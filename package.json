@@ -4,16 +4,19 @@
   "description": "twitter clone coding with express and react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JinuCheon/clone-twitter.git"
   },
-  "author": "",
+  "author": "JinuCheon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JinuCheon/clone-twitter/issues"
   },
-  "homepage": "https://github.com/JinuCheon/clone-twitter#readme"
+  "homepage": "https://github.com/JinuCheon/clone-twitter#readme",
+  "dependencies": {
+    "next": "^9.5.5"
+  }
 }
