@@ -13,7 +13,7 @@ const AppLayout = ({children}) => {
         <div>
             <Menu mode="horizontal">
                 <Menu.Item>
-                    {isLoggedIn ? <UserProfile/> : <LoginForm/>}
+                    노드버드
                 </Menu.Item>
                 <Menu.Item>
                     <Link href="/profile">프로필</Link>
@@ -21,11 +21,14 @@ const AppLayout = ({children}) => {
                 <Menu.Item>
                     <Link href="/signup">회원가입</Link>
                 </Menu.Item>
+                <Menu.Item>
+                    <Input.Search style={{verticalAlign: 'middle'}} enterButton/>
+                </Menu.Item>
             </Menu>
-            <Input.Search style={{verticalAlign: 'middle'}} enterButton/>
+            
             <Row gutter={8}>
                 <Col sx={24} md={6}>
-                    왼쪽메뉴
+                    {isLoggedIn ? <UserProfile/> : <LoginForm/>}
                 </Col>
                 <Col sx={24} md={12}>
                     {children}
