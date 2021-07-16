@@ -2,6 +2,9 @@ import { Form, Input, Button } from 'antd';
 import { useState, useCallback } from 'react';
 import Link from 'next/link'; 
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import useInput from '../hooks/useInput';
+
 
 //커스텀 태그를 div로 만들고, 여기에 스타일을 미리 적용할 수 있다.
 const ButtonWrapper = styled.div`
@@ -12,16 +15,12 @@ const FormWrapper = styled(Form)`
 `;
 
 const LoginForm = ({setIsLoggedIn}) => {
-    const [id, setId] = useState('');
-    const [password, setPassword] = useState('');
+    const [id, onChangeId] = useInput('');
+    const [password, onChangePassword] = useInput('');
 
     //컨포넌트에 props 로 넘겨주는 function은 최적화를 위해 꼭 useCallBack을 써주자.
-    const onChangeId = useCallback((e)=>{
-        setId(e.target.value);
-    },[]);
-    const onChangePassword = useCallback((e)=>{
-        setPassword(e.target.value);
-    },[]);
+    
+    
 
     const onSubmitForm = useCallback(()=>{
         console.log(id, password);
@@ -50,4 +49,9 @@ const LoginForm = ({setIsLoggedIn}) => {
         </FormWrapper>
     );
 }
+
+LoginForm.propTypes = {
+    setIsLoggedIn: PropTypes.node.isRequired,
+    //node 타입은 render로 반환 가능한 것이라고 한다.
+};
 export default LoginForm;
