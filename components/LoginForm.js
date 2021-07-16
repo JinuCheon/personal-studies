@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import useInput from '../hooks/useInput';
 import { useDispatch } from 'react-redux';
-import { loginAction } from '../reducers'
+import { loginAction } from '../reducers/user'
 
 
 //커스텀 태그를 div로 만들고, 여기에 스타일을 미리 적용할 수 있다.
