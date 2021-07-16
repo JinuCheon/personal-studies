@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import useInput from '../hooks/useInput';
+import { useDispatch } from 'react-redux';
+import { loginAction } from '../reducers'
 
 
 //커스텀 태그를 div로 만들고, 여기에 스타일을 미리 적용할 수 있다.
@@ -15,6 +17,8 @@ const FormWrapper = styled(Form)`
 `;
 
 const LoginForm = ({setIsLoggedIn}) => {
+    const dispatch = useDispatch();
+
     const [id, onChangeId] = useInput('');
     const [password, onChangePassword] = useInput('');
 
@@ -23,8 +27,9 @@ const LoginForm = ({setIsLoggedIn}) => {
     
 
     const onSubmitForm = useCallback(()=>{
-        console.log(id, password);
-        setIsLoggedIn(true);
+        // console.log(id, password);
+        // setIsLoggedIn(true);
+        dispatch(loginAction({ id, password}));
     }, [id, password]);
 
     return(

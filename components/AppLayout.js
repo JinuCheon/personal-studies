@@ -6,6 +6,7 @@ import { useState } from 'react';
 import UserProfile from '../components/userProfile';
 import LoginForm from '../components/LoginForm';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';//react와 Redux를 연겨랳준다.
 
 //컴포넌트에 style을 미리 적용하려면, 이런식으로 사용한다.
 const SearchInput = styled(Input.Search)`
@@ -14,7 +15,9 @@ const SearchInput = styled(Input.Search)`
 
 //children에는 AppLayout태그 사이에 있던 것이 들어있다.
 const AppLayout = ({children}) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+
     return(
         <div>
             <Menu mode="horizontal">
@@ -34,7 +37,7 @@ const AppLayout = ({children}) => {
             
             <Row gutter={8}>
                 <Col sx={24} md={6}>
-                    {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn}/> : <LoginForm setIsLoggedIn={setIsLoggedIn}/>}
+                    {isLoggedIn ? <UserProfile/> : <LoginForm/>}
                 </Col>
                 <Col sx={24} md={12}>
                     {children}

@@ -33,7 +33,7 @@ const Signup = () => {
         if(!term){
             return setTermError(true);
         }
-        console.log(id, nickname, password);
+        // console.log(id, nickname, password);
     }, [password, passwordCheck, term]);
 
     return (
