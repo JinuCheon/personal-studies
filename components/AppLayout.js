@@ -19,7 +19,7 @@ const AppLayout = ({children}) => {
         <div>
             <Menu mode="horizontal">
                 <Menu.Item>
-                    노드버드
+                    <b><Link href="/">NodeBird</Link></b>
                 </Menu.Item>
                 <Menu.Item>
                     <Link href="/profile">프로필</Link>
@@ -43,7 +43,6 @@ const AppLayout = ({children}) => {
                     <a href="https://velog.io/@woojin8787" target="_blank" rel="noreferrer noopener">Jinu Cheon</a>
                 </Col>
             </Row>
-            {children}
         </div>
     )
 };
