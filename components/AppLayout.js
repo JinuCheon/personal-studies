@@ -5,6 +5,12 @@ import { useState } from 'react';
 
 import UserProfile from '../components/userProfile';
 import LoginForm from '../components/LoginForm';
+import styled from 'styled-components';
+
+//컴포넌트에 style을 미리 적용하려면, 이런식으로 사용한다.
+const SearchInput = styled(Input.Search)`
+    vertical-align: middle;
+`;
 
 //children에는 AppLayout태그 사이에 있던 것이 들어있다.
 const AppLayout = ({children}) => {
@@ -22,13 +28,13 @@ const AppLayout = ({children}) => {
                     <Link href="/signup">회원가입</Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Input.Search style={{verticalAlign: 'middle'}} enterButton/>
+                    <SearchInput style={{verticalAlign: 'middle'}} enterButton/>
                 </Menu.Item>
             </Menu>
             
             <Row gutter={8}>
                 <Col sx={24} md={6}>
-                    {isLoggedIn ? <UserProfile/> : <LoginForm/>}
+                    {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn}/> : <LoginForm setIsLoggedIn={setIsLoggedIn}/>}
                 </Col>
                 <Col sx={24} md={12}>
                     {children}
