@@ -3,15 +3,15 @@ export const initialState = {
         id: 1,
         User: {
             id: 1,
-            nickname: '제로초',
+            nickname: '천진우',
         },
-        content: '첫 게시글 안녕하세요 #해시태그',
+        content: '아이유 짱 이쁨 #IU #아이유',
         Images: [{
-            src: 'https://images.chosun.com/resizer/HoGaPo0K-HNh_w9wmkUxpt404rc=/616x0/filters:focal(291x444:301x454)/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/XG2MW2H3ZRW5FHDVSOMF6FDT3E.jpg',
+            src: 'https://image.bugsm.co.kr/artist/images/1000/800491/80049126.jpg',
         }, {
-            src: 'https://i.pinimg.com/564x/1d/e5/b1/1de5b1350ddf2f37ee536aec562680e3.jpg',
+            src: 'https://img.koreatimes.co.kr/upload/newsV2/images/202104/186fd69ed8724f4cacacc573247ec281.jpg/dims/resize/740/optimize',
         }, {
-            src: 'https://i.pinimg.com/564x/1d/e5/b1/1de5b1350ddf2f37ee536aec562680e3.jpg',
+            src: 'https://img.insight.co.kr/static/2020/05/26/700/q18j53u55e75qqe6oa66.jpg',
         }],
         Comments: [{
             User: {
