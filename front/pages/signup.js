@@ -8,6 +8,7 @@ import { SIGN_UP_REQUEST } from '../reducers/user';
 import AppLayout from '../components/AppLayout';
 import useInput from '../hooks/useInput';
 
+
 const Signup = () => {
   const [passwordCheck, setPasswordCheck] = useState('');
   const [term, setTerm] = useState(false);
@@ -18,7 +19,19 @@ const Signup = () => {
   const [nick, onChangeNick] = useInput('');
   const [password, onChangePassword] = useInput('');
   const dispatch = useDispatch();
-  const { isSigningUp, me } = useSelector((state) => state.user);
+  const { isSigningUp, me, signUpDone, signUpError } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    if(signUpDone) {
+      Router.push('/');
+    }
+  }, [signUpDone]);
+
+  useEffect(() => {
+    if(signUpError) {
+      alert(signUpError);
+    }
+  }, [signUpError]);
 
   useEffect(() => {
     if (me) {
