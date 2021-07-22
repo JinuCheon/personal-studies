@@ -4,6 +4,7 @@ const userRouter = require('./routes/user');
 const db = require('./models');
 const cors = require('cors');
 const app = express();
+const passportConfig = require('./passport');
 
 db.sequelize.sync()
     .then(() => {
@@ -11,6 +12,7 @@ db.sequelize.sync()
     })
     .catch(console.error);
 
+passportConfig();
 app.use(cors({
     origin: '*',
 })); //cors문제 해결
