@@ -9,7 +9,7 @@ module.exports = () => {
         passwordField: 'password',
     }, async(email, password, done) => {
         try{
-            const User = await User.findeOne({
+            const user = await User.findOne({
                 where: {email}
             });
             if(!user){
@@ -17,7 +17,7 @@ module.exports = () => {
             }
             const result = await bcrypt.compare(password, user.password); 
             if(result) {
-                return res.status(200).done(null, user); //성공이면 사용자 정보 넘기기
+                return done(null, user); //성공이면 사용자 정보 넘기기
             }
             return done(null, false, {reason: '비밀번호 틀림'});
         } catch (error) {

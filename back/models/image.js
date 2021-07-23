@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Image = sequelize.define('User', {
+    const Image = sequelize.define('Image', {
         src: {
             type: DataTypes.STRING(200),
             allowNull: false, //필수

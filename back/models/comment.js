@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Comment = sequelize.define('User', {
+    const Comment = sequelize.define('Comment', {
         content: {
             type: DataTypes.TEXT,
             allowNull: false, //필수

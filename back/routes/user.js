@@ -1,7 +1,7 @@
 const express =require('express');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
-const { User } = require('../models');
+const { User, Post } = require('../models');
 
 const router = express.Router();
 
@@ -19,7 +19,22 @@ router.post('/login', (req, res, next) => {
                 console.error(loginErr);
                 return next(loginErr);
             }
-            return res.json(user);
+            const fullUserWithoutPassword = await User.findOne({
+                where: {id: user.id},
+                attributes: {
+                    exclude: ['password']
+                },
+                include: [{
+                    model: Post,
+                }, {
+                    model: User,
+                    as: 'Followings',
+                }, {
+                    model: User,
+                    as: 'Followers',
+                }]
+            })
+            return res.json(fullUserWithoutPassword);
         })
     })(req, res, next);
 });
@@ -36,7 +51,6 @@ router.post('/', async (req, res, next) => {
         }
 
         const hashedPassword = await bcrypt.hash(req.body.password, 11);
-        console.log("!!!!!!!!!!!!!!!!",req.body,"!!!!!!!!!!!!!!")
         await User.create({
             email: req.body.email,
             nickname: req.body.nick,
@@ -50,6 +64,12 @@ router.post('/', async (req, res, next) => {
         next(error); //next를 통해 error 보낼 수 있음 서버 에러라서 500번 에러
     }
     
+});
+
+router.post('/user/logout', (req, res) => {
+    req.logout();
+    req.session.destroy();
+    res.send('ok');
 });
 
 module.exports = router;
