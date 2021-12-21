@@ -24,7 +24,7 @@ let cardTemplate = (planData) => `
 <div class="card col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
     <div class="card-body">
         <h5 class="card-title">${planData.date} ${planData.title}</h5>
-        <p class="card-text">진행률 : ${progress(planData)}%</p>
+        <p class="card-text">진행률 : ${Math.round(Math.round(progress(planData)))}%</p>
         <button onclick="openList(${planData.sequence})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal">상세 보기</button>
     </div>
 </div>
@@ -65,28 +65,27 @@ let addPlans = () => {
 
 let openList = (sequence) => {
   $planTitle = document.getElementById('planTitle');
-  $pendingListNumber = document.getElementById('pending-list-number');
   $addTaskButton = document.getElementById('add-task-button');
-  drawCheckFormList(toDoListMemoryStorage[sequence]);
+  drawCheckFormList(sequence);
   $planTitle.innerHTML = `${toDoListMemoryStorage[sequence].title} (${toDoListMemoryStorage[sequence].date})`;
-  $pendingListNumber.innerHTML = `할 일이 ${toDoListMemoryStorage[sequence].pendingList.length}개 남았습니다!!`;
   $addTaskButton.setAttribute('onClick', `addNewTask(${sequence})`);
 }
 
-let drawCheckFormList = (list) => {
+let drawCheckFormList = (sequence) => {
+  document.getElementById('pending-list-number').innerHTML = `할 일이 ${toDoListMemoryStorage[sequence].pendingList.length}개 남았습니다!!`;
   let form = '';
-  for (let pending of list.pendingList) {
+  for (let i in toDoListMemoryStorage[sequence].pendingList) {
     form += `
     <div class="form-check">
-    <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" >
-    <label class="form-check-label" for="flexCheckChecked">${pending}</label>
+    <input onclick="pendingCheckboxEvent(${sequence}, ${i})" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+    <label class="form-check-label" for="flexCheckChecked">${toDoListMemoryStorage[sequence].pendingList[i]}</label>
     </div>`
   }
-  for (let completed of list.completedList) {
+  for (let i in toDoListMemoryStorage[sequence].completedList) {
     form += `
     <div class="form-check">
-    <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked>
-    <label class="form-check-label" for="flexCheckChecked">${completed}</label>
+    <input onclick="completedCheckboxEvent(${sequence}, ${i})" class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked>
+    <label class="form-check-label" for="flexCheckChecked">${toDoListMemoryStorage[sequence].completedList[i]}</label>
     </div>`
   }
   document.getElementById('checkForms').innerHTML=form;
@@ -95,9 +94,26 @@ let drawCheckFormList = (list) => {
 let addNewTask = (sequence) => {
   $addTaskValue = document.getElementById("add-task-value");
   toDoListMemoryStorage[sequence].pendingList.push($addTaskValue.value);
-  drawCheckFormList(toDoListMemoryStorage[sequence]);
+  drawCheckFormList(sequence);
   $addTaskValue.value = "";
   printPlans();
+}
+
+let pendingCheckboxEvent = (planSequence, taskSequence) => {
+  console.log(planSequence, taskSequence);
+  console.log(toDoListMemoryStorage[planSequence].pendingList[taskSequence]);
+  toDoListMemoryStorage[planSequence].completedList.push(toDoListMemoryStorage[planSequence].pendingList[taskSequence]);
+  toDoListMemoryStorage[planSequence].pendingList.splice(taskSequence,1);
+  printPlans();
+  drawCheckFormList(planSequence);
+}
+
+let completedCheckboxEvent = (planSequence, taskSequence) => {
+  console.log(toDoListMemoryStorage[planSequence].completedList[taskSequence]);
+  toDoListMemoryStorage[planSequence].pendingList.push(toDoListMemoryStorage[planSequence].completedList[taskSequence]);
+  toDoListMemoryStorage[planSequence].completedList.splice(taskSequence,1);
+  printPlans();
+  drawCheckFormList(planSequence);
 }
 
 printPlans();
