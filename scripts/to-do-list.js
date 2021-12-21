@@ -32,30 +32,33 @@ let createNewCardTemplate = () => `
 </div>
 `
 
-let checkFormList = (list) => {
+let drawCheckFormList = (list) => {
   let form = '';
   for (let pending of list.pendingList) {
     form += `
-      <div class="form-check">
-        <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">${pending}</label>
-      </div>`
+    <div class="form-check">
+    <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" >
+    <label class="form-check-label" for="flexCheckChecked">${pending}</label>
+    </div>`
   }
   for (let completed of list.completedList) {
     form += `
-      <div class="form-check">
-        <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked">
-        <label class="form-check-label" for="flexCheckChecked">${completed}</label>
-      </div>`
+    <div class="form-check">
+    <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked checked">
+    <label class="form-check-label" for="flexCheckChecked">${completed}</label>
+    </div>`
   }
-  return form
+  document.getElementById('checkForms').innerHTML=form;
 }
 
 let openList = (sequence) => {
   $planTitle = document.getElementById('planTitle');
   $pendingListNumber = document.getElementById('pending-list-number');
-  $checkForms = document.getElementById('checkForms');
-  $checkForms.innerHTML = checkFormList(toDoListMemoryStorage[sequence])
+  $addTaskButton = document.getElementById('add-task-button');
+  drawCheckFormList(toDoListMemoryStorage[sequence]);
+  $planTitle.innerHTML = `${toDoListMemoryStorage[sequence].title} (${toDoListMemoryStorage[sequence].date})`;
+  $pendingListNumber.innerHTML = `할 일이 ${toDoListMemoryStorage[sequence].pendingList.length}개 남았습니다!!`;
+  $addTaskButton.setAttribute('onClick', `addNewTask(${sequence})`);
 }
 
 let printList = () => {
@@ -75,6 +78,12 @@ let printList = () => {
 let newTDL = () => {
   const toDoList = new ToDoList("12/17", "일정제목", ["a", "b", "c"], ["d", "e", "f"]);
   toDoListMemoryStorage.push(toDoList);
+}
+
+let addNewTask = (sequence) => {
+  $addTaskValue = document.getElementById("add-task-value");
+  toDoListMemoryStorage[sequence].pendingList.push($addTaskValue.value);
+  drawCheckFormList(toDoListMemoryStorage[sequence]);
 }
 
 printList();

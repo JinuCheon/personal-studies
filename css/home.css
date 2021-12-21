@@ -1,0 +1,7 @@
+.form-control {
+    width: 90%;
+}
+.add-task-button {
+    width: 10%;
+    font-size: 0.4rem;
+}

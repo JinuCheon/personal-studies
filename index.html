@@ -22,14 +22,16 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body row">
-          <p id="pending-list-number" class="col">할 일 N개 남음</p>
+          <p id="pending-list-number" class="col"></p>
           <hr>
-          <div id="checkForms">
+          <div id="checkForms" class="mb-5">
             <div class="form-check">
               <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked>
               <label class="form-check-label" for="flexCheckChecked">체크된거</label>
             </div>
           </div>
+          <input item id="add-task-value" class="form-control" id="inputPassword2" placeholder="할 일을 입력">
+          <button type="button" id="add-task-button" onclick="" class="add-task-button btn btn-primary">추가</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
