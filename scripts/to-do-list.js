@@ -116,4 +116,13 @@ let completedCheckboxEvent = (planSequence, taskSequence) => {
   drawCheckFormList(planSequence);
 }
 
+//for test
+let makeTestCase = () => {
+  newPlan = new ToDoList("이사 날", "2021/12/20", ["이사하기","코딩하기","부동산 아줌마랑 싸우기","집주인이랑 싸우기"], ["방정리하기"]);
+  toDoListMemoryStorage.push(newPlan);
+  newPlan = new ToDoList("정리하는 날", "2021/12/21", ["정리하기","공부하기","집주인이랑 싸우기"], ["커텐 달기", "러그 깔기"]);
+  toDoListMemoryStorage.push(newPlan);
+}
+
+makeTestCase();
 printPlans();
