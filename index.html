@@ -13,8 +13,8 @@
 </head>
 
 <body>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- 상세보기 modal -->
+  <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -34,6 +34,27 @@
           <button type="button" id="add-task-button" onclick="" class="add-task-button btn btn-primary">추가</button>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 새로운 일정 modal -->
+
+  <div class="modal fade" id="addNewPlan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="planTitle" class="modal-title" id="exampleModalLabel">새로운 일정 추가하기</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row">
+          <input id="add-plan-title" item class="form-control mb-3" id="inputPassword2" placeholder="일정 제목 입력">
+          <input id="add-plan-date" item class="form-control mb-3" id="inputPassword2" placeholder="날자 입력 : (yyyy/mm/dd)">
+        </div>
+        <div class="modal-footer">
+          <button onclick="addPlans()" type="button" class="btn btn-primary" data-bs-dismiss="modal">추가</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
