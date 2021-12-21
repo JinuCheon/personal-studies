@@ -1,5 +1,12 @@
+// plan : task의 집합
+// task : 세부 할 일
+// pending : 미완료 task
+// completed : 완료 task
+
+// 메모리 DB
 let toDoListMemoryStorage = [];
 
+// 클래스의 생성자를 통한 객체생성
 class ToDoList {
   constructor(date, title, completedList, pendingList) {
     this.date = date;
@@ -9,6 +16,7 @@ class ToDoList {
   }
 }
 
+// 진행률 계산
 let progress = (planData) => {
   result = planData.completedList.length / (planData.completedList.length + planData.pendingList.length) * 100
   if(isNaN(result)){
@@ -18,6 +26,7 @@ let progress = (planData) => {
   }
 }
 
+// plan card 만들기 위한 템플릿, 가독성을 위해 분리
 let cardTemplate = (planData, sequence) => `
 <div class="card col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
     <div class="card-body">
@@ -29,6 +38,7 @@ let cardTemplate = (planData, sequence) => `
 </div>
 `
 
+// 새로운 plan 을 만들기 위한 탬플릿
 let createNewCardTemplate = () => `
 <div class="card col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
 <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#addNewPlan">
@@ -40,7 +50,8 @@ let createNewCardTemplate = () => `
 </div>
 `
 
-let printPlans = () => {
+// plan 페이지 렌더링
+let drawPlans = () => {
   let $listWrapper = document.getElementById('list-wrapper');
   console.log($listWrapper);
   let tempTDL = '';
@@ -51,7 +62,7 @@ let printPlans = () => {
   $listWrapper.innerHTML = tempTDL;
 }
 
-
+// 새로운 plan 추가
 let addPlans = () => {
   $addPlanTitle = document.getElementById("add-plan-title");
   $addPlanDate = document.getElementById("add-plan-date");
@@ -59,23 +70,27 @@ let addPlans = () => {
   toDoListMemoryStorage.push(newPlan);
   $addPlanTitle.value = "";
   $addPlanDate.value = "";
-  printPlans();
+  drawPlans();
 }
 
+// plan 삭제
 let deletePlan = (sequence) => {
   toDoListMemoryStorage.splice(sequence,1);
-  printPlans();
+  drawPlans();
 }
 
+// 상세보기 button action
+// modal의 내부 텍스트를 해당 plan에 맞춰서 변경해준다
 let openList = (sequence) => {
   $planTitle = document.getElementById('planTitle');
   $addTaskButton = document.getElementById('add-task-button');
-  drawCheckFormList(sequence);
+  drawTasks(sequence);
   $planTitle.innerHTML = `${toDoListMemoryStorage[sequence].title} (${toDoListMemoryStorage[sequence].date})`;
   $addTaskButton.setAttribute('onClick', `addNewTask(${sequence})`);
 }
 
-let drawCheckFormList = (sequence) => {
+// task 렌더링
+let drawTasks = (sequence) => {
   document.getElementById('pending-list-number').innerHTML = `할 일이 ${toDoListMemoryStorage[sequence].pendingList.length}개 남았습니다!!`;
   let form = '';
   for (let i in toDoListMemoryStorage[sequence].pendingList) {
@@ -97,39 +112,43 @@ let drawCheckFormList = (sequence) => {
   document.getElementById('checkForms').innerHTML=form;
 }
 
+// 새로운 task
 let addNewTask = (sequence) => {
   $addTaskValue = document.getElementById("add-task-value");
   toDoListMemoryStorage[sequence].pendingList.push($addTaskValue.value);
-  drawCheckFormList(sequence);
+  drawTasks(sequence);
   $addTaskValue.value = "";
-  printPlans();
+  drawPlans();
 }
 
-let deleteTask = (planSequence, taskSequence, state) => { //state 0->pending 1->completed
+// task 삭제
+let deleteTask = (planSequence, taskSequence, state) => { // state 0->pending 1->completed
   if(state){
     toDoListMemoryStorage[planSequence].completedList.splice(taskSequence,1);
   } else {
     toDoListMemoryStorage[planSequence].pendingList.splice(taskSequence,1);
   }
-  drawCheckFormList(planSequence);
-  printPlans();
+  drawTasks(planSequence);
+  drawPlans();
 }
 
+// 미완료 task 삭제
 let pendingCheckboxEvent = (planSequence, taskSequence) => {
   console.log(planSequence, taskSequence);
   console.log(toDoListMemoryStorage[planSequence].pendingList[taskSequence]);
   toDoListMemoryStorage[planSequence].completedList.push(toDoListMemoryStorage[planSequence].pendingList[taskSequence]);
   toDoListMemoryStorage[planSequence].pendingList.splice(taskSequence,1);
-  drawCheckFormList(planSequence);
-  printPlans();
+  drawTasks(planSequence);
+  drawPlans();
 }
 
+// 완료 task 삭제
 let completedCheckboxEvent = (planSequence, taskSequence) => {
   console.log(toDoListMemoryStorage[planSequence].completedList[taskSequence]);
   toDoListMemoryStorage[planSequence].pendingList.push(toDoListMemoryStorage[planSequence].completedList[taskSequence]);
   toDoListMemoryStorage[planSequence].completedList.splice(taskSequence,1);
-  drawCheckFormList(planSequence);
-  printPlans();
+  drawTasks(planSequence);
+  drawPlans();
 }
 
 //for test
@@ -141,4 +160,4 @@ let makeTestCase = () => {
 }
 
 makeTestCase();
-printPlans();
+drawPlans();
