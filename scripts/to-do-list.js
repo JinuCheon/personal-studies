@@ -1,9 +1,7 @@
 let toDoListMemoryStorage = [];
-let sequenceCounter = 0;
 
 class ToDoList {
   constructor(date, title, completedList, pendingList) {
-    this.sequence = sequenceCounter++;
     this.date = date;
     this.title = title;
     this.completedList = completedList;
@@ -20,12 +18,13 @@ let progress = (planData) => {
   }
 }
 
-let cardTemplate = (planData) => `
+let cardTemplate = (planData, sequence) => `
 <div class="card col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
     <div class="card-body">
         <h5 class="card-title">${planData.date} ${planData.title}</h5>
         <p class="card-text">진행률 : ${Math.round(Math.round(progress(planData)))}%</p>
-        <button onclick="openList(${planData.sequence})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal">상세 보기</button>
+        <button onclick="openList(${sequence})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal">상세 보기</button>
+        <button type="button" class="delete-plan-button btn-close" aria-label="Close" onclick="deletePlan(${planData.sequence})"></button>
     </div>
 </div>
 `
@@ -45,8 +44,8 @@ let printPlans = () => {
   let $listWrapper = document.getElementById('list-wrapper');
   console.log($listWrapper);
   let tempTDL = '';
-  for (let planData of toDoListMemoryStorage) {
-    tempTDL += cardTemplate(planData);
+  for (let sequence in toDoListMemoryStorage) {
+    tempTDL += cardTemplate(toDoListMemoryStorage[sequence], sequence);
   }
   tempTDL += createNewCardTemplate();
   $listWrapper.innerHTML = tempTDL;
@@ -60,6 +59,11 @@ let addPlans = () => {
   toDoListMemoryStorage.push(newPlan);
   $addPlanTitle.value = "";
   $addPlanDate.value = "";
+  printPlans();
+}
+
+let deletePlan = (sequence) => {
+  toDoListMemoryStorage.splice(sequence,1);
   printPlans();
 }
 
@@ -79,6 +83,7 @@ let drawCheckFormList = (sequence) => {
     <div class="form-check">
     <input onclick="pendingCheckboxEvent(${sequence}, ${i})" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
     <label class="form-check-label" for="flexCheckChecked">${toDoListMemoryStorage[sequence].pendingList[i]}</label>
+    <button onclick="deleteTask(${sequence}, ${i}, 0)" type="button" class="btn-close btn-close-muted close-button-font" aria-label="Close"></button>
     </div>`
   }
   for (let i in toDoListMemoryStorage[sequence].completedList) {
@@ -86,6 +91,7 @@ let drawCheckFormList = (sequence) => {
     <div class="form-check">
     <input onclick="completedCheckboxEvent(${sequence}, ${i})" class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked>
     <label class="form-check-label" for="flexCheckChecked">${toDoListMemoryStorage[sequence].completedList[i]}</label>
+    <button onclick="deleteTask(${sequence}, ${i}, 1)" type="button" class="btn-close btn-close-muted close-button-font" aria-label="Close"></button>
     </div>`
   }
   document.getElementById('checkForms').innerHTML=form;
@@ -99,21 +105,31 @@ let addNewTask = (sequence) => {
   printPlans();
 }
 
+let deleteTask = (planSequence, taskSequence, state) => { //state 0->pending 1->completed
+  if(state){
+    toDoListMemoryStorage[planSequence].completedList.splice(taskSequence,1);
+  } else {
+    toDoListMemoryStorage[planSequence].pendingList.splice(taskSequence,1);
+  }
+  drawCheckFormList(planSequence);
+  printPlans();
+}
+
 let pendingCheckboxEvent = (planSequence, taskSequence) => {
   console.log(planSequence, taskSequence);
   console.log(toDoListMemoryStorage[planSequence].pendingList[taskSequence]);
   toDoListMemoryStorage[planSequence].completedList.push(toDoListMemoryStorage[planSequence].pendingList[taskSequence]);
   toDoListMemoryStorage[planSequence].pendingList.splice(taskSequence,1);
-  printPlans();
   drawCheckFormList(planSequence);
+  printPlans();
 }
 
 let completedCheckboxEvent = (planSequence, taskSequence) => {
   console.log(toDoListMemoryStorage[planSequence].completedList[taskSequence]);
   toDoListMemoryStorage[planSequence].pendingList.push(toDoListMemoryStorage[planSequence].completedList[taskSequence]);
   toDoListMemoryStorage[planSequence].completedList.splice(taskSequence,1);
-  printPlans();
   drawCheckFormList(planSequence);
+  printPlans();
 }
 
 //for test
