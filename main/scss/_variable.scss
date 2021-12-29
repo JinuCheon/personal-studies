@@ -1,0 +1,265 @@
+// Variables
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+$bodyfont:'Roboto', sans-serif;
+$headingfont:'Montserrat', sans-serif;
+
+$p100: 100%;
+
+$sid-bar-w: 270px;
+$hed-max: 120px;
+$main-hed-nav: 90px;
+$default-border-radius: 0.25rem;
+$fct-border-radius: 5px;
+$border-circle: 50%;
+$mini-sid-bar-w: 60px;
+$ctrl-sid-bar-w: 345px;
+$inn-pg-sid-bar-w: 280px;
+
+// Typography
+//
+// Font-size, font-weight
+
+
+$fw-unset:unset;
+$fw-100:100;
+$fw-200: 200;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+$fw-900: 900;
+$fw-light: 100;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-0: 0;
+$fs-10: 0.7143rem;
+$fs-12: 0.8571rem;
+$fs-14: 1rem;
+$fs-16: 1.143rem;
+$fs-18: 1.286rem;
+$fs-20: 1.429rem;
+$fs-22: 1.5714285714285714rem;
+$fs-24: 1.714rem;
+$fs-26: 1.857rem;
+$fs-30: 2.143rem;
+$fs-32: 2.2857142857142856rem;
+$fs-36: 2.5714285714285716rem;
+$fs-38: 2.7142857142857144rem;
+$fs-40: 2.857rem;
+$fs-42: 3rem;
+$fs-46: 3.2857142857142856rem;
+$fs-48: 3.4285714285714284rem;
+$fs-50: 3.571rem;
+$fs-60: 4.286rem;
+$fs-70: 5rem;
+$fs-72: 5.142857142857143rem;
+$fs-76: 5.428571428571429rem;
+$fs-78: 5.571428571428571rem;
+$fs-80: 5.714rem;
+$fs-100: 7.142857142857143rem;
+$fs-140: 10rem ;
+$fs-180: 12.857142857142858rem;
+$fs-200: 14.285714285714286rem ;
+
+/*Social Media Colors*/
+$facebook: #3b5998;
+$google: #dd4b39;
+$twitter: #1da1f2;
+$linkedin: #0077b5;
+$pinterest: #bd081c;
+$git: #6cc644;
+$tumblr: #35465c;
+$vimeo: #1ab7ea;
+$youtube: #ff0000;
+$flickr: #ff0084;
+$reddit: #ff4500;
+$dribbble: #ea4c89;
+$skype: #00aff0;
+$instagram: #e1306c;
+$lastfm: #d51007;
+$behance: #1769ff;
+$rss: #f26522;
+$bitbucket: #205081;
+$dropbox: #007ee5;
+$foursquare: #2d5be3;
+$github: #4078c0;
+$vk: #45668e;
+
+/*Theme Colors*/
+
+$dark: #0e1319;
+$light:#f0f0f0;
+$light2:#fafafa;
+$light3: #f2f2f2;
+$white:#ffffff;
+$black:#000000;
+$danger:#dc3545;
+$warning:#f7cc05;
+$success:#45b6c6;
+$primary:#843cf7;
+$info:#2444e8;
+$mildgray: #bcc2c8;
+
+$colors: (
+  'primary':   $primary,
+  'success':   $success,
+  'info':      $info,
+  'warning':   $warning,
+  'danger':    $danger,
+  'dark':      $dark,
+  'white':     $white,
+  'black':     $black,
+  'light':     $light,
+);
+
+$gray-100:      #f3f6f7;
+$gray-200:      #eff2f9;
+$gray-300:      #dbe0ec;
+$gray-400:      #b6c2e4;
+$gray-500:      #8997bd;
+$gray-600:      #7081b9;
+$gray-700:      #50649c;
+$gray-800:      #435177;
+$gray-900:      #1c2d41;
+
+
+$theme-strawberry-primary: #673ab7;
+$theme-strawberry-info: #0060c3;
+$theme-strawberry-success: #00b689;
+$theme-strawberry-danger: #fe0b46;
+$theme-strawberry-warning: #ffab96;
+
+$theme-strawberry-grd: linear-gradient(45deg, $theme-strawberry-danger, $theme-strawberry-warning);
+$theme-strawberry-grd-dark: linear-gradient(45deg, darken($theme-strawberry-danger, 20%), darken($theme-strawberry-warning, 20%));
+
+$theme-greentea-primary: #6b19d1;
+$theme-greentea-info: #004b91;
+$theme-greentea-success: #78cc37;
+$theme-greentea-danger: #f22a2a;
+$theme-greentea-warning: #dcc823;
+
+$theme-greentea-grd: linear-gradient(45deg, $theme-greentea-info, $theme-greentea-success);
+$theme-greentea-grd-dark: linear-gradient(45deg, darken($theme-greentea-info, 20%), darken($theme-greentea-success, 20%));
+
+$theme-blackberry-primary: #843cf7;
+$theme-blackberry-info: #2444e8;
+$theme-blackberry-success: #45b6c6;
+$theme-blackberry-danger: #ec4b71;
+$theme-blackberry-warning: #f7cc05;
+
+$theme-blackberry-grd: linear-gradient(45deg, $theme-blackberry-primary, $theme-blackberry-info);
+$theme-blackberry-grd-dark: linear-gradient(45deg, darken($theme-blackberry-primary, 20%), darken($theme-blackberry-info, 20%));
+
+$theme-bluegrey-primary: #263238;
+$theme-bluegrey-info: #2979ff;
+$theme-bluegrey-success: #35d2d0;
+$theme-bluegrey-danger: #f33349;
+$theme-bluegrey-warning: #f78e05;
+
+$theme-bluegrey-grd: linear-gradient(45deg, $theme-bluegrey-primary, $theme-bluegrey-info);
+$theme-bluegrey-grd-dark: linear-gradient(45deg, darken($theme-bluegrey-primary, 20%), darken($theme-bluegrey-info, 20%));
+
+$theme-virginamerica-primary: #7b4397;
+$theme-virginamerica-info: #298eff;
+$theme-virginamerica-success: #0fc48f;
+$theme-virginamerica-danger: #dc2430;
+$theme-virginamerica-warning: #f7b505;
+
+$theme-virginamerica-grd: linear-gradient(45deg, $theme-virginamerica-primary, $theme-virginamerica-danger);
+$theme-virginamerica-grd-dark: linear-gradient(45deg, darken($theme-virginamerica-primary, 20%), darken($theme-virginamerica-danger, 20%));
+
+$theme-purpledeeporange-primary: #8e24aa;
+$theme-purpledeeporange-info: #297aff;
+$theme-purpledeeporange-success: #14ecad;
+$theme-purpledeeporange-danger: #ff1c2b;
+$theme-purpledeeporange-warning: #ff6e40;
+
+$theme-purpledeeporange-grd: linear-gradient(45deg, $theme-purpledeeporange-primary, $theme-purpledeeporange-danger);
+$theme-purpledeeporange-grd-dark: linear-gradient(45deg, darken($theme-purpledeeporange-primary, 20%), darken($theme-purpledeeporange-danger, 20%));
+
+$theme-purpledeeppurple-primary: #7b1fa2;
+$theme-purpledeeppurple-info: #7c4dff;
+$theme-purpledeeppurple-success: #00d464;
+$theme-purpledeeppurple-danger: #e41f85;
+$theme-purpledeeppurple-warning: #ffc740;
+
+$theme-purpledeeppurple-grd: linear-gradient(45deg, $theme-purpledeeppurple-primary, $theme-purpledeeppurple-info);
+$theme-purpledeeppurple-grd-dark: linear-gradient(45deg, darken($theme-purpledeeppurple-primary, 20%), darken($theme-purpledeeppurple-info, 20%));
+
+$theme-celestial-primary: #1d2671;
+$theme-celestial-info: #1a34f0;
+$theme-celestial-success: #29b83a;
+$theme-celestial-danger: #c33764;
+$theme-celestial-warning: #eae325;
+
+$theme-celestial-grd: linear-gradient(45deg, $theme-celestial-danger, $theme-celestial-primary);
+$theme-celestial-grd-dark: linear-gradient(45deg, darken($theme-celestial-danger, 20%), darken($theme-celestial-primary, 20%));
+
+$theme-cosmicfusion-primary: #0f25df;
+$theme-cosmicfusion-info: #333399;
+$theme-cosmicfusion-success: #2ddf92;
+$theme-cosmicfusion-danger: #ff00cc;
+$theme-cosmicfusion-warning: #eaa725;
+
+$theme-cosmicfusion-grd: linear-gradient(45deg, $theme-cosmicfusion-danger, $theme-cosmicfusion-info);
+$theme-cosmicfusion-grd-dark: linear-gradient(45deg, darken($theme-cosmicfusion-danger, 20%), darken($theme-cosmicfusion-info, 20%));
+
+$theme-purplebliss-primary: #360033;
+$theme-purplebliss-info: #3380d7;
+$theme-purplebliss-success: #0b8793;
+$theme-purplebliss-danger: #e0132b;
+$theme-purplebliss-warning: #eac944;
+
+$theme-purplebliss-grd: linear-gradient(45deg, $theme-purplebliss-primary, $theme-purplebliss-success);
+$theme-purplebliss-grd-dark: linear-gradient(45deg, darken($theme-purplebliss-primary, 20%), darken($theme-purplebliss-success, 20%));
+
+$theme-lightbluecyan-primary: #aa2be5;
+$theme-lightbluecyan-info: #0288d1;
+$theme-lightbluecyan-success: #26c6da;
+$theme-lightbluecyan-danger: #fa4d8e;
+$theme-lightbluecyan-warning: #e4dc00;
+
+$theme-lightbluecyan-grd: linear-gradient(45deg, $theme-lightbluecyan-info, $theme-lightbluecyan-success);
+$theme-lightbluecyan-grd-dark: linear-gradient(45deg, darken($theme-lightbluecyan-info, 20%), darken($theme-lightbluecyan-success, 20%));
+
+$theme-pomegranate-primary: #9b3cb7;
+$theme-pomegranate-info: #1572f0;
+$theme-pomegranate-success: #15d481;
+$theme-pomegranate-danger: #ff396f;
+$theme-pomegranate-warning: #e4bc00;
+
+$theme-pomegranate-grd: linear-gradient(45deg, $theme-pomegranate-danger, $theme-pomegranate-primary);
+$theme-pomegranate-grd-dark: linear-gradient(45deg, darken($theme-pomegranate-danger, 20%), darken($theme-pomegranate-primary, 20%));
+
+$theme-manofsteel-primary: #061161;
+$theme-manofsteel-info: #2d4dc1;
+$theme-manofsteel-success: #28866a;
+$theme-manofsteel-danger: #780206;
+$theme-manofsteel-warning: #f9d52d;
+
+$theme-manofsteel-grd: linear-gradient(45deg, $theme-manofsteel-danger, $theme-manofsteel-primary 100%);
+$theme-manofsteel-grd-dark: linear-gradient(45deg, darken($theme-manofsteel-danger, 20%), darken($theme-manofsteel-primary, 20%) 100%);
+
+$theme-indigodarkblue-primary: #3949ab;
+$theme-indigodarkblue-info: #4fc3f7;
+$theme-indigodarkblue-success: #01da58;
+$theme-indigodarkblue-danger: #f21e26;
+$theme-indigodarkblue-warning: #d8ac13;
+
+$theme-indigodarkblue-grd: linear-gradient(45deg, $theme-indigodarkblue-primary, $theme-indigodarkblue-info);
+$theme-indigodarkblue-grd-dark: linear-gradient(45deg, darken($theme-indigodarkblue-primary, 20%), darken($theme-indigodarkblue-info, 20%));
+
+$theme-purplelightblue-primary: #175ef0;
+$theme-purplelightblue-info: #4fc3f7;
+$theme-purplelightblue-success: #10be72;
+$theme-purplelightblue-danger: #e040fb;
+$theme-purplelightblue-warning: #eadf2f;
+
+$theme-purplelightblue-grd: linear-gradient(45deg, $theme-purplelightblue-danger, $theme-purplelightblue-primary);
+$theme-purplelightblue-grd-dark: linear-gradient(45deg, darken($theme-purplelightblue-danger, 20%), darken($theme-purplelightblue-primary, 20%));

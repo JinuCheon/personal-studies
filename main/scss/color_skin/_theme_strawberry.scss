@@ -1,0 +1,2835 @@
+
+/**************************************
+Theme strawberry Color
+**************************************/
+.bg-gradient-strawberry 
+{
+	background-image: $theme-strawberry-grd;
+}
+.theme-strawberry{ 
+    .bg-gradient-strawberry{@extend .bg-gradient-strawberry}
+    .art-bg{@extend .bg-gradient-strawberry}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-strawberry
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-strawberry
+    }
+}
+
+.theme-strawberry.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-strawberry-dark
+{
+	background-image: $theme-strawberry-grd-dark;
+}
+
+.dark-skin{
+&.theme-strawberry{ 
+    .bg-gradient-strawberry{@extend .bg-gradient-strawberry-dark}
+    .art-bg{@extend .bg-gradient-strawberry-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-strawberry-dark
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-strawberry-dark
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-strawberry{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-strawberry-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-strawberry{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-strawberry-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-strawberry{
+    a{  
+        
+        @include hover-state{
+            color: $theme-strawberry-primary;
+        }         
+    }
+}
+.theme-strawberry{
+    &.light-skin, &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        background: $theme-strawberry-danger;
+                        color: $white !important;
+                        > i{
+                           color: $white; 
+                        }
+                        &:after{
+                            border-color: transparent #fafafa transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+         &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li.active{
+                        >a{
+                            >span{
+                                background: $theme-strawberry-danger !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        &:after{
+                            border-color: transparent lighten($black, 20%) transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+    /*---Primary Button---*/
+.theme-strawberry {
+    .btn-link {
+        color: $theme-strawberry-primary;
+    }
+    .btn-primary {
+        background-color: $theme-strawberry-primary;
+        border-color: $theme-strawberry-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-strawberry-primary, 10%) !important;
+            border-color: darken($theme-strawberry-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-strawberry-primary, 20%);
+            border-color: $theme-strawberry-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-strawberry-primary, 20%);
+            border-color: $theme-strawberry-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-primary, 10%) !important;
+            border-color: darken($theme-strawberry-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-strawberry-primary;
+        background-color: transparent;
+        border-color: $theme-strawberry-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-primary, 10%) !important;
+            border-color: darken($theme-strawberry-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-primary, 10%) !important;
+            border-color: darken($theme-strawberry-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-strawberry-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-primary, 10%) !important;
+            border-color: darken($theme-strawberry-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-strawberry {
+    .btn-info {
+        background-color: $theme-strawberry-info;
+        border-color: $theme-strawberry-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-strawberry-info, 10%) !important;
+            border-color: darken($theme-strawberry-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-strawberry-info, 20%);
+            border-color: $theme-strawberry-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-strawberry-info, 20%);
+            border-color: $theme-strawberry-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-info, 10%) !important;
+            border-color: darken($theme-strawberry-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-strawberry-info;
+        background-color: transparent;
+        border-color: $theme-strawberry-info;        
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-info, 10%) !important;
+            border-color: darken($theme-strawberry-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-info, 10%) !important;
+            border-color: darken($theme-strawberry-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-strawberry-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-info, 10%) !important;
+            border-color: darken($theme-strawberry-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-strawberry {
+    .btn-success {
+        background-color: $theme-strawberry-success;
+        border-color: $theme-strawberry-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-strawberry-success, 10%) !important;
+            border-color: darken($theme-strawberry-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-strawberry-success, 20%);
+            border-color: $theme-strawberry-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-strawberry-success, 20%);
+            border-color: $theme-strawberry-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-success, 10%) !important;
+            border-color: darken($theme-strawberry-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-strawberry-success;
+        background-color: transparent;
+        border-color: $theme-strawberry-success;        
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-success, 10%) !important;
+            border-color: darken($theme-strawberry-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-success, 10%) !important;
+            border-color: darken($theme-strawberry-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-strawberry-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-success, 10%) !important;
+            border-color: darken($theme-strawberry-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-strawberry {
+    .btn-danger {
+        background-color: $theme-strawberry-danger;
+        border-color: $theme-strawberry-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-strawberry-danger, 10%) !important;
+            border-color: darken($theme-strawberry-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-strawberry-danger, 20%);
+            border-color: $theme-strawberry-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-strawberry-danger, 20%);
+            border-color: $theme-strawberry-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-danger, 10%) !important;
+            border-color: darken($theme-strawberry-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-strawberry-danger;
+        background-color: transparent;
+        border-color: $theme-strawberry-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-danger, 10%) !important;
+            border-color: darken($theme-strawberry-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-danger, 10%) !important;
+            border-color: darken($theme-strawberry-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-strawberry-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-danger, 10%) !important;
+            border-color: darken($theme-strawberry-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-strawberry {
+    .btn-warning {
+        background-color: $theme-strawberry-warning;
+        border-color: $theme-strawberry-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-strawberry-warning, 10%) !important;
+            border-color: darken($theme-strawberry-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-strawberry-warning, 20%);
+            border-color: $theme-strawberry-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-strawberry-warning, 20%);
+            border-color: $theme-strawberry-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-warning, 10%) !important;
+            border-color: darken($theme-strawberry-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-strawberry-warning;
+        background-color: transparent;
+        border-color: $theme-strawberry-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-warning, 10%) !important;
+            border-color: darken($theme-strawberry-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-strawberry-warning, 10%) !important;
+            border-color: darken($theme-strawberry-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-strawberry-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-strawberry-warning, 10%) !important;
+            border-color: darken($theme-strawberry-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-strawberry{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-strawberry-primary;
+        background-color: $theme-strawberry-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-strawberry-info;
+        background-color: $theme-strawberry-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-strawberry-success;
+        background-color: $theme-strawberry-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-strawberry-danger;
+        background-color: $theme-strawberry-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-strawberry-warning;
+        background-color: $theme-strawberry-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-strawberry{
+    .alert-primary{
+        border-color: $theme-strawberry-primary;
+        background-color: $theme-strawberry-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-strawberry-info;
+        background-color: $theme-strawberry-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-strawberry-success;
+        background-color: $theme-strawberry-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-strawberry-danger;
+        background-color: $theme-strawberry-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-strawberry-danger;
+        background-color: $theme-strawberry-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-strawberry-warning;
+        background-color: $theme-strawberry-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-strawberry {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-strawberry-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-strawberry-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-strawberry-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-strawberry-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-strawberry-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-strawberry-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-strawberry-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-strawberry-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-strawberry-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-strawberry-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-strawberry{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-strawberry-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-strawberry-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-strawberry-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-strawberry-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-strawberry-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-strawberry-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-strawberry-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-strawberry-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-strawberry-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-strawberry-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-strawberry {
+    .border-primary {
+        border-color: $theme-strawberry-primary !important;
+    }
+    .border-info {
+        border-color: $theme-strawberry-info !important;
+    }
+    .border-success {
+        border-color: $theme-strawberry-success !important;
+    }
+    .border-danger {
+        border-color: $theme-strawberry-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-strawberry-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-strawberry {
+    .bg-primary {
+      background-color: $theme-strawberry-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-strawberry-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-strawberry-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-strawberry-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-strawberry-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-strawberry {
+    .text-primary {
+      color: $theme-strawberry-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-strawberry-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-strawberry-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-strawberry-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-strawberry-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-strawberry-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-strawberry-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-strawberry-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-strawberry-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-strawberry-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-strawberry-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-strawberry-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-strawberry-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-strawberry-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-strawberry-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-strawberry {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-strawberry-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-strawberry-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-strawberry-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-strawberry-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-strawberry-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-strawberry {
+    .label-primary{
+        background-color: $theme-strawberry-primary !important;
+    }
+    .label-info{
+        background-color: $theme-strawberry-info !important;
+    }
+    .label-success{
+        background-color: $theme-strawberry-success !important;
+    }
+    .label-danger{
+        background-color: $theme-strawberry-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-strawberry-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-strawberry {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-strawberry-primary;
+            
+            &:before  {
+                border-color: $theme-strawberry-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-strawberry-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-strawberry-info;
+            
+            &:before  {
+                border-color: $theme-strawberry-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-strawberry-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-strawberry-success;
+            
+            &:before  {
+                border-color: $theme-strawberry-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-strawberry-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-strawberry-danger;
+            
+            &:before  {
+                border-color: $theme-strawberry-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-strawberry-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-strawberry-warning;
+            
+            &:before  {
+                border-color: $theme-strawberry-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-strawberry-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-strawberry-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-strawberry{ 
+    .box-primary {
+        background-color: $theme-strawberry-primary !important;
+    &.box-bordered{
+        border-color: $theme-strawberry-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-strawberry-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-strawberry-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-strawberry-info !important;
+    &.box-bordered{
+        border-color: $theme-strawberry-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-strawberry-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-strawberry-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-strawberry-success !important;
+    &.box-bordered{
+        border-color: $theme-strawberry-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-strawberry-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-strawberry-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-strawberry-danger !important;
+    &.box-bordered{
+        border-color: $theme-strawberry-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-strawberry-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-strawberry-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-strawberry-warning !important;
+    &.box-bordered{
+        border-color: $theme-strawberry-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-strawberry-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-strawberry-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-strawberry-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-strawberry-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-strawberry-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-strawberry-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-strawberry {
+    .progress-bar-primary {
+        background-color: $theme-strawberry-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-strawberry-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-strawberry-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-strawberry-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-strawberry-warning;
+    }
+}
+    /*---panel---*/
+.theme-strawberry {
+    .panel-primary {
+        border-color: $theme-strawberry-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-strawberry-primary;
+            border-color: $theme-strawberry-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-strawberry-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-strawberry-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-strawberry-primary;
+          border-top-color: $theme-strawberry-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-strawberry-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-strawberry-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-strawberry-info;
+            border-color: $theme-strawberry-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-strawberry-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-strawberry-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-strawberry-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-strawberry-info;
+          border-top-color: $theme-strawberry-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-strawberry-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-strawberry-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-strawberry-success;
+            border-color: $theme-strawberry-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-strawberry-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-strawberry-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-strawberry-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-strawberry-success;
+          border-top-color: $theme-strawberry-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-strawberry-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-strawberry-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-strawberry-danger;
+            border-color: $theme-strawberry-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-strawberry-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-strawberry-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-strawberry-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-strawberry-danger;
+          border-top-color: $theme-strawberry-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-strawberry-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-strawberry-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-strawberry-warning;
+            border-color: $theme-strawberry-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-strawberry-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-strawberry-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-strawberry-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-strawberry-warning;
+          border-top-color: $theme-strawberry-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-strawberry-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-strawberry {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-strawberry-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-strawberry-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-strawberry-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-strawberry-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-strawberry-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-strawberry-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-strawberry {
+    .badge-primary {
+        background-color: $theme-strawberry-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-strawberry-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-strawberry-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-strawberry-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-strawberry-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-strawberry-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-strawberry-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-strawberry-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-strawberry-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-strawberry-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-strawberry {
+    .rating-primary {
+        .active {
+            color: $theme-strawberry-primary;
+        }
+        :checked ~ label {
+            color: $theme-strawberry-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-strawberry-primary;
+                ~ label {
+                    color: $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-strawberry-info;
+        }
+        :checked ~ label {
+            color: $theme-strawberry-info;
+        }
+        label{
+            &:hover {
+                color: $theme-strawberry-info;
+                ~ label {
+                    color: $theme-strawberry-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-strawberry-success;
+        }
+        :checked ~ label {
+            color: $theme-strawberry-success;
+        }
+        label{
+            &:hover {
+                color: $theme-strawberry-success;
+                ~ label {
+                    color: $theme-strawberry-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-strawberry-danger;
+        }
+        :checked ~ label {
+            color: $theme-strawberry-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-strawberry-danger;
+                ~ label {
+                    color: $theme-strawberry-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-strawberry-warning;
+        }
+        :checked ~ label {
+            color: $theme-strawberry-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-strawberry-warning;
+                ~ label {
+                    color: $theme-strawberry-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-strawberry {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-strawberry-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-strawberry-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-strawberry-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-strawberry-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-strawberry-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-strawberry {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-strawberry-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-strawberry-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-strawberry-info, 10%);
+                background-color: transparent;
+                color: darken($theme-strawberry-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-strawberry-success, 10%);
+                background-color: transparent;
+                color: darken($theme-strawberry-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-strawberry-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-strawberry-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-strawberry-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-strawberry-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-strawberry-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-strawberry-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-strawberry-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-strawberry-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-strawberry-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-strawberry-primary;
+            background-color: $theme-strawberry-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-strawberry-primary;
+                background-color: $theme-strawberry-primary;  
+                color: $white;  
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-strawberry-primary;
+                background-color: $theme-strawberry-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-strawberry-primary;
+                    background-color: $theme-strawberry-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-strawberry {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-strawberry-primary;
+        }
+        .info {
+            border-left-color: $theme-strawberry-primary;
+        }
+        .success {
+            border-left-color: $theme-strawberry-success;
+        }
+        .danger {
+            border-left-color: $theme-strawberry-danger;
+        }
+        .warning {
+            border-left-color: $theme-strawberry-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-strawberry {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-strawberry-primary;
+                  border: 1px solid  $theme-strawberry-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-strawberry-primary;
+                  border-right-color: $theme-strawberry-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-strawberry-info;
+                  border: 1px solid  $theme-strawberry-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-strawberry-info;
+                  border-right-color: $theme-strawberry-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-strawberry-success;
+                  border: 1px solid  $theme-strawberry-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-strawberry-success;
+                  border-right-color: $theme-strawberry-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-strawberry-danger;
+                  border: 1px solid  $theme-strawberry-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-strawberry-danger;
+                  border-right-color: $theme-strawberry-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-strawberry-warning;
+                  border: 1px solid  $theme-strawberry-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-strawberry-warning;
+                  border-right-color: $theme-strawberry-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-strawberry-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-strawberry-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-strawberry-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-strawberry-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-strawberry-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-strawberry-primary;
+            }
+            .label-info {
+                background-color: $theme-strawberry-info;
+            }
+            .label-success {
+                background-color: $theme-strawberry-success;
+            }
+            .label-danger {
+                background-color: $theme-strawberry-danger;
+            }
+            .label-warning {
+                background-color: $theme-strawberry-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-strawberry-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-strawberry-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-strawberry{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-strawberry-primary; 
+                &:hover{
+                   background-color: $theme-strawberry-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-strawberry-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-strawberry-primary;
+                background-color: $theme-strawberry-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-strawberry{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-strawberry-primary;
+                        color: $theme-strawberry-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-strawberry-primary;
+                        color: $theme-strawberry-primary;
+                        @include hover-state{
+                            border-color: $theme-strawberry-primary;
+                            color: $theme-strawberry-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-strawberry-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-strawberry{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-strawberry-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-strawberry-primary;
+	                   background-color: $theme-strawberry-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-strawberry-primary;
+	                   background-color: $theme-strawberry-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-strawberry-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-strawberry-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-strawberry-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-strawberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-strawberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-strawberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-strawberry {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-strawberry-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-strawberry-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-strawberry-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-strawberry-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-strawberry-primary;
+                    border-bottom: 2px solid $theme-strawberry-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-strawberry-info;
+                    border-bottom: 2px solid $theme-strawberry-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-strawberry-success;
+                    border-bottom: 2px solid $theme-strawberry-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-strawberry-danger;
+                    border-bottom: 2px solid $theme-strawberry-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-strawberry-warning;
+                    border-bottom: 2px solid $theme-strawberry-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-primary;
+                    background-color: $theme-strawberry-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-info;
+                    background-color: $theme-strawberry-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-success;
+                    background-color: $theme-strawberry-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-danger;
+                    background-color: $theme-strawberry-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-warning;
+                    background-color: $theme-strawberry-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-primary;
+                    border-color: $theme-strawberry-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-strawberry-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-primary;
+                    border: 2px solid $theme-strawberry-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-info;
+                    border-color: $theme-strawberry-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-strawberry-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-info;
+                    border: 2px solid $theme-strawberry-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-success;
+                    border-color: $theme-strawberry-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-strawberry-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-success;
+                    border: 2px solid $theme-strawberry-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-danger;
+                    border-color: $theme-strawberry-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-strawberry-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-danger;
+                    border: 2px solid $theme-strawberry-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-warning;
+                    border-color: $theme-strawberry-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-strawberry-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-strawberry-warning;
+                    border: 2px solid $theme-strawberry-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-strawberry-primary;
+                    border-bottom: 2px solid $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-primary;
+                    background-color: $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-strawberry-primary;
+                }
+                &:after {
+                    background-color: $theme-strawberry-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-strawberry-primary;
+                    background-color: $theme-strawberry-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-strawberry-primary;
+                    background-color: $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-strawberry{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-strawberry-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-strawberry-primary;
+                border-color: $theme-strawberry-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-strawberry-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-strawberry {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-strawberry-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-strawberry-primary;
+                        color: $theme-strawberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-strawberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-strawberry {
+    .jq-icon-primary { 
+        background-color: $theme-strawberry-primary; 
+        color: $white; 
+        border-color: $theme-strawberry-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-strawberry-info; 
+        color: $white; 
+        border-color: $theme-strawberry-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-strawberry-success; 
+        color: $white; 
+        border-color: $theme-strawberry-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-strawberry-danger; 
+        color: $white; 
+        border-color: $theme-strawberry-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-strawberry-danger; 
+        color: $white; 
+        border-color: $theme-strawberry-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-strawberry-warning; 
+        color: $white; 
+        border-color: $theme-strawberry-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-strawberry {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-strawberry-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-strawberry-info;
+        }
+        &.status-success::after {
+            background-color: $theme-strawberry-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-strawberry-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-strawberry-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-strawberry-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-strawberry-primary, 10%);
+        border-color: darken($theme-strawberry-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-strawberry {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-strawberry-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-strawberry-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-strawberry{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-strawberry-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-strawberry-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-strawberry-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-strawberry{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-strawberry-primary;
+                        &:hover{
+                            border-left-color: $theme-strawberry-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-strawberry{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-strawberry-primary;
+                    background-color: $theme-strawberry-primary;
+                    &:hover{
+                        border: 1px solid $theme-strawberry-primary;
+                        background-color: $theme-strawberry-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-strawberry-primary, 10%);
+                    background-color: darken($theme-strawberry-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-strawberry-primary;
+                background-color: $theme-strawberry-primary;
+                    &:hover{
+                        border: 1px solid $theme-strawberry-primary;
+                        background-color: $theme-strawberry-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-strawberry-primary;
+                }
+                &:hover a{
+                    background-color: $theme-strawberry-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-strawberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-strawberry {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-strawberry-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-strawberry {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-strawberry-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-strawberry-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-strawberry-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-strawberry-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-strawberry-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-strawberry-primary;
+                border-color: $theme-strawberry-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-strawberry{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-strawberry-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-strawberry-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-strawberry-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-strawberry-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-strawberry{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-strawberry-primary;
+                        background-color: $theme-strawberry-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-strawberry-primary, 10%);
+                        background-color: darken($theme-strawberry-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-strawberry-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-strawberry-primary;
+                        }
+                       &:before{
+                            background-color: $theme-strawberry-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-strawberry-primary;
+                        }
+                       &:before{
+                            background-color: $theme-strawberry-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-strawberry-primary;
+                                color: $theme-strawberry-primary;
+                                &:after{
+                                    border-top-color: $theme-strawberry-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-strawberry-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-strawberry{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-strawberry-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-strawberry{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-strawberry-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-strawberry{
+    #primary {
+        .slider-selection{
+            background-color: $theme-strawberry-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-strawberry-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-strawberry-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-strawberry-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-strawberry-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-strawberry{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-strawberry-primary;
+	                    border-color: $theme-strawberry-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-strawberry-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-strawberry-primary;
+        }
+        a{ 
+            color: $theme-strawberry-primary; 
+            @include hover-focus-state{
+                color: $theme-strawberry-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-strawberry-primary;    
+            }
+        }
+    }
+}

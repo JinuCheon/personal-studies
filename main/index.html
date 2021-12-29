@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pearl Admin - Dashboard Support Ticket </title>
+
+  <!-- Bootstrap 4.0-->
+  <link rel="stylesheet" href="../assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- Data Table-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor_components/datatable/datatables.min.css" />
+
+  <!-- theme style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Admin skins -->
+  <link rel="stylesheet" href="css/skin_color.css">
+
+
+</head>
+
+<body class="hold-transition light-skin sidebar-mini theme-blackberry">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <div class="d-flex align-items-center ml-5">
+        <a href="#" class="waves-effect waves-light nav-link rounded d-none d-md-inline-block" data-toggle="push-menu"
+          role="button">
+          <i class="nav-link-icon mdi mdi-menu text-white"></i>
+        </a>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <!-- logo-->
+          <div class="logo-lg">
+            <span>재고관리앱</span>
+          </div>
+        </a>
+      </div>
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <div class="app-menu">
+          <ul class="header-megamenu nav">
+            <li class="btn-group nav-item d-md-none">
+              <a href="#" class="waves-effect waves-light nav-link rounded" data-toggle="push-menu" role="button">
+                <i class="nav-link-icon mdi mdi-menu text-white"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar-custom-menu r-side">
+          <ul class="nav navbar-nav">
+            <!-- full Screen -->
+            <li class="search-bar">
+              <div class="lookup lookup-circle lookup-right">
+                <input type="text" name="s">
+              </div>
+            </li>
+            <!-- Notifications -->
+            <li class="dropdown notifications-menu">
+              <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="Notifications">
+                <i class="mdi mdi-bell"></i>
+              </a>
+              <ul class="dropdown-menu animated bounceIn">
+
+                <li class="header">
+                  <div class="p-20">
+                    <div class="flexbox">
+                      <div>
+                        <h4 class="mb-0 mt-0">Notifications</h4>
+                      </div>
+                      <div>
+                        <a href="#" class="text-danger">Clear All</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu sm-scrol">
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper
+                        diam posuere.
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium
+                        a erat.
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque
+                        ipsum imperdiet.
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer">
+                  <a href="#">View all</a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar-->
+      <section class="sidebar">
+        <!-- sidebar menu-->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li>
+            <a href="/">
+              <i class="mdi mdi-export"></i>
+              <span>메뉴1</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <i class="mdi mdi-export"></i>
+              <span>메뉴2</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <i class="mdi mdi-export"></i>
+              <span>메뉴3</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <i class="mdi mdi-export"></i>
+              <span>메뉴4</span>
+            </a>
+          </li>
+
+          <li class="header line"></li>
+
+        </ul>
+      </section>
+    </aside>
+
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="d-flex align-items-center">
+            <div class="mr-auto">
+              <h3 class="page-title">Tickets</h3>
+              <div class="d-inline-block align-items-center">
+                <nav>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                    <li class="breadcrumb-item" aria-current="page">Extra</li>
+                    <li class="breadcrumb-item active" aria-current="page">재고현황</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+
+          <div class="row">
+            <div class="col-lg-3 col-6">
+              <a class="box box-link-shadow text-center" href="javascript:void(0)">
+                <div class="box-body">
+                  <div class="font-size-24">+264</div>
+                  <span>Total Tickets</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-6">
+              <a class="box box-link-shadow text-center" href="javascript:void(0)">
+                <div class="box-body">
+                  <div class="font-size-24">175</div>
+                  <span>Responded</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-6">
+              <a class="box box-link-shadow text-center" href="javascript:void(0)">
+                <div class="box-body">
+                  <div class="font-size-24">110</div>
+                  <span>Resolve</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-6">
+              <a class="box box-link-shadow text-center" href="javascript:void(0)">
+                <div class="box-body">
+                  <div class="font-size-24">59</div>
+                  <span>Pending</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-12">
+              <div class="box">
+                <div class="box-header with-border">
+                  <h4 class="box-title">Support Ticket List</h4>
+                  <h6 class="box-subtitle">List of ticket opend by customers</h6>
+                </div>
+                <div class="box-body p-15">
+                  <div class="table-responsive">
+                    <table id="tickets" class="table mt-0 table-hover no-wrap table-borderless" data-page-size="10">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Ope. by</th>
+                          <th>Cust. Email</th>
+                          <th>Sbuject</th>
+                          <th>Status</th>
+                          <th>Ass. to</th>
+                          <th>Date</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1011</td>
+                          <td>
+                            <a href="javascript:void(0)">Sophia</a>
+                          </td>
+                          <td>sophia@gmail.com</td>
+                          <td>How to customize the template?</td>
+                          <td><span class="badge badge-warning">New</span> </td>
+                          <td>Elijah</td>
+                          <td>14-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1224</td>
+                          <td>
+                            <a href="javascript:void(0)">William</a>
+                          </td>
+                          <td>william@gmail.com</td>
+                          <td>How to change colors</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Benjamin</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1024</td>
+                          <td>
+                            <a href="javascript:void(0)">Jayden</a>
+                          </td>
+                          <td>jayden@gmail.com</td>
+                          <td>How to set Horizontal nav</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2124</td>
+                          <td>
+                            <a href="javascript:void(0)">Ethan</a>
+                          </td>
+                          <td>ethan@gmail.com</td>
+                          <td>How this will connect with ethan</td>
+                          <td><span class="badge badge-danger">Pending</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3124</td>
+                          <td>
+                            <a href="javascript:void(0)">Noah</a>
+                          </td>
+                          <td>noah@gmail.com</td>
+                          <td>How to set navigation</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1611</td>
+                          <td>
+                            <a href="javascript:void(0)">Sophia</a>
+                          </td>
+                          <td>sophia@gmail.com</td>
+                          <td>How to customize the template?</td>
+                          <td><span class="badge badge-warning">New</span> </td>
+                          <td>Elijah</td>
+                          <td>14-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4224</td>
+                          <td>
+                            <a href="javascript:void(0)">William</a>
+                          </td>
+                          <td>william@gmail.com</td>
+                          <td>How to change colors</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Benjamin</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2524</td>
+                          <td>
+                            <a href="javascript:void(0)">Jayden</a>
+                          </td>
+                          <td>jayden@gmail.com</td>
+                          <td>How to set Horizontal nav</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7524</td>
+                          <td>
+                            <a href="javascript:void(0)">Ethan</a>
+                          </td>
+                          <td>ethan@gmail.com</td>
+                          <td>How this will connect with ethan</td>
+                          <td><span class="badge badge-danger">Pending</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4124</td>
+                          <td>
+                            <a href="javascript:void(0)">Noah</a>
+                          </td>
+                          <td>noah@gmail.com</td>
+                          <td>How to set navigation</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1011</td>
+                          <td>
+                            <a href="javascript:void(0)">Mia</a>
+                          </td>
+                          <td>sophia@gmail.com</td>
+                          <td>How to customize the template?</td>
+                          <td><span class="badge badge-warning">New</span> </td>
+                          <td>Elijah</td>
+                          <td>14-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1224</td>
+                          <td>
+                            <a href="javascript:void(0)">Chloe</a>
+                          </td>
+                          <td>william@gmail.com</td>
+                          <td>How to change colors</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Benjamin</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8024</td>
+                          <td>
+                            <a href="javascript:void(0)">Chloe</a>
+                          </td>
+                          <td>jayden@gmail.com</td>
+                          <td>How to set Horizontal nav</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5124</td>
+                          <td>
+                            <a href="javascript:void(0)">Ethan</a>
+                          </td>
+                          <td>ethan@gmail.com</td>
+                          <td>How this will connect with ethan</td>
+                          <td><span class="badge badge-danger">Pending</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3144</td>
+                          <td>
+                            <a href="javascript:void(0)">Noah</a>
+                          </td>
+                          <td>noah@gmail.com</td>
+                          <td>How to set navigation</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1621</td>
+                          <td>
+                            <a href="javascript:void(0)">Sophia</a>
+                          </td>
+                          <td>sophia@gmail.com</td>
+                          <td>How to customize the template?</td>
+                          <td><span class="badge badge-warning">New</span> </td>
+                          <td>Elijah</td>
+                          <td>14-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4724</td>
+                          <td>
+                            <a href="javascript:void(0)">William</a>
+                          </td>
+                          <td>william@gmail.com</td>
+                          <td>How to change colors</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Benjamin</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2594</td>
+                          <td>
+                            <a href="javascript:void(0)">Jayden</a>
+                          </td>
+                          <td>jayden@gmail.com</td>
+                          <td>How to set Horizontal nav</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>13-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7524</td>
+                          <td>
+                            <a href="javascript:void(0)">Ethan</a>
+                          </td>
+                          <td>ethan@gmail.com</td>
+                          <td>How this will connect with ethan</td>
+                          <td><span class="badge badge-danger">Pending</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4124</td>
+                          <td>
+                            <a href="javascript:void(0)">Noah</a>
+                          </td>
+                          <td>noah@gmail.com</td>
+                          <td>How to set navigation</td>
+                          <td><span class="badge badge-success">Complete</span> </td>
+                          <td>Andrew</td>
+                          <td>12-10-2018</td>
+                          <td>
+                            <a href="javascript:void(0)" class="text-danger" data-toggle="tooltip"
+                              data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.row -->
+
+        </section>
+        <!-- /.content -->
+      </div>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+      &copy; 2020 <a href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
+    </footer>
+    <!-- Control Sidebar -->
+
+
+
+    <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery 3 -->
+  <script src="../assets/vendor_components/jquery-3.3.1/jquery-3.3.1.js"></script>
+
+  <!-- fullscreen -->
+  <script src="../assets/vendor_components/screenfull/screenfull.js"></script>
+
+  <!-- popper -->
+  <script src="../assets/vendor_components/popper/dist/popper.min.js"></script>
+
+  <!-- Bootstrap 4.0-->
+  <script src="../assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- This is data table -->
+  <script src="../assets/vendor_components/datatable/datatables.min.js"></script>
+
+  <!-- SlimScroll -->
+  <script src="../assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+  <!-- FastClick -->
+  <script src="../assets/vendor_components/fastclick/lib/fastclick.js"></script>
+
+  <!-- sparkline -->
+  <script src="../assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.js"></script>
+
+  <!-- peity -->
+  <script src="../assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+
+  <!-- Pearl Admin App -->
+  <script src="js/template.js"></script>
+
+  <!-- Pearl Admin for demo purposes -->
+  <script src="js/demo.js"></script>
+
+  <!-- Pearl Admin for Data Table -->
+  <script src="js/pages/data-table.js"></script>
+
+  <!-- demo only -->
+  <script src="js/pages/app-ticket.js"></script>
+
+
+</body>
+
+</html>
