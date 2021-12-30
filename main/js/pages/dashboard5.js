@@ -35,10 +35,10 @@ $(function () {
 	  },
 	  colors: ["#2444e8", "#c6cffb"],
 	  series: [{
-		  name: 'New Visitors',
+		  name: '입고',
 		  data: [70, 45, 51, 58, 59, 58, 61, 65, 60, 69]
 	  }, {
-		  name: 'Unique Visitors',
+		  name: '출고',
 		  data: [55, 71, 80, 100, 89, 98, 110, 95, 116, 90]
 	  },],
 	  xaxis: {
