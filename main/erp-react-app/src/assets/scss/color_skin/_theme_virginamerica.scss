@@ -1,0 +1,2834 @@
+/**************************************
+Theme virginamerica Color
+**************************************/
+.bg-gradient-virginamerica 
+{
+	background-image: $theme-virginamerica-grd;
+}
+.theme-virginamerica{ 
+    .bg-gradient-virginamerica{@extend .bg-gradient-virginamerica}
+    .art-bg{@extend .bg-gradient-virginamerica}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-virginamerica
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-virginamerica
+    }
+}
+
+.theme-virginamerica.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-virginamerica-dark
+{
+	background-image: $theme-virginamerica-grd-dark;
+}
+
+.dark-skin{
+&.theme-virginamerica{ 
+    .bg-gradient-virginamerica{@extend .bg-gradient-virginamerica-dark}
+    .art-bg{@extend .bg-gradient-virginamerica-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-virginamerica-dark
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-virginamerica-dark
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-virginamerica{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-virginamerica-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-virginamerica{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-virginamerica-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-virginamerica{
+    a{  
+        
+        @include hover-state{
+            color: $theme-virginamerica-primary;
+        }         
+    }
+}
+.theme-virginamerica{
+    &.light-skin, &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        background: $theme-virginamerica-primary;
+                        color: $white !important;
+                        > i{
+                           color: $white; 
+                        }
+                        &:after{
+                            border-color: transparent #fafafa transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+         &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li.active{
+                        >a{
+                            >span{
+                                background: $theme-virginamerica-primary !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        &:after{
+                            border-color: transparent lighten($black, 20%) transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+    /*---Primary Button---*/
+.theme-virginamerica {
+    .btn-link {
+        color: $theme-virginamerica-primary;
+    }
+    .btn-primary {
+        background-color: $theme-virginamerica-primary;
+        border-color: $theme-virginamerica-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-virginamerica-primary, 10%) !important;
+            border-color: darken($theme-virginamerica-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-virginamerica-primary, 20%);
+            border-color: $theme-virginamerica-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-virginamerica-primary, 20%);
+            border-color: $theme-virginamerica-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-primary, 10%) !important;
+            border-color: darken($theme-virginamerica-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-virginamerica-primary;
+        background-color: transparent;
+        border-color: $theme-virginamerica-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-primary, 10%) !important;
+            border-color: darken($theme-virginamerica-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-primary, 10%) !important;
+            border-color: darken($theme-virginamerica-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-virginamerica-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-primary, 10%) !important;
+            border-color: darken($theme-virginamerica-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-virginamerica {
+    .btn-info {
+        background-color: $theme-virginamerica-info;
+        border-color: $theme-virginamerica-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-virginamerica-info, 10%) !important;
+            border-color: darken($theme-virginamerica-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-virginamerica-info, 20%);
+            border-color: $theme-virginamerica-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-virginamerica-info, 20%);
+            border-color: $theme-virginamerica-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-info, 10%) !important;
+            border-color: darken($theme-virginamerica-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-virginamerica-info;
+        background-color: transparent;
+        border-color: $theme-virginamerica-info;        
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-info, 10%) !important;
+            border-color: darken($theme-virginamerica-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-info, 10%) !important;
+            border-color: darken($theme-virginamerica-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-virginamerica-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-info, 10%) !important;
+            border-color: darken($theme-virginamerica-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-virginamerica {
+    .btn-success {
+        background-color: $theme-virginamerica-success;
+        border-color: $theme-virginamerica-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-virginamerica-success, 10%) !important;
+            border-color: darken($theme-virginamerica-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-virginamerica-success, 20%);
+            border-color: $theme-virginamerica-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-virginamerica-success, 20%);
+            border-color: $theme-virginamerica-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-success, 10%) !important;
+            border-color: darken($theme-virginamerica-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-virginamerica-success;
+        background-color: transparent;
+        border-color: $theme-virginamerica-success;        
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-success, 10%) !important;
+            border-color: darken($theme-virginamerica-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-success, 10%) !important;
+            border-color: darken($theme-virginamerica-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-virginamerica-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-success, 10%) !important;
+            border-color: darken($theme-virginamerica-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-virginamerica {
+    .btn-danger {
+        background-color: $theme-virginamerica-danger;
+        border-color: $theme-virginamerica-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-virginamerica-danger, 10%) !important;
+            border-color: darken($theme-virginamerica-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-virginamerica-danger, 20%);
+            border-color: $theme-virginamerica-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-virginamerica-danger, 20%);
+            border-color: $theme-virginamerica-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-danger, 10%) !important;
+            border-color: darken($theme-virginamerica-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-virginamerica-danger;
+        background-color: transparent;
+        border-color: $theme-virginamerica-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-danger, 10%) !important;
+            border-color: darken($theme-virginamerica-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-danger, 10%) !important;
+            border-color: darken($theme-virginamerica-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-virginamerica-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-danger, 10%) !important;
+            border-color: darken($theme-virginamerica-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-virginamerica {
+    .btn-warning {
+        background-color: $theme-virginamerica-warning;
+        border-color: $theme-virginamerica-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-virginamerica-warning, 10%) !important;
+            border-color: darken($theme-virginamerica-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-virginamerica-warning, 20%);
+            border-color: $theme-virginamerica-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-virginamerica-warning, 20%);
+            border-color: $theme-virginamerica-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-warning, 10%) !important;
+            border-color: darken($theme-virginamerica-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-virginamerica-warning;
+        background-color: transparent;
+        border-color: $theme-virginamerica-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-warning, 10%) !important;
+            border-color: darken($theme-virginamerica-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-virginamerica-warning, 10%) !important;
+            border-color: darken($theme-virginamerica-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-virginamerica-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-virginamerica-warning, 10%) !important;
+            border-color: darken($theme-virginamerica-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-virginamerica{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-virginamerica-primary;
+        background-color: $theme-virginamerica-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-virginamerica-info;
+        background-color: $theme-virginamerica-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-virginamerica-success;
+        background-color: $theme-virginamerica-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-virginamerica-danger;
+        background-color: $theme-virginamerica-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-virginamerica-warning;
+        background-color: $theme-virginamerica-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-virginamerica{
+    .alert-primary{
+        border-color: $theme-virginamerica-primary;
+        background-color: $theme-virginamerica-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-virginamerica-info;
+        background-color: $theme-virginamerica-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-virginamerica-success;
+        background-color: $theme-virginamerica-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-virginamerica-danger;
+        background-color: $theme-virginamerica-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-virginamerica-danger;
+        background-color: $theme-virginamerica-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-virginamerica-warning;
+        background-color: $theme-virginamerica-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-virginamerica {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-virginamerica-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-virginamerica-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-virginamerica-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-virginamerica-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-virginamerica-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-virginamerica-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-virginamerica-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-virginamerica-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-virginamerica-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-virginamerica-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-virginamerica{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-virginamerica-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-virginamerica-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-virginamerica-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-virginamerica-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-virginamerica-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-virginamerica-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-virginamerica-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-virginamerica-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-virginamerica-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-virginamerica-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-virginamerica {
+    .border-primary {
+        border-color: $theme-virginamerica-primary !important;
+    }
+    .border-info {
+        border-color: $theme-virginamerica-info !important;
+    }
+    .border-success {
+        border-color: $theme-virginamerica-success !important;
+    }
+    .border-danger {
+        border-color: $theme-virginamerica-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-virginamerica-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-virginamerica {
+    .bg-primary {
+      background-color: $theme-virginamerica-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-virginamerica-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-virginamerica-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-virginamerica-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-virginamerica-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-virginamerica {
+    .text-primary {
+      color: $theme-virginamerica-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-virginamerica-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-virginamerica-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-virginamerica-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-virginamerica-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-virginamerica-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-virginamerica-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-virginamerica-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-virginamerica-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-virginamerica-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-virginamerica-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-virginamerica-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-virginamerica-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-virginamerica-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-virginamerica-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-virginamerica {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-virginamerica-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-virginamerica-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-virginamerica-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-virginamerica-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-virginamerica-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-virginamerica {
+    .label-primary{
+        background-color: $theme-virginamerica-primary !important;
+    }
+    .label-info{
+        background-color: $theme-virginamerica-info !important;
+    }
+    .label-success{
+        background-color: $theme-virginamerica-success !important;
+    }
+    .label-danger{
+        background-color: $theme-virginamerica-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-virginamerica-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-virginamerica {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-virginamerica-primary;
+            
+            &:before  {
+                border-color: $theme-virginamerica-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-virginamerica-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-virginamerica-info;
+            
+            &:before  {
+                border-color: $theme-virginamerica-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-virginamerica-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-virginamerica-success;
+            
+            &:before  {
+                border-color: $theme-virginamerica-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-virginamerica-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-virginamerica-danger;
+            
+            &:before  {
+                border-color: $theme-virginamerica-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-virginamerica-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-virginamerica-warning;
+            
+            &:before  {
+                border-color: $theme-virginamerica-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-virginamerica-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-virginamerica-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-virginamerica{ 
+    .box-primary {
+        background-color: $theme-virginamerica-primary !important;
+    &.box-bordered{
+        border-color: $theme-virginamerica-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-virginamerica-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-virginamerica-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-virginamerica-info !important;
+    &.box-bordered{
+        border-color: $theme-virginamerica-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-virginamerica-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-virginamerica-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-virginamerica-success !important;
+    &.box-bordered{
+        border-color: $theme-virginamerica-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-virginamerica-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-virginamerica-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-virginamerica-danger !important;
+    &.box-bordered{
+        border-color: $theme-virginamerica-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-virginamerica-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-virginamerica-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-virginamerica-warning !important;
+    &.box-bordered{
+        border-color: $theme-virginamerica-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-virginamerica-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-virginamerica-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-virginamerica-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-virginamerica-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-virginamerica-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-virginamerica-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-virginamerica {
+    .progress-bar-primary {
+        background-color: $theme-virginamerica-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-virginamerica-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-virginamerica-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-virginamerica-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-virginamerica-warning;
+    }
+}
+    /*---panel---*/
+.theme-virginamerica {
+    .panel-primary {
+        border-color: $theme-virginamerica-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-virginamerica-primary;
+            border-color: $theme-virginamerica-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-virginamerica-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-virginamerica-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-virginamerica-primary;
+          border-top-color: $theme-virginamerica-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-virginamerica-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-virginamerica-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-virginamerica-info;
+            border-color: $theme-virginamerica-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-virginamerica-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-virginamerica-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-virginamerica-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-virginamerica-info;
+          border-top-color: $theme-virginamerica-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-virginamerica-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-virginamerica-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-virginamerica-success;
+            border-color: $theme-virginamerica-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-virginamerica-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-virginamerica-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-virginamerica-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-virginamerica-success;
+          border-top-color: $theme-virginamerica-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-virginamerica-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-virginamerica-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-virginamerica-danger;
+            border-color: $theme-virginamerica-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-virginamerica-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-virginamerica-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-virginamerica-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-virginamerica-danger;
+          border-top-color: $theme-virginamerica-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-virginamerica-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-virginamerica-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-virginamerica-warning;
+            border-color: $theme-virginamerica-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-virginamerica-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-virginamerica-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-virginamerica-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-virginamerica-warning;
+          border-top-color: $theme-virginamerica-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-virginamerica-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-virginamerica {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-virginamerica-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-virginamerica-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-virginamerica-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-virginamerica-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-virginamerica-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-virginamerica-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-virginamerica {
+    .badge-primary {
+        background-color: $theme-virginamerica-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-virginamerica-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-virginamerica-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-virginamerica-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-virginamerica-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-virginamerica-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-virginamerica-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-virginamerica-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-virginamerica-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-virginamerica-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-virginamerica {
+    .rating-primary {
+        .active {
+            color: $theme-virginamerica-primary;
+        }
+        :checked ~ label {
+            color: $theme-virginamerica-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-virginamerica-primary;
+                ~ label {
+                    color: $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-virginamerica-info;
+        }
+        :checked ~ label {
+            color: $theme-virginamerica-info;
+        }
+        label{
+            &:hover {
+                color: $theme-virginamerica-info;
+                ~ label {
+                    color: $theme-virginamerica-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-virginamerica-success;
+        }
+        :checked ~ label {
+            color: $theme-virginamerica-success;
+        }
+        label{
+            &:hover {
+                color: $theme-virginamerica-success;
+                ~ label {
+                    color: $theme-virginamerica-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-virginamerica-danger;
+        }
+        :checked ~ label {
+            color: $theme-virginamerica-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-virginamerica-danger;
+                ~ label {
+                    color: $theme-virginamerica-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-virginamerica-warning;
+        }
+        :checked ~ label {
+            color: $theme-virginamerica-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-virginamerica-warning;
+                ~ label {
+                    color: $theme-virginamerica-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-virginamerica {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-virginamerica-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-virginamerica-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-virginamerica-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-virginamerica-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-virginamerica-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-virginamerica {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-virginamerica-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-virginamerica-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-virginamerica-info, 10%);
+                background-color: transparent;
+                color: darken($theme-virginamerica-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-virginamerica-success, 10%);
+                background-color: transparent;
+                color: darken($theme-virginamerica-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-virginamerica-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-virginamerica-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-virginamerica-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-virginamerica-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-virginamerica-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-virginamerica-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-virginamerica-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-virginamerica-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-virginamerica-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-virginamerica-primary;
+            background-color: $theme-virginamerica-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-virginamerica-primary;
+                background-color: $theme-virginamerica-primary; 
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-virginamerica-primary;
+                background-color: $theme-virginamerica-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-virginamerica-primary;
+                    background-color: $theme-virginamerica-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-virginamerica {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-virginamerica-primary;
+        }
+        .info {
+            border-left-color: $theme-virginamerica-primary;
+        }
+        .success {
+            border-left-color: $theme-virginamerica-success;
+        }
+        .danger {
+            border-left-color: $theme-virginamerica-danger;
+        }
+        .warning {
+            border-left-color: $theme-virginamerica-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-virginamerica {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-virginamerica-primary;
+                  border: 1px solid  $theme-virginamerica-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-virginamerica-primary;
+                  border-right-color: $theme-virginamerica-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-virginamerica-info;
+                  border: 1px solid  $theme-virginamerica-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-virginamerica-info;
+                  border-right-color: $theme-virginamerica-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-virginamerica-success;
+                  border: 1px solid  $theme-virginamerica-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-virginamerica-success;
+                  border-right-color: $theme-virginamerica-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-virginamerica-danger;
+                  border: 1px solid  $theme-virginamerica-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-virginamerica-danger;
+                  border-right-color: $theme-virginamerica-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-virginamerica-warning;
+                  border: 1px solid  $theme-virginamerica-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-virginamerica-warning;
+                  border-right-color: $theme-virginamerica-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-virginamerica-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-virginamerica-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-virginamerica-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-virginamerica-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-virginamerica-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-virginamerica-primary;
+            }
+            .label-info {
+                background-color: $theme-virginamerica-info;
+            }
+            .label-success {
+                background-color: $theme-virginamerica-success;
+            }
+            .label-danger {
+                background-color: $theme-virginamerica-danger;
+            }
+            .label-warning {
+                background-color: $theme-virginamerica-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-virginamerica-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-virginamerica-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-virginamerica{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-virginamerica-primary; 
+                &:hover{
+                   background-color: $theme-virginamerica-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-virginamerica-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-virginamerica-primary;
+                background-color: $theme-virginamerica-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-virginamerica{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-virginamerica-primary;
+                        color: $theme-virginamerica-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-virginamerica-primary;
+                        color: $theme-virginamerica-primary;
+                        @include hover-state{
+                            border-color: $theme-virginamerica-primary;
+                            color: $theme-virginamerica-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-virginamerica-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-virginamerica{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-virginamerica-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-virginamerica-primary;
+	                   background-color: $theme-virginamerica-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-virginamerica-primary;
+	                   background-color: $theme-virginamerica-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-virginamerica-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-virginamerica-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-virginamerica-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-virginamerica-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-virginamerica-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-virginamerica-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-virginamerica {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-virginamerica-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-virginamerica-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-virginamerica-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-virginamerica-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-virginamerica-primary;
+                    border-bottom: 2px solid $theme-virginamerica-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-virginamerica-info;
+                    border-bottom: 2px solid $theme-virginamerica-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-virginamerica-success;
+                    border-bottom: 2px solid $theme-virginamerica-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-virginamerica-danger;
+                    border-bottom: 2px solid $theme-virginamerica-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-virginamerica-warning;
+                    border-bottom: 2px solid $theme-virginamerica-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-primary;
+                    background-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-info;
+                    background-color: $theme-virginamerica-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-success;
+                    background-color: $theme-virginamerica-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-danger;
+                    background-color: $theme-virginamerica-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-warning;
+                    background-color: $theme-virginamerica-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-primary;
+                    border-color: $theme-virginamerica-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-virginamerica-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-primary;
+                    border: 2px solid $theme-virginamerica-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-info;
+                    border-color: $theme-virginamerica-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-virginamerica-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-info;
+                    border: 2px solid $theme-virginamerica-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-success;
+                    border-color: $theme-virginamerica-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-virginamerica-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-success;
+                    border: 2px solid $theme-virginamerica-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-danger;
+                    border-color: $theme-virginamerica-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-virginamerica-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-danger;
+                    border: 2px solid $theme-virginamerica-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-warning;
+                    border-color: $theme-virginamerica-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-virginamerica-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-virginamerica-warning;
+                    border: 2px solid $theme-virginamerica-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-virginamerica-primary;
+                    border-bottom: 2px solid $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-primary;
+                    background-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-virginamerica-primary;
+                }
+                &:after {
+                    background-color: $theme-virginamerica-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-virginamerica-primary;
+                    background-color: $theme-virginamerica-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-virginamerica-primary;
+                    background-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-virginamerica{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-virginamerica-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-virginamerica-primary;
+                border-color: $theme-virginamerica-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-virginamerica-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-virginamerica {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-virginamerica-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-virginamerica-primary;
+                        color: $theme-virginamerica-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-virginamerica-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-virginamerica {
+    .jq-icon-primary { 
+        background-color: $theme-virginamerica-primary; 
+        color: $white; 
+        border-color: $theme-virginamerica-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-virginamerica-info; 
+        color: $white; 
+        border-color: $theme-virginamerica-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-virginamerica-success; 
+        color: $white; 
+        border-color: $theme-virginamerica-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-virginamerica-danger; 
+        color: $white; 
+        border-color: $theme-virginamerica-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-virginamerica-danger; 
+        color: $white; 
+        border-color: $theme-virginamerica-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-virginamerica-warning; 
+        color: $white; 
+        border-color: $theme-virginamerica-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-virginamerica {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-virginamerica-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-virginamerica-info;
+        }
+        &.status-success::after {
+            background-color: $theme-virginamerica-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-virginamerica-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-virginamerica-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-virginamerica-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-virginamerica-primary, 10%);
+        border-color: darken($theme-virginamerica-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-virginamerica {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-virginamerica-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-virginamerica-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-virginamerica{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-virginamerica-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-virginamerica-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-virginamerica-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-virginamerica{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-virginamerica-primary;
+                        &:hover{
+                            border-left-color: $theme-virginamerica-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-virginamerica{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-virginamerica-primary;
+                    background-color: $theme-virginamerica-primary;
+                    &:hover{
+                        border: 1px solid $theme-virginamerica-primary;
+                        background-color: $theme-virginamerica-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-virginamerica-primary, 10%);
+                    background-color: darken($theme-virginamerica-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-virginamerica-primary;
+                background-color: $theme-virginamerica-primary;
+                    &:hover{
+                        border: 1px solid $theme-virginamerica-primary;
+                        background-color: $theme-virginamerica-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-virginamerica-primary;
+                }
+                &:hover a{
+                    background-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-virginamerica-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-virginamerica {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-virginamerica-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-virginamerica {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-virginamerica-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-virginamerica-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-virginamerica-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-virginamerica-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-virginamerica-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-virginamerica-primary;
+                border-color: $theme-virginamerica-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-virginamerica{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-virginamerica-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-virginamerica-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-virginamerica-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-virginamerica-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-virginamerica{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-virginamerica-primary;
+                        background-color: $theme-virginamerica-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-virginamerica-primary, 10%);
+                        background-color: darken($theme-virginamerica-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-virginamerica-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-virginamerica-primary;
+                        }
+                       &:before{
+                            background-color: $theme-virginamerica-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-virginamerica-primary;
+                        }
+                       &:before{
+                            background-color: $theme-virginamerica-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-virginamerica-primary;
+                                color: $theme-virginamerica-primary;
+                                &:after{
+                                    border-top-color: $theme-virginamerica-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-virginamerica-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-virginamerica{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-virginamerica-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-virginamerica{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-virginamerica-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-virginamerica{
+    #primary {
+        .slider-selection{
+            background-color: $theme-virginamerica-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-virginamerica-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-virginamerica-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-virginamerica-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-virginamerica-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-virginamerica{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-virginamerica-primary;
+	                    border-color: $theme-virginamerica-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-virginamerica-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-virginamerica-primary;
+        }
+        a{
+            color: $theme-virginamerica-primary; 
+            @include hover-focus-state{
+                color: $theme-virginamerica-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-virginamerica-primary;    
+            }
+        }
+    }
+}
