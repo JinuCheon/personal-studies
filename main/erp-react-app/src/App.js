@@ -1,25 +1,28 @@
 import { React } from 'react';
 import { Helmet } from 'react-helmet';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import './App.css';
 import './assets/css/style.css';
 import './assets/css/skin_color.css'
 import './assets/vendor_components/bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header.js'
 import Aside from './components/Aside';
+import Home from './routes/Home';
+import InventoryManage from './routes/InventoryManage';
 // import './assets/vendor_components/bootstrap/datatable/datatables.min.css';
 
 
 function App() {
   console.log("hi");
   return (
-    <>
+    <Router>
       <div className='hold-transition light-skin sidebar-mini theme-blackberry'>
-        <div>
-        <Header />
-        <Aside />
-        </div>
-
-        
+          <Header />
+          <Aside />
+          <Routes>
+            <Route path='/' element={<Home />} exact />
+            <Route path='/inventory-manage' element={<InventoryManage />} />
+          </Routes>
       </div>
       <Helmet>
           <script type="text/babel" src="./assets/vendor_components/jquery-3.3.1/jquery-3.3.1.js"></script>
@@ -59,7 +62,7 @@ function App() {
           {/* <!-- demo only --> */}
           <script type="text/babel" src="./assets/js/pages/app-ticket.js"></script>
         </Helmet>
-    </>
+    </Router>
   );
 }
 
