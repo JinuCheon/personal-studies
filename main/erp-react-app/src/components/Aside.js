@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Aside = () => {
   return (
@@ -9,34 +10,34 @@ const Aside = () => {
         {/* <!-- sidebar menu--> */}
         <ul className='sidebar-menu' data-widget='tree'>
           <li>
-            <a href='./index.html'>
+            <Link to='./index.html'>
               <i className='mdi mdi-minus-network'></i>
               <span>통계</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='./inventory-manage.html'>
+            <Link to='./inventory-manage'>
               <i className='mdi mdi-border-color'></i>
               <span>재고관리</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='./new-product.html'>
+            <Link to='./create-new-product'>
               <i className='mdi mdi-cube-outline'></i>
               <span>제품추가</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='./release'>
+            <Link to='./release'>
               <i className='mdi mdi-export'></i>
               <span>출고</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='./release-manage'>
+            <Link to='./release-manage'>
               <i className='mdi mdi-border-color'></i>
               <span>출고관리</span>
-            </a>
+            </Link>
           </li>
 
           <li className='header line'></li>

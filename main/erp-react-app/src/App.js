@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import './App.css';
 import './assets/css/style.css';
@@ -9,11 +9,12 @@ import Header from './components/Header.js'
 import Aside from './components/Aside';
 import Home from './routes/Home';
 import InventoryManage from './routes/InventoryManage';
-// import './assets/vendor_components/bootstrap/datatable/datatables.min.css';
+import useScript from './hooks/useScript';
+import CreateNewProduct from './routes/CreateNewProduct';
 
 
 function App() {
-  console.log("hi");
+  // useScript();
   return (
     <Router>
       <div className='hold-transition light-skin sidebar-mini theme-blackberry'>
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} exact />
           <Route path='/inventory-manage' element={<InventoryManage />} />
+          <Route path='/create-new-product' element={<CreateNewProduct />} />
         </Routes>
       </div>
       

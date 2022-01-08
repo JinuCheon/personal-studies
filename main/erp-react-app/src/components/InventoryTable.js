@@ -1,11 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const dummyData = [
-  { id: 1000, productName: 'pencel', price: 1000, stock: 200 },
-  { id: 1001, productName: 'eraser', price: 500, stock: 240 },
-];
+// const dummyData = [
+//   { id: 1000, productName: 'pencel', price: 1000, stock: 200 },
+//   { id: 1001, productName: 'eraser', price: 500, stock: 240 },
+// ];
 
 const renderTableData = (data) => data.map((product) => {
+  console.log(data);
   const { id, productName, price, stock } = product;
   return (
     <tr>
@@ -32,6 +34,8 @@ const renderTableData = (data) => data.map((product) => {
 });
 
 const InventoryTable = () => {
+  const store = useSelector((state) => state); //reducer
+
   return (
     <table id="tickets" className="table mt-0 table-hover no-wrap table-borderless" data-page-size="10">
       <thead>
@@ -44,7 +48,7 @@ const InventoryTable = () => {
         </tr>
       </thead>
       <tbody>
-        {renderTableData(dummyData)}
+        {renderTableData(store.inventory)}
       </tbody>
     </table>
   );
