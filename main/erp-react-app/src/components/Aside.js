@@ -28,7 +28,7 @@ const Aside = () => {
             </Link>
           </li>
           <li>
-            <Link to='./release'>
+            <Link to='./shipping'>
               <i className='mdi mdi-export'></i>
               <span>출고</span>
             </Link>

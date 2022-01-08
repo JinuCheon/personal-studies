@@ -7,10 +7,10 @@ import './assets/css/skin_color.css'
 import './assets/vendor_components/bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header.js'
 import Aside from './components/Aside';
-import Home from './routes/Home';
-import InventoryManage from './routes/InventoryManage';
-import useScript from './hooks/useScript';
-import CreateNewProduct from './routes/CreateNewProduct';
+import HomePage from './routes/HomePage';
+import InventoryManagePage from './routes/InventoryManagePage';
+import CreateNewProductPage from './routes/CreateNewProductPage';
+import ShippingPage from './routes/ShippingPage';
 
 
 function App() {
@@ -21,9 +21,10 @@ function App() {
         <Header />
         <Aside />
         <Routes>
-          <Route path='/' element={<Home />} exact />
-          <Route path='/inventory-manage' element={<InventoryManage />} />
-          <Route path='/create-new-product' element={<CreateNewProduct />} />
+          <Route path='/' element={<HomePage />} exact />
+          <Route path='/inventory-manage' element={<InventoryManagePage />} />
+          <Route path='/create-new-product' element={<CreateNewProductPage />} />
+          <Route path='/shipping' element={<ShippingPage />} />
         </Routes>
       </div>
       
