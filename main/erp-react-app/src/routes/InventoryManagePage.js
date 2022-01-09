@@ -5,7 +5,6 @@ const InventoryManage = () => {
   return (
     <div className="content-wrapper">
       <div className="container-full">
-        {/* <!-- Content Header (Page header) --> */}
         <div className="content-header">
           <div className="d-flex align-items-center">
             <div className="mr-auto">
@@ -23,7 +22,6 @@ const InventoryManage = () => {
           </div>
         </div>
 
-        {/* <!-- Main content --> */}
         <section className="content">
           <div className="col-12 col-12">
             <div className="box">
@@ -34,10 +32,8 @@ const InventoryManage = () => {
               </div>
             </div>
           </div>
-          {/* <!-- /.row --> */}
 
         </section>
-        {/* <!-- /.content --> */}
       </div>
     </div>
 

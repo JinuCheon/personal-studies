@@ -1,4 +1,5 @@
 const SET_NEW_PRODUCT_TEXT = 'counter/SET_NEW_PRODUCT_TEXT';
+const CLEAR_NEW_PRODUCT_TEXT = 'counter/CLEAR_NEW_PRODUCT_TEXT';
 
 
 export const setNewProductText = (value, name) => ({
@@ -7,10 +8,14 @@ export const setNewProductText = (value, name) => ({
   name
 });
 
+export const clearNewProductText = () => ({
+  type: CLEAR_NEW_PRODUCT_TEXT
+});
+
 const initialState = {
-  productName: 'init1',
-  price:'init2',
-  stock: 111
+  productName: '',
+  price:'',
+  stock: 0
 };
 
 export default function newProductInputBox(state = initialState, action) {
@@ -19,6 +24,10 @@ export default function newProductInputBox(state = initialState, action) {
       return ({
         ...state,
         [action.name]: action.value
+      });
+    case CLEAR_NEW_PRODUCT_TEXT:
+      return ({
+        ...initialState
       });
     default:
       return state;

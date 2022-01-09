@@ -11,10 +11,11 @@ import HomePage from './routes/HomePage';
 import InventoryManagePage from './routes/InventoryManagePage';
 import CreateNewProductPage from './routes/CreateNewProductPage';
 import ShippingPage from './routes/ShippingPage';
+import useScript from './hooks/useScript';
 
 
 function App() {
-  // useScript();
+  useScript();
   return (
     <Router>
       <div className='hold-transition light-skin sidebar-mini theme-blackberry'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { newProduct } from '../redux/inventory';
-import { setNewProductText } from '../redux/newProductInputBox';
+import { setNewProductText, clearNewProductText } from '../redux/newProductInputBox';
 
 
 const NewProductInputForm = () => {
@@ -18,6 +18,7 @@ const NewProductInputForm = () => {
 
   const createButton = (e) => {
     dispatch(newProduct(productName, price, stock));
+    dispatch(clearNewProductText());
   }
 
   return (
