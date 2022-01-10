@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 // ];
 
 const renderTableData = (data) => data.map((product) => {
-  console.log(data);
   const { id, productName, price, stock } = product;
   return (
     <tr>
