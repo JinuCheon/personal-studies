@@ -35,7 +35,7 @@ const ShippingForm = () => {
     <section className="content">
       <div className="form-group col-12 col-md-6">
         <label>제품 선택</label>
-        <select onChange={onChange} name="productName" className="col-12 col-md-6 form-control select2 select2-hidden-accessible" tabIndex="-1" aria-hidden="true">
+        <select onChange={onChange} value={productName} name="productName" className="col-12 col-md-6 form-control select2 select2-hidden-accessible" tabIndex="-1" aria-hidden="true">
           <option selected>선택</option>
           {renderProductList(store.inventory)}
         </select>
@@ -45,7 +45,7 @@ const ShippingForm = () => {
         </span> */}
         
         <label>거래처 선택</label>
-        <select onChange={onChange} name="customer" className="col-12 col-md-6 form-control select2 select2-hidden-accessible" tabIndex="-1" aria-hidden="true">
+        <select onChange={onChange} value={customer} name="customer" className="col-12 col-md-6 form-control select2 select2-hidden-accessible" tabIndex="-1" aria-hidden="true">
           <option selected>선택</option>
           <option>A</option>
           <option>B</option>
@@ -57,7 +57,7 @@ const ShippingForm = () => {
         {/* <span className="select2 select2-container select2-container--default select2-container--above" dir="ltr"><span className="selection"><span className="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabIndex="0" aria-labelledby="select2-4l6z-container"><span className="select2-selection__rendered" id="select2-4l6z-container" title="Texas">Texas</span><span className="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span className="dropdown-wrapper" aria-hidden="true"></span></span> */}
         
         <label>수량</label>
-        <input onChange={onChange} name="stock" className="col-12 col-md-6 form-control" type="number" />
+        <input onChange={onChange} value={stock} name="stock" className="col-12 col-md-6 form-control" type="number" />
         
         <button onClick={createButton} type="submit" className="float-left mt-3 waves-effect waves-light btn mb-5 bg-gradient-blackberry">생성하기</button>
         

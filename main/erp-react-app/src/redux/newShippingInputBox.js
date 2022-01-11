@@ -14,6 +14,7 @@ export const clearNewShippingText = () => ({
 
 const initialState = {
   productName: '',
+  customer: '',
   price:'',
   stock: 0
 };
