@@ -11,6 +11,7 @@ import HomePage from './routes/HomePage';
 import InventoryManagePage from './routes/InventoryManagePage';
 import CreateNewProductPage from './routes/CreateNewProductPage';
 import ShippingPage from './routes/ShippingPage';
+import ShippingManagePage from './routes/ShippingManagePage';
 import useScript from './hooks/useScript';
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/inventory-manage' element={<InventoryManagePage />} />
           <Route path='/create-new-product' element={<CreateNewProductPage />} />
           <Route path='/shipping' element={<ShippingPage />} />
+          <Route path='/shipping-manage' element={<ShippingManagePage />} />
         </Routes>
       </div>
       

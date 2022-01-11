@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { newProduct } from '../redux/inventory';
 import { setNewProductText, clearNewProductText } from '../redux/newProductInputBox';
@@ -11,15 +11,17 @@ const NewProductInputForm = () => {
 
   const { productName, price, stock } = store.newProductInputBox; // 비구조화 할당을 통해 값 추출
 
-  const onChange = (e) => {
-    const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
-    dispatch(setNewProductText(value, name));
-  };
+  const onChange = useMemo(
+    () => (e) => {
+      const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
+      dispatch(setNewProductText(value, name));
+  }, []);
 
-  const createButton = (e) => {
-    dispatch(newProduct(productName, price, stock));
-    dispatch(clearNewProductText());
-  }
+  const createButton = useMemo(
+    () => (e) => {
+      dispatch(newProduct(productName, price, stock));
+      dispatch(clearNewProductText());
+  });
 
   return (
     <section className="content">

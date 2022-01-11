@@ -34,7 +34,7 @@ const Aside = () => {
             </Link>
           </li>
           <li>
-            <Link to='./release-manage'>
+            <Link to='./shipping-manage'>
               <i className='mdi mdi-border-color'></i>
               <span>출고관리</span>
             </Link>

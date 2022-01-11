@@ -1,18 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-// const dummyData = [
-//   { id: 1000, productName: 'pencel', price: 1000, stock: 200 },
-//   { id: 1001, productName: 'eraser', price: 500, stock: 240 },
-// ];
-
 const renderTableData = (data) => data.map((product) => {
-  const { id, productName, price, stock } = product;
+  const { time, productName, customer, stock } = product;
   return (
-    <tr key={id}>
-      <td>{id}</td>
+    <tr key={time}>
+      <td>{time}</td>
       <td>{productName}</td>
-      <td>{price}</td>
+      <td>{customer}</td>
       <td>{stock}</td>
       <td className="text-center">
         <div className="list-icons d-inline-flex">
@@ -32,25 +27,25 @@ const renderTableData = (data) => data.map((product) => {
   )
 });
 
-const InventoryTable = () => {
+const ShippingTable = () => {
   const store = useSelector((state) => state); //reducer
 
   return (
     <table id="tickets" className="table mt-0 table-hover no-wrap table-borderless" data-page-size="10">
       <thead>
         <tr>
-          <th>제품코드</th>
+          <th>시간</th>
           <th>제품명</th>
-          <th>판매단가</th>
+          <th>거래처</th>
           <th>수량</th>
           <th>수정</th>
         </tr>
       </thead>
       <tbody>
-        {renderTableData(store.inventory)}
+        {renderTableData(store.shipping)}
       </tbody>
     </table>
   );
 };
 
-export default InventoryTable;
+export default ShippingTable;

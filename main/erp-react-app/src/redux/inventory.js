@@ -17,7 +17,6 @@ const initialState = [
 export default function inventory(state = initialState, action) {
   switch (action.type) {
     case NEW_PRODUCT:
-      console.log(action);
       idCounter+=1;
       return [...state, {
         id: idCounter,
