@@ -2,10 +2,12 @@ import React, { useCallback, useState } from 'react';
 import { Button, Form, Input } from 'antd';
 import Link from 'next/link';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { loginAction } from '../reducers/index';
 
 // eslint-disable-next-line no-unused-vars
-const LoginForm = ({ setIsLoggedIn }) => {
+const LoginForm = () => {
+  const dispatch = useDispatch();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
 
@@ -24,7 +26,8 @@ const LoginForm = ({ setIsLoggedIn }) => {
   const onSubmitForm = useCallback(() => {
     // antd 에서는 preventDefault()가 이미 적용되어있음.
     console.log(id, password);
-    setIsLoggedIn(true);
+    // setIsLoggedIn(true);
+    dispatch(loginAction({id, password}));
   }, [id, password]);
 
   return (
@@ -46,9 +49,5 @@ const LoginForm = ({ setIsLoggedIn }) => {
     </Form>
   );
 }
-
-LoginForm.propTypes = {
-  setIsLoggedIn: PropTypes.func.isRequired,
-};
 
 export default LoginForm;
