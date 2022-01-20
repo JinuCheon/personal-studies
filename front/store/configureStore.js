@@ -1,10 +1,15 @@
 import { createWrapper } from 'next-redux-wrapper';
-import { createStore } from 'redux';
-
+import { applyMiddleware, compose, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension'
 import reducer from '../reducers/index';
 
 const configureStore = () => {
-  const store = createStore(reducer);
+  const middlewares = [];
+  // 개발 시, 크롬 extention에서 action을 볼 수 있다.
+  const enhancer = process.env.NODE_ENV === 'production'
+    ? compose(applyMiddleware(...middlewares))
+    : composeWithDevTools(applyMiddleware(...middlewares)) //개발모드
+  const store = createStore(reducer, enhancer);
   // console.log(store);
   return store;
 };
