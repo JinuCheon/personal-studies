@@ -2,12 +2,13 @@ import React, { useCallback, useState } from 'react';
 import { Button, Form, Input } from 'antd';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { useDispatch } from 'react-redux';
-import { loginAction } from '../reducers/user';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginRequestAction } from '../reducers/user';
 
 // eslint-disable-next-line no-unused-vars
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const { isLoggingIn } = useSelector((state) => state.user);
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,23 +28,23 @@ const LoginForm = () => {
     // antd 에서는 preventDefault()가 이미 적용되어있음.
     console.log(id, password);
     // setIsLoggedIn(true);
-    dispatch(loginAction({id, password}));
+    dispatch(loginRequestAction({id, password}));
   }, [id, password]);
 
   return (
     <Form onFinish={onSubmitForm}>
       <div>
-        <lavel htmlFor="user-id">아이디</lavel>
+        <label htmlFor="user-id">아이디</label>
         <br />
         <Input name="user-id" value={id} onChange={onChangeId} required />
       </div>
       <div>
-        <lavel htmlFor="user-id">패스워드</lavel>
+        <label htmlFor="user-id">패스워드</label>
         <br />
         <Input name="user-password" type="password" value={password} onChange={onChangePassword} required />
       </div>
       <ButtonWrapper>
-        <Button type="primary" htmlType="submit" loading={false}>로그인</Button>
+        <Button type="primary" htmlType="submit" loading={isLoggingIn}>로그인</Button>
         <Link href="/signup"><a><Button>회원가입</Button></a></Link>
       </ButtonWrapper>
     </Form>
