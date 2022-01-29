@@ -18,7 +18,6 @@ const LoginForm = () => {
   `
   const onSubmitForm = useCallback(() => {
     // antd 에서는 preventDefault()가 이미 적용되어있음.
-    console.log(email, password);
     // setIsLoggedIn(true);
     dispatch(loginRequestAction({email, password}));
   }, [email, password]);
@@ -28,7 +27,7 @@ const LoginForm = () => {
       <div>
         <label htmlFor="user-email">이메일</label>
         <br />
-        <Input name="user-email" value={email}} onChange={onChangeEmail} required />
+        <Input name="user-email" value={email} onChange={onChangeEmail} required />
       </div>
       <div>
         <label htmlFor="user-password">패스워드</label>

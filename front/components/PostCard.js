@@ -1,13 +1,16 @@
 import { Avatar, Button, Card, Comment, List, Popover } from 'antd';
 import React, { useCallback, useState } from 'react';
 import { MessageOutlined, HeartOutlined, RetweetOutlined, EllipsisOutlined, HeartTwoTone } from '@ant-design/icons'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import PostImages from './PostImages';
 import CommentForm from './CommentForm';
 import PostCardContent from './PostCardContent';
+import { REMOVE_POST_REQUEST } from '../reducers/post';
 
 const PostCard = ({ post }) => {
+  const dispatch = useDispatch();
+  const { removePostLoading } = useSelector((state) => state.post);
   const [liked, setLiked] = useState(false);
   const [commentFormOpened, setCommentFormOpened] = useState(false);
   const onToggleLike = useCallback(() => {
@@ -16,6 +19,12 @@ const PostCard = ({ post }) => {
   const onToggleComment = useCallback(() => {
     setCommentFormOpened((prev) => !prev);
   }, []);
+  const onRemovePost = useCallback(() => {
+    dispatch({
+      type: REMOVE_POST_REQUEST,
+      data: post.id,
+    })
+  })
   const { me } = useSelector((state) => state.user);
   const id = me?.id;//optional chainning
 
@@ -34,7 +43,7 @@ const PostCard = ({ post }) => {
               {id && post.User.id === id ? (
                 <>
                   <Button>수정</Button>
-                  <Button type="danger">삭제</Button>
+                  <Button type="danger" loading={removePostLoading} onClick={onRemovePost}>삭제</Button>
                 </>
               ) : <Button>신고</Button>}
             </Button.Group>
@@ -43,9 +52,10 @@ const PostCard = ({ post }) => {
           </Popover>
         ]} 
       >
+        {console.log(post.User.nickName)}
         <Card.Meta
           avatar={<Avatar>{post.User.nickname[0]}</Avatar>}
-          title={post.User.nickName}
+          title={post.User.nickname}
           description={<PostCardContent postData={post.content} />}
         />
       </Card>

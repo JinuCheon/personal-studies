@@ -6,7 +6,6 @@ import reducer from '../reducers/index';
 import rootSaga from '../sagas';
 
 const loggerMiddleware = ({ dispatch, getState }) => (next) => (action) => {
-  console.log(action);
   return next(action);
 };
 
@@ -24,5 +23,4 @@ const configureStore = () => {
 };
 
 const wrapper = createWrapper(configureStore, { debug: process.env.NODE_ENV === 'development' });
-// console.log(wrapper);
 export default wrapper;

@@ -39,7 +39,6 @@ const Signup = () => {
         type: SIGN_UP_REQUEST,
         data: { email, password, nickname },
       });
-      console.log("회원가입" + email, nickname, password);
   }, [email, password, passwordCheck, term]);
 
   return (
