@@ -1,0 +1,14 @@
+.form-control {
+    width: 90%;
+}
+.add-task-button {
+    width: 10%;
+    font-size: 0.4rem;
+}
+.delete-plan-button {
+    float: right;
+}
+
+.close-button-font {
+    font-size: 0.5rem;
+}
