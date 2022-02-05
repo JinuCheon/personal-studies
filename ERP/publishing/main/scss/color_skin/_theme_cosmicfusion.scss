@@ -1,0 +1,2834 @@
+/**************************************
+Theme cosmicfusion Color
+**************************************/
+.bg-gradient-cosmicfusion 
+{
+	background-image: $theme-cosmicfusion-grd;
+}
+.theme-cosmicfusion{ 
+    .bg-gradient-cosmicfusion{@extend .bg-gradient-cosmicfusion}
+    .art-bg{@extend .bg-gradient-cosmicfusion}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-cosmicfusion
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-cosmicfusion
+    }
+}
+
+.theme-cosmicfusion.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-cosmicfusion-dark
+{
+	background-image: $theme-cosmicfusion-grd-dark;
+}
+
+.dark-skin{
+&.theme-cosmicfusion{ 
+    .bg-gradient-cosmicfusion{@extend .bg-gradient-cosmicfusion-dark}
+    .art-bg{@extend .bg-gradient-cosmicfusion-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-cosmicfusion-dark
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-cosmicfusion-dark
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-cosmicfusion{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-cosmicfusion-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-cosmicfusion{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-cosmicfusion-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-cosmicfusion{
+    a{  
+        
+        @include hover-state{
+            color: $theme-cosmicfusion-primary;
+        }         
+    }
+}
+.theme-cosmicfusion{
+    &.light-skin, &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        background: $theme-cosmicfusion-info;
+                        color: $white !important;
+                        > i{
+                           color: $white; 
+                        }
+                        &:after{
+                            border-color: transparent #fafafa transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+         &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li.active{
+                        >a{
+                            >span{
+                                background: $theme-cosmicfusion-info !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        &:after{
+                            border-color: transparent lighten($black, 20%) transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+    /*---Primary Button---*/
+.theme-cosmicfusion {
+    .btn-link {
+        color: $theme-cosmicfusion-primary;
+    }
+    .btn-primary {
+        background-color: $theme-cosmicfusion-primary;
+        border-color: $theme-cosmicfusion-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            border-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cosmicfusion-primary, 20%);
+            border-color: $theme-cosmicfusion-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cosmicfusion-primary, 20%);
+            border-color: $theme-cosmicfusion-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            border-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-cosmicfusion-primary;
+        background-color: transparent;
+        border-color: $theme-cosmicfusion-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            border-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            border-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-cosmicfusion-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            border-color: darken($theme-cosmicfusion-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-cosmicfusion {
+    .btn-info {
+        background-color: $theme-cosmicfusion-info;
+        border-color: $theme-cosmicfusion-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cosmicfusion-info, 10%) !important;
+            border-color: darken($theme-cosmicfusion-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cosmicfusion-info, 20%);
+            border-color: $theme-cosmicfusion-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cosmicfusion-info, 20%);
+            border-color: $theme-cosmicfusion-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-info, 10%) !important;
+            border-color: darken($theme-cosmicfusion-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-cosmicfusion-info;
+        background-color: transparent;
+        border-color: $theme-cosmicfusion-info;        
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-info, 10%) !important;
+            border-color: darken($theme-cosmicfusion-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-info, 10%) !important;
+            border-color: darken($theme-cosmicfusion-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-cosmicfusion-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-info, 10%) !important;
+            border-color: darken($theme-cosmicfusion-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-cosmicfusion {
+    .btn-success {
+        background-color: $theme-cosmicfusion-success;
+        border-color: $theme-cosmicfusion-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cosmicfusion-success, 10%) !important;
+            border-color: darken($theme-cosmicfusion-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cosmicfusion-success, 20%);
+            border-color: $theme-cosmicfusion-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cosmicfusion-success, 20%);
+            border-color: $theme-cosmicfusion-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-success, 10%) !important;
+            border-color: darken($theme-cosmicfusion-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-cosmicfusion-success;
+        background-color: transparent;
+        border-color: $theme-cosmicfusion-success;        
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-success, 10%) !important;
+            border-color: darken($theme-cosmicfusion-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-success, 10%) !important;
+            border-color: darken($theme-cosmicfusion-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-cosmicfusion-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-success, 10%) !important;
+            border-color: darken($theme-cosmicfusion-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-cosmicfusion {
+    .btn-danger {
+        background-color: $theme-cosmicfusion-danger;
+        border-color: $theme-cosmicfusion-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            border-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cosmicfusion-danger, 20%);
+            border-color: $theme-cosmicfusion-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cosmicfusion-danger, 20%);
+            border-color: $theme-cosmicfusion-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            border-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-cosmicfusion-danger;
+        background-color: transparent;
+        border-color: $theme-cosmicfusion-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            border-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            border-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-cosmicfusion-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            border-color: darken($theme-cosmicfusion-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-cosmicfusion {
+    .btn-warning {
+        background-color: $theme-cosmicfusion-warning;
+        border-color: $theme-cosmicfusion-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            border-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cosmicfusion-warning, 20%);
+            border-color: $theme-cosmicfusion-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cosmicfusion-warning, 20%);
+            border-color: $theme-cosmicfusion-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            border-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-cosmicfusion-warning;
+        background-color: transparent;
+        border-color: $theme-cosmicfusion-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            border-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            border-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-cosmicfusion-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            border-color: darken($theme-cosmicfusion-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-cosmicfusion{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-cosmicfusion-primary;
+        background-color: $theme-cosmicfusion-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-cosmicfusion-info;
+        background-color: $theme-cosmicfusion-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-cosmicfusion-success;
+        background-color: $theme-cosmicfusion-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-cosmicfusion-danger;
+        background-color: $theme-cosmicfusion-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-cosmicfusion-warning;
+        background-color: $theme-cosmicfusion-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-cosmicfusion{
+    .alert-primary{
+        border-color: $theme-cosmicfusion-primary;
+        background-color: $theme-cosmicfusion-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-cosmicfusion-info;
+        background-color: $theme-cosmicfusion-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-cosmicfusion-success;
+        background-color: $theme-cosmicfusion-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-cosmicfusion-danger;
+        background-color: $theme-cosmicfusion-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-cosmicfusion-danger;
+        background-color: $theme-cosmicfusion-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-cosmicfusion-warning;
+        background-color: $theme-cosmicfusion-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-cosmicfusion {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cosmicfusion-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cosmicfusion-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cosmicfusion-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cosmicfusion-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cosmicfusion-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cosmicfusion-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cosmicfusion-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cosmicfusion-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cosmicfusion-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-cosmicfusion-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-cosmicfusion{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-cosmicfusion-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cosmicfusion-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-cosmicfusion-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cosmicfusion-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-cosmicfusion-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cosmicfusion-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-cosmicfusion-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cosmicfusion-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-cosmicfusion-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cosmicfusion-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-cosmicfusion {
+    .border-primary {
+        border-color: $theme-cosmicfusion-primary !important;
+    }
+    .border-info {
+        border-color: $theme-cosmicfusion-info !important;
+    }
+    .border-success {
+        border-color: $theme-cosmicfusion-success !important;
+    }
+    .border-danger {
+        border-color: $theme-cosmicfusion-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-cosmicfusion-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-cosmicfusion {
+    .bg-primary {
+      background-color: $theme-cosmicfusion-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-cosmicfusion-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-cosmicfusion-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-cosmicfusion-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-cosmicfusion-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-cosmicfusion {
+    .text-primary {
+      color: $theme-cosmicfusion-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-cosmicfusion-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-cosmicfusion-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-cosmicfusion-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-cosmicfusion-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-cosmicfusion-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-cosmicfusion {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-cosmicfusion-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-cosmicfusion-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-cosmicfusion-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-cosmicfusion-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-cosmicfusion-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-cosmicfusion {
+    .label-primary{
+        background-color: $theme-cosmicfusion-primary !important;
+    }
+    .label-info{
+        background-color: $theme-cosmicfusion-info !important;
+    }
+    .label-success{
+        background-color: $theme-cosmicfusion-success !important;
+    }
+    .label-danger{
+        background-color: $theme-cosmicfusion-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-cosmicfusion-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-cosmicfusion {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-cosmicfusion-primary;
+            
+            &:before  {
+                border-color: $theme-cosmicfusion-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-cosmicfusion-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-cosmicfusion-info;
+            
+            &:before  {
+                border-color: $theme-cosmicfusion-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-cosmicfusion-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-cosmicfusion-success;
+            
+            &:before  {
+                border-color: $theme-cosmicfusion-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-cosmicfusion-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-cosmicfusion-danger;
+            
+            &:before  {
+                border-color: $theme-cosmicfusion-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-cosmicfusion-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-cosmicfusion-warning;
+            
+            &:before  {
+                border-color: $theme-cosmicfusion-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-cosmicfusion-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cosmicfusion-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-cosmicfusion{ 
+    .box-primary {
+        background-color: $theme-cosmicfusion-primary !important;
+    &.box-bordered{
+        border-color: $theme-cosmicfusion-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cosmicfusion-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cosmicfusion-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-cosmicfusion-info !important;
+    &.box-bordered{
+        border-color: $theme-cosmicfusion-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cosmicfusion-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cosmicfusion-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-cosmicfusion-success !important;
+    &.box-bordered{
+        border-color: $theme-cosmicfusion-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cosmicfusion-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cosmicfusion-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-cosmicfusion-danger !important;
+    &.box-bordered{
+        border-color: $theme-cosmicfusion-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cosmicfusion-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cosmicfusion-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-cosmicfusion-warning !important;
+    &.box-bordered{
+        border-color: $theme-cosmicfusion-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cosmicfusion-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cosmicfusion-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-cosmicfusion-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-cosmicfusion-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-cosmicfusion-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-cosmicfusion-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-cosmicfusion {
+    .progress-bar-primary {
+        background-color: $theme-cosmicfusion-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-cosmicfusion-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-cosmicfusion-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-cosmicfusion-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-cosmicfusion-warning;
+    }
+}
+    /*---panel---*/
+.theme-cosmicfusion {
+    .panel-primary {
+        border-color: $theme-cosmicfusion-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cosmicfusion-primary;
+            border-color: $theme-cosmicfusion-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cosmicfusion-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-cosmicfusion-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-cosmicfusion-primary;
+          border-top-color: $theme-cosmicfusion-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cosmicfusion-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-cosmicfusion-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cosmicfusion-info;
+            border-color: $theme-cosmicfusion-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cosmicfusion-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-cosmicfusion-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cosmicfusion-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-cosmicfusion-info;
+          border-top-color: $theme-cosmicfusion-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cosmicfusion-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-cosmicfusion-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cosmicfusion-success;
+            border-color: $theme-cosmicfusion-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cosmicfusion-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-cosmicfusion-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cosmicfusion-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-cosmicfusion-success;
+          border-top-color: $theme-cosmicfusion-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cosmicfusion-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-cosmicfusion-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cosmicfusion-danger;
+            border-color: $theme-cosmicfusion-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cosmicfusion-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-cosmicfusion-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cosmicfusion-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-cosmicfusion-danger;
+          border-top-color: $theme-cosmicfusion-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cosmicfusion-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-cosmicfusion-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cosmicfusion-warning;
+            border-color: $theme-cosmicfusion-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cosmicfusion-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-cosmicfusion-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cosmicfusion-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-cosmicfusion-warning;
+          border-top-color: $theme-cosmicfusion-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cosmicfusion-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-cosmicfusion {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-cosmicfusion-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cosmicfusion-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cosmicfusion-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cosmicfusion-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cosmicfusion-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cosmicfusion-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-cosmicfusion {
+    .badge-primary {
+        background-color: $theme-cosmicfusion-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cosmicfusion-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-cosmicfusion-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cosmicfusion-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-cosmicfusion-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cosmicfusion-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-cosmicfusion-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cosmicfusion-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-cosmicfusion-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cosmicfusion-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-cosmicfusion {
+    .rating-primary {
+        .active {
+            color: $theme-cosmicfusion-primary;
+        }
+        :checked ~ label {
+            color: $theme-cosmicfusion-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-cosmicfusion-primary;
+                ~ label {
+                    color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-cosmicfusion-info;
+        }
+        :checked ~ label {
+            color: $theme-cosmicfusion-info;
+        }
+        label{
+            &:hover {
+                color: $theme-cosmicfusion-info;
+                ~ label {
+                    color: $theme-cosmicfusion-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-cosmicfusion-success;
+        }
+        :checked ~ label {
+            color: $theme-cosmicfusion-success;
+        }
+        label{
+            &:hover {
+                color: $theme-cosmicfusion-success;
+                ~ label {
+                    color: $theme-cosmicfusion-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-cosmicfusion-danger;
+        }
+        :checked ~ label {
+            color: $theme-cosmicfusion-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-cosmicfusion-danger;
+                ~ label {
+                    color: $theme-cosmicfusion-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-cosmicfusion-warning;
+        }
+        :checked ~ label {
+            color: $theme-cosmicfusion-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-cosmicfusion-warning;
+                ~ label {
+                    color: $theme-cosmicfusion-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-cosmicfusion {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-cosmicfusion-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-cosmicfusion-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-cosmicfusion-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-cosmicfusion-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-cosmicfusion-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-cosmicfusion {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cosmicfusion-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-cosmicfusion-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cosmicfusion-info, 10%);
+                background-color: transparent;
+                color: darken($theme-cosmicfusion-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cosmicfusion-success, 10%);
+                background-color: transparent;
+                color: darken($theme-cosmicfusion-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cosmicfusion-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-cosmicfusion-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cosmicfusion-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-cosmicfusion-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cosmicfusion-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cosmicfusion-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cosmicfusion-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cosmicfusion-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cosmicfusion-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-cosmicfusion-primary;
+            background-color: $theme-cosmicfusion-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-cosmicfusion-primary;
+                background-color: $theme-cosmicfusion-primary;
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-cosmicfusion-primary;
+                background-color: $theme-cosmicfusion-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-cosmicfusion-primary;
+                    background-color: $theme-cosmicfusion-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-cosmicfusion {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-cosmicfusion-primary;
+        }
+        .info {
+            border-left-color: $theme-cosmicfusion-primary;
+        }
+        .success {
+            border-left-color: $theme-cosmicfusion-success;
+        }
+        .danger {
+            border-left-color: $theme-cosmicfusion-danger;
+        }
+        .warning {
+            border-left-color: $theme-cosmicfusion-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-cosmicfusion {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-cosmicfusion-primary;
+                  border: 1px solid  $theme-cosmicfusion-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cosmicfusion-primary;
+                  border-right-color: $theme-cosmicfusion-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-cosmicfusion-info;
+                  border: 1px solid  $theme-cosmicfusion-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cosmicfusion-info;
+                  border-right-color: $theme-cosmicfusion-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-cosmicfusion-success;
+                  border: 1px solid  $theme-cosmicfusion-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cosmicfusion-success;
+                  border-right-color: $theme-cosmicfusion-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-cosmicfusion-danger;
+                  border: 1px solid  $theme-cosmicfusion-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cosmicfusion-danger;
+                  border-right-color: $theme-cosmicfusion-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-cosmicfusion-warning;
+                  border: 1px solid  $theme-cosmicfusion-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cosmicfusion-warning;
+                  border-right-color: $theme-cosmicfusion-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-cosmicfusion-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-cosmicfusion-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-cosmicfusion-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-cosmicfusion-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-cosmicfusion-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-cosmicfusion-primary;
+            }
+            .label-info {
+                background-color: $theme-cosmicfusion-info;
+            }
+            .label-success {
+                background-color: $theme-cosmicfusion-success;
+            }
+            .label-danger {
+                background-color: $theme-cosmicfusion-danger;
+            }
+            .label-warning {
+                background-color: $theme-cosmicfusion-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-cosmicfusion-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-cosmicfusion-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-cosmicfusion{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-cosmicfusion-primary; 
+                &:hover{
+                   background-color: $theme-cosmicfusion-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-cosmicfusion-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-cosmicfusion-primary;
+                background-color: $theme-cosmicfusion-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-cosmicfusion{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-cosmicfusion-primary;
+                        color: $theme-cosmicfusion-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-cosmicfusion-primary;
+                        color: $theme-cosmicfusion-primary;
+                        @include hover-state{
+                            border-color: $theme-cosmicfusion-primary;
+                            color: $theme-cosmicfusion-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-cosmicfusion-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-cosmicfusion{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-cosmicfusion-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-cosmicfusion-primary;
+	                   background-color: $theme-cosmicfusion-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-cosmicfusion-primary;
+	                   background-color: $theme-cosmicfusion-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-cosmicfusion-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-cosmicfusion-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-cosmicfusion-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-cosmicfusion-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-cosmicfusion-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-cosmicfusion-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-cosmicfusion {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-cosmicfusion-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-cosmicfusion-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-cosmicfusion-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-cosmicfusion-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cosmicfusion-primary;
+                    border-bottom: 2px solid $theme-cosmicfusion-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cosmicfusion-info;
+                    border-bottom: 2px solid $theme-cosmicfusion-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cosmicfusion-success;
+                    border-bottom: 2px solid $theme-cosmicfusion-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cosmicfusion-danger;
+                    border-bottom: 2px solid $theme-cosmicfusion-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cosmicfusion-warning;
+                    border-bottom: 2px solid $theme-cosmicfusion-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-primary;
+                    background-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-info;
+                    background-color: $theme-cosmicfusion-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-success;
+                    background-color: $theme-cosmicfusion-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-danger;
+                    background-color: $theme-cosmicfusion-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-warning;
+                    background-color: $theme-cosmicfusion-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-primary;
+                    border-color: $theme-cosmicfusion-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cosmicfusion-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-primary;
+                    border: 2px solid $theme-cosmicfusion-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-info;
+                    border-color: $theme-cosmicfusion-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cosmicfusion-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-info;
+                    border: 2px solid $theme-cosmicfusion-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-success;
+                    border-color: $theme-cosmicfusion-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cosmicfusion-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-success;
+                    border: 2px solid $theme-cosmicfusion-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-danger;
+                    border-color: $theme-cosmicfusion-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cosmicfusion-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-danger;
+                    border: 2px solid $theme-cosmicfusion-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-warning;
+                    border-color: $theme-cosmicfusion-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cosmicfusion-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cosmicfusion-warning;
+                    border: 2px solid $theme-cosmicfusion-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cosmicfusion-primary;
+                    border-bottom: 2px solid $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-primary;
+                    background-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-cosmicfusion-primary;
+                }
+                &:after {
+                    background-color: $theme-cosmicfusion-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cosmicfusion-primary;
+                    background-color: $theme-cosmicfusion-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-cosmicfusion-primary;
+                    background-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-cosmicfusion{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-cosmicfusion-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-cosmicfusion-primary;
+                border-color: $theme-cosmicfusion-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-cosmicfusion-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-cosmicfusion {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-cosmicfusion-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-cosmicfusion-primary;
+                        color: $theme-cosmicfusion-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-cosmicfusion-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-cosmicfusion {
+    .jq-icon-primary { 
+        background-color: $theme-cosmicfusion-primary; 
+        color: $white; 
+        border-color: $theme-cosmicfusion-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-cosmicfusion-info; 
+        color: $white; 
+        border-color: $theme-cosmicfusion-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-cosmicfusion-success; 
+        color: $white; 
+        border-color: $theme-cosmicfusion-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-cosmicfusion-danger; 
+        color: $white; 
+        border-color: $theme-cosmicfusion-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-cosmicfusion-danger; 
+        color: $white; 
+        border-color: $theme-cosmicfusion-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-cosmicfusion-warning; 
+        color: $white; 
+        border-color: $theme-cosmicfusion-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-cosmicfusion {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-cosmicfusion-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-cosmicfusion-info;
+        }
+        &.status-success::after {
+            background-color: $theme-cosmicfusion-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-cosmicfusion-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-cosmicfusion-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-cosmicfusion-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-cosmicfusion-primary, 10%);
+        border-color: darken($theme-cosmicfusion-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-cosmicfusion {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-cosmicfusion-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-cosmicfusion-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-cosmicfusion{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-cosmicfusion-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-cosmicfusion-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-cosmicfusion-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-cosmicfusion{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-cosmicfusion-primary;
+                        &:hover{
+                            border-left-color: $theme-cosmicfusion-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-cosmicfusion{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-cosmicfusion-primary;
+                    background-color: $theme-cosmicfusion-primary;
+                    &:hover{
+                        border: 1px solid $theme-cosmicfusion-primary;
+                        background-color: $theme-cosmicfusion-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-cosmicfusion-primary, 10%);
+                    background-color: darken($theme-cosmicfusion-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-cosmicfusion-primary;
+                background-color: $theme-cosmicfusion-primary;
+                    &:hover{
+                        border: 1px solid $theme-cosmicfusion-primary;
+                        background-color: $theme-cosmicfusion-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-cosmicfusion-primary;
+                }
+                &:hover a{
+                    background-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-cosmicfusion-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-cosmicfusion {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-cosmicfusion-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-cosmicfusion {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-cosmicfusion-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-cosmicfusion-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-cosmicfusion-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-cosmicfusion-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-cosmicfusion-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-cosmicfusion-primary;
+                border-color: $theme-cosmicfusion-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-cosmicfusion{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-cosmicfusion-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-cosmicfusion-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-cosmicfusion-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-cosmicfusion-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-cosmicfusion{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-cosmicfusion-primary;
+                        background-color: $theme-cosmicfusion-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-cosmicfusion-primary, 10%);
+                        background-color: darken($theme-cosmicfusion-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-cosmicfusion-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-cosmicfusion-primary;
+                        }
+                       &:before{
+                            background-color: $theme-cosmicfusion-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-cosmicfusion-primary;
+                        }
+                       &:before{
+                            background-color: $theme-cosmicfusion-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-cosmicfusion-primary;
+                                color: $theme-cosmicfusion-primary;
+                                &:after{
+                                    border-top-color: $theme-cosmicfusion-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-cosmicfusion-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-cosmicfusion{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-cosmicfusion-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-cosmicfusion{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-cosmicfusion-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-cosmicfusion{
+    #primary {
+        .slider-selection{
+            background-color: $theme-cosmicfusion-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-cosmicfusion-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-cosmicfusion-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-cosmicfusion-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-cosmicfusion-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-cosmicfusion{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-cosmicfusion-primary;
+	                    border-color: $theme-cosmicfusion-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-cosmicfusion-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-cosmicfusion-primary;
+        }
+        a{
+            color: $theme-cosmicfusion-primary; 
+            @include hover-focus-state{
+                color: $theme-cosmicfusion-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-cosmicfusion-primary;    
+            }
+        }
+    }
+}

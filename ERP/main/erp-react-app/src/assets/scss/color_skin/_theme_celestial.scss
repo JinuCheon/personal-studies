@@ -1,0 +1,2834 @@
+/**************************************
+Theme celestial Color
+**************************************/
+.bg-gradient-celestial 
+{
+	background-image: $theme-celestial-grd;
+}
+.theme-celestial{ 
+    .bg-gradient-celestial{@extend .bg-gradient-celestial}
+    .art-bg{@extend .bg-gradient-celestial}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-celestial
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-celestial
+    }
+}
+
+.theme-celestial.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-celestial-dark
+{
+	background-image: $theme-celestial-grd-dark;
+}
+
+.dark-skin{
+&.theme-celestial{ 
+    .bg-gradient-celestial{@extend .bg-gradient-celestial-dark}
+    .art-bg{@extend .bg-gradient-celestial-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-celestial-dark
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-celestial-dark
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-celestial{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-celestial-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-celestial{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-celestial-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-celestial{
+    a{  
+        
+        @include hover-state{
+            color: $theme-celestial-primary;
+        }         
+    }
+}
+.theme-celestial{
+    &.light-skin, &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        background: $theme-celestial-danger;
+                        color: $white !important;
+                        > i{
+                           color: $white; 
+                        }
+                        &:after{
+                            border-color: transparent #fafafa transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+         &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li.active{
+                        >a{
+                            >span{
+                                background: $theme-celestial-danger !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        &:after{
+                            border-color: transparent lighten($black, 20%) transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+    /*---Primary Button---*/
+.theme-celestial {
+    .btn-link {
+        color: $theme-celestial-primary;
+    }
+    .btn-primary {
+        background-color: $theme-celestial-primary;
+        border-color: $theme-celestial-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-celestial-primary, 10%) !important;
+            border-color: darken($theme-celestial-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-celestial-primary, 20%);
+            border-color: $theme-celestial-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-celestial-primary, 20%);
+            border-color: $theme-celestial-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-primary, 10%) !important;
+            border-color: darken($theme-celestial-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-celestial-primary;
+        background-color: transparent;
+        border-color: $theme-celestial-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-celestial-primary, 10%) !important;
+            border-color: darken($theme-celestial-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-primary, 10%) !important;
+            border-color: darken($theme-celestial-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-celestial-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-celestial-primary, 10%) !important;
+            border-color: darken($theme-celestial-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-celestial {
+    .btn-info {
+        background-color: $theme-celestial-info;
+        border-color: $theme-celestial-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-celestial-info, 10%) !important;
+            border-color: darken($theme-celestial-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-celestial-info, 20%);
+            border-color: $theme-celestial-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-celestial-info, 20%);
+            border-color: $theme-celestial-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-info, 10%) !important;
+            border-color: darken($theme-celestial-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-celestial-info;
+        background-color: transparent;
+        border-color: $theme-celestial-info;        
+        @include hover-active-state{
+            background-color: darken($theme-celestial-info, 10%) !important;
+            border-color: darken($theme-celestial-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-info, 10%) !important;
+            border-color: darken($theme-celestial-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-celestial-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-celestial-info, 10%) !important;
+            border-color: darken($theme-celestial-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-celestial {
+    .btn-success {
+        background-color: $theme-celestial-success;
+        border-color: $theme-celestial-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-celestial-success, 10%) !important;
+            border-color: darken($theme-celestial-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-celestial-success, 20%);
+            border-color: $theme-celestial-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-celestial-success, 20%);
+            border-color: $theme-celestial-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-success, 10%) !important;
+            border-color: darken($theme-celestial-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-celestial-success;
+        background-color: transparent;
+        border-color: $theme-celestial-success;        
+        @include hover-active-state{
+            background-color: darken($theme-celestial-success, 10%) !important;
+            border-color: darken($theme-celestial-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-success, 10%) !important;
+            border-color: darken($theme-celestial-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-celestial-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-celestial-success, 10%) !important;
+            border-color: darken($theme-celestial-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-celestial {
+    .btn-danger {
+        background-color: $theme-celestial-danger;
+        border-color: $theme-celestial-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-celestial-danger, 10%) !important;
+            border-color: darken($theme-celestial-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-celestial-danger, 20%);
+            border-color: $theme-celestial-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-celestial-danger, 20%);
+            border-color: $theme-celestial-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-danger, 10%) !important;
+            border-color: darken($theme-celestial-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-celestial-danger;
+        background-color: transparent;
+        border-color: $theme-celestial-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-celestial-danger, 10%) !important;
+            border-color: darken($theme-celestial-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-danger, 10%) !important;
+            border-color: darken($theme-celestial-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-celestial-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-celestial-danger, 10%) !important;
+            border-color: darken($theme-celestial-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-celestial {
+    .btn-warning {
+        background-color: $theme-celestial-warning;
+        border-color: $theme-celestial-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-celestial-warning, 10%) !important;
+            border-color: darken($theme-celestial-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-celestial-warning, 20%);
+            border-color: $theme-celestial-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-celestial-warning, 20%);
+            border-color: $theme-celestial-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-warning, 10%) !important;
+            border-color: darken($theme-celestial-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-celestial-warning;
+        background-color: transparent;
+        border-color: $theme-celestial-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-celestial-warning, 10%) !important;
+            border-color: darken($theme-celestial-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-celestial-warning, 10%) !important;
+            border-color: darken($theme-celestial-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-celestial-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-celestial-warning, 10%) !important;
+            border-color: darken($theme-celestial-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-celestial{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-celestial-primary;
+        background-color: $theme-celestial-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-celestial-info;
+        background-color: $theme-celestial-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-celestial-success;
+        background-color: $theme-celestial-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-celestial-danger;
+        background-color: $theme-celestial-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-celestial-warning;
+        background-color: $theme-celestial-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-celestial{
+    .alert-primary{
+        border-color: $theme-celestial-primary;
+        background-color: $theme-celestial-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-celestial-info;
+        background-color: $theme-celestial-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-celestial-success;
+        background-color: $theme-celestial-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-celestial-danger;
+        background-color: $theme-celestial-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-celestial-danger;
+        background-color: $theme-celestial-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-celestial-warning;
+        background-color: $theme-celestial-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-celestial {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-celestial-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-celestial-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-celestial-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-celestial-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-celestial-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-celestial-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-celestial-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-celestial-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-celestial-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-celestial-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-celestial-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-celestial{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-celestial-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-celestial-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-celestial-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-celestial-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-celestial-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-celestial-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-celestial-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-celestial-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-celestial-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-celestial-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-celestial {
+    .border-primary {
+        border-color: $theme-celestial-primary !important;
+    }
+    .border-info {
+        border-color: $theme-celestial-info !important;
+    }
+    .border-success {
+        border-color: $theme-celestial-success !important;
+    }
+    .border-danger {
+        border-color: $theme-celestial-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-celestial-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-celestial {
+    .bg-primary {
+      background-color: $theme-celestial-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-celestial-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-celestial-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-celestial-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-celestial-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-celestial {
+    .text-primary {
+      color: $theme-celestial-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-celestial-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-celestial-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-celestial-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-celestial-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-celestial-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-celestial-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-celestial-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-celestial-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-celestial-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-celestial-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-celestial-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-celestial-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-celestial-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-celestial-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-celestial {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-celestial-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-celestial-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-celestial-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-celestial-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-celestial-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-celestial {
+    .label-primary{
+        background-color: $theme-celestial-primary !important;
+    }
+    .label-info{
+        background-color: $theme-celestial-info !important;
+    }
+    .label-success{
+        background-color: $theme-celestial-success !important;
+    }
+    .label-danger{
+        background-color: $theme-celestial-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-celestial-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-celestial {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-celestial-primary;
+            
+            &:before  {
+                border-color: $theme-celestial-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-celestial-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-celestial-info;
+            
+            &:before  {
+                border-color: $theme-celestial-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-celestial-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-celestial-success;
+            
+            &:before  {
+                border-color: $theme-celestial-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-celestial-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-celestial-danger;
+            
+            &:before  {
+                border-color: $theme-celestial-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-celestial-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-celestial-warning;
+            
+            &:before  {
+                border-color: $theme-celestial-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-celestial-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-celestial-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-celestial{ 
+    .box-primary {
+        background-color: $theme-celestial-primary !important;
+    &.box-bordered{
+        border-color: $theme-celestial-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-celestial-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-celestial-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-celestial-info !important;
+    &.box-bordered{
+        border-color: $theme-celestial-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-celestial-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-celestial-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-celestial-success !important;
+    &.box-bordered{
+        border-color: $theme-celestial-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-celestial-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-celestial-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-celestial-danger !important;
+    &.box-bordered{
+        border-color: $theme-celestial-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-celestial-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-celestial-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-celestial-warning !important;
+    &.box-bordered{
+        border-color: $theme-celestial-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-celestial-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-celestial-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-celestial-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-celestial-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-celestial-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-celestial-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-celestial {
+    .progress-bar-primary {
+        background-color: $theme-celestial-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-celestial-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-celestial-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-celestial-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-celestial-warning;
+    }
+}
+    /*---panel---*/
+.theme-celestial {
+    .panel-primary {
+        border-color: $theme-celestial-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-celestial-primary;
+            border-color: $theme-celestial-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-celestial-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-celestial-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-celestial-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-celestial-primary;
+          border-top-color: $theme-celestial-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-celestial-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-celestial-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-celestial-info;
+            border-color: $theme-celestial-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-celestial-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-celestial-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-celestial-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-celestial-info;
+          border-top-color: $theme-celestial-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-celestial-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-celestial-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-celestial-success;
+            border-color: $theme-celestial-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-celestial-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-celestial-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-celestial-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-celestial-success;
+          border-top-color: $theme-celestial-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-celestial-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-celestial-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-celestial-danger;
+            border-color: $theme-celestial-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-celestial-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-celestial-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-celestial-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-celestial-danger;
+          border-top-color: $theme-celestial-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-celestial-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-celestial-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-celestial-warning;
+            border-color: $theme-celestial-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-celestial-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-celestial-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-celestial-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-celestial-warning;
+          border-top-color: $theme-celestial-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-celestial-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-celestial {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-celestial-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-celestial-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-celestial-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-celestial-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-celestial-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-celestial-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-celestial {
+    .badge-primary {
+        background-color: $theme-celestial-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-celestial-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-celestial-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-celestial-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-celestial-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-celestial-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-celestial-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-celestial-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-celestial-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-celestial-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-celestial {
+    .rating-primary {
+        .active {
+            color: $theme-celestial-primary;
+        }
+        :checked ~ label {
+            color: $theme-celestial-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-celestial-primary;
+                ~ label {
+                    color: $theme-celestial-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-celestial-info;
+        }
+        :checked ~ label {
+            color: $theme-celestial-info;
+        }
+        label{
+            &:hover {
+                color: $theme-celestial-info;
+                ~ label {
+                    color: $theme-celestial-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-celestial-success;
+        }
+        :checked ~ label {
+            color: $theme-celestial-success;
+        }
+        label{
+            &:hover {
+                color: $theme-celestial-success;
+                ~ label {
+                    color: $theme-celestial-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-celestial-danger;
+        }
+        :checked ~ label {
+            color: $theme-celestial-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-celestial-danger;
+                ~ label {
+                    color: $theme-celestial-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-celestial-warning;
+        }
+        :checked ~ label {
+            color: $theme-celestial-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-celestial-warning;
+                ~ label {
+                    color: $theme-celestial-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-celestial {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-celestial-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-celestial-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-celestial-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-celestial-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-celestial-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-celestial {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-celestial-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-celestial-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-celestial-info, 10%);
+                background-color: transparent;
+                color: darken($theme-celestial-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-celestial-success, 10%);
+                background-color: transparent;
+                color: darken($theme-celestial-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-celestial-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-celestial-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-celestial-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-celestial-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-celestial-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-celestial-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-celestial-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-celestial-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-celestial-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-celestial-primary;
+            background-color: $theme-celestial-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-celestial-primary;
+                background-color: $theme-celestial-primary;
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-celestial-primary;
+                background-color: $theme-celestial-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-celestial-primary;
+                    background-color: $theme-celestial-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-celestial {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-celestial-primary;
+        }
+        .info {
+            border-left-color: $theme-celestial-primary;
+        }
+        .success {
+            border-left-color: $theme-celestial-success;
+        }
+        .danger {
+            border-left-color: $theme-celestial-danger;
+        }
+        .warning {
+            border-left-color: $theme-celestial-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-celestial {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-celestial-primary;
+                  border: 1px solid  $theme-celestial-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-celestial-primary;
+                  border-right-color: $theme-celestial-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-celestial-info;
+                  border: 1px solid  $theme-celestial-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-celestial-info;
+                  border-right-color: $theme-celestial-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-celestial-success;
+                  border: 1px solid  $theme-celestial-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-celestial-success;
+                  border-right-color: $theme-celestial-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-celestial-danger;
+                  border: 1px solid  $theme-celestial-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-celestial-danger;
+                  border-right-color: $theme-celestial-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-celestial-warning;
+                  border: 1px solid  $theme-celestial-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-celestial-warning;
+                  border-right-color: $theme-celestial-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-celestial-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-celestial-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-celestial-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-celestial-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-celestial-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-celestial-primary;
+            }
+            .label-info {
+                background-color: $theme-celestial-info;
+            }
+            .label-success {
+                background-color: $theme-celestial-success;
+            }
+            .label-danger {
+                background-color: $theme-celestial-danger;
+            }
+            .label-warning {
+                background-color: $theme-celestial-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-celestial-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-celestial-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-celestial{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-celestial-primary; 
+                &:hover{
+                   background-color: $theme-celestial-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-celestial-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-celestial-primary;
+                background-color: $theme-celestial-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-celestial{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-celestial-primary;
+                        color: $theme-celestial-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-celestial-primary;
+                        color: $theme-celestial-primary;
+                        @include hover-state{
+                            border-color: $theme-celestial-primary;
+                            color: $theme-celestial-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-celestial-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-celestial{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-celestial-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-celestial-primary;
+	                   background-color: $theme-celestial-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-celestial-primary;
+	                   background-color: $theme-celestial-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-celestial-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-celestial-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-celestial-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-celestial-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-celestial-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-celestial-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-celestial {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-celestial-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-celestial-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-celestial-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-celestial-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-celestial-primary;
+                    border-bottom: 2px solid $theme-celestial-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-celestial-info;
+                    border-bottom: 2px solid $theme-celestial-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-celestial-success;
+                    border-bottom: 2px solid $theme-celestial-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-celestial-danger;
+                    border-bottom: 2px solid $theme-celestial-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-celestial-warning;
+                    border-bottom: 2px solid $theme-celestial-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-primary;
+                    background-color: $theme-celestial-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-info;
+                    background-color: $theme-celestial-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-success;
+                    background-color: $theme-celestial-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-danger;
+                    background-color: $theme-celestial-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-warning;
+                    background-color: $theme-celestial-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-primary;
+                    border-color: $theme-celestial-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-celestial-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-primary;
+                    border: 2px solid $theme-celestial-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-info;
+                    border-color: $theme-celestial-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-celestial-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-info;
+                    border: 2px solid $theme-celestial-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-success;
+                    border-color: $theme-celestial-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-celestial-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-success;
+                    border: 2px solid $theme-celestial-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-danger;
+                    border-color: $theme-celestial-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-celestial-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-danger;
+                    border: 2px solid $theme-celestial-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-warning;
+                    border-color: $theme-celestial-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-celestial-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-celestial-warning;
+                    border: 2px solid $theme-celestial-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-celestial-primary;
+                    border-bottom: 2px solid $theme-celestial-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-primary;
+                    background-color: $theme-celestial-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-celestial-primary;
+                }
+                &:after {
+                    background-color: $theme-celestial-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-celestial-primary;
+                    background-color: $theme-celestial-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-celestial-primary;
+                    background-color: $theme-celestial-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-celestial{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-celestial-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-celestial-primary;
+                border-color: $theme-celestial-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-celestial-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-celestial {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-celestial-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-celestial-primary;
+                        color: $theme-celestial-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-celestial-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-celestial {
+    .jq-icon-primary { 
+        background-color: $theme-celestial-primary; 
+        color: $white; 
+        border-color: $theme-celestial-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-celestial-info; 
+        color: $white; 
+        border-color: $theme-celestial-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-celestial-success; 
+        color: $white; 
+        border-color: $theme-celestial-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-celestial-danger; 
+        color: $white; 
+        border-color: $theme-celestial-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-celestial-danger; 
+        color: $white; 
+        border-color: $theme-celestial-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-celestial-warning; 
+        color: $white; 
+        border-color: $theme-celestial-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-celestial {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-celestial-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-celestial-info;
+        }
+        &.status-success::after {
+            background-color: $theme-celestial-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-celestial-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-celestial-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-celestial-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-celestial-primary, 10%);
+        border-color: darken($theme-celestial-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-celestial {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-celestial-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-celestial-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-celestial{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-celestial-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-celestial-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-celestial-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-celestial{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-celestial-primary;
+                        &:hover{
+                            border-left-color: $theme-celestial-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-celestial{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-celestial-primary;
+                    background-color: $theme-celestial-primary;
+                    &:hover{
+                        border: 1px solid $theme-celestial-primary;
+                        background-color: $theme-celestial-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-celestial-primary, 10%);
+                    background-color: darken($theme-celestial-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-celestial-primary;
+                background-color: $theme-celestial-primary;
+                    &:hover{
+                        border: 1px solid $theme-celestial-primary;
+                        background-color: $theme-celestial-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-celestial-primary;
+                }
+                &:hover a{
+                    background-color: $theme-celestial-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-celestial-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-celestial {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-celestial-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-celestial {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-celestial-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-celestial-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-celestial-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-celestial-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-celestial-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-celestial-primary;
+                border-color: $theme-celestial-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-celestial{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-celestial-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-celestial-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-celestial-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-celestial-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-celestial{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-celestial-primary;
+                        background-color: $theme-celestial-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-celestial-primary, 10%);
+                        background-color: darken($theme-celestial-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-celestial-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-celestial-primary;
+                        }
+                       &:before{
+                            background-color: $theme-celestial-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-celestial-primary;
+                        }
+                       &:before{
+                            background-color: $theme-celestial-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-celestial-primary;
+                                color: $theme-celestial-primary;
+                                &:after{
+                                    border-top-color: $theme-celestial-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-celestial-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-celestial{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-celestial-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-celestial{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-celestial-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-celestial{
+    #primary {
+        .slider-selection{
+            background-color: $theme-celestial-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-celestial-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-celestial-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-celestial-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-celestial-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-celestial{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-celestial-primary;
+	                    border-color: $theme-celestial-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-celestial-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-celestial-primary;
+        }
+        a{
+            color: $theme-celestial-primary; 
+            @include hover-focus-state{
+                color: $theme-celestial-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-celestial-primary;    
+            }
+        }
+    }
+}

@@ -1,0 +1,2834 @@
+/**************************************
+Theme greentea Color
+**************************************/
+.bg-gradient-greentea 
+{
+	background-image: $theme-greentea-grd;
+}
+.theme-greentea{ 
+    .bg-gradient-greentea{@extend .bg-gradient-greentea}
+    .art-bg{@extend .bg-gradient-greentea}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-greentea
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-greentea
+    }
+}
+
+.theme-greentea.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-greentea-dark
+{
+	background-image: $theme-greentea-grd-dark;
+}
+
+.dark-skin{
+&.theme-greentea{ 
+    .bg-gradient-greentea{@extend .bg-gradient-greentea-dark}
+    .art-bg{@extend .bg-gradient-greentea-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-greentea-dark
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-greentea-dark
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-greentea{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-greentea-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-greentea{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-greentea-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-greentea{
+    a{  
+        
+        @include hover-state{
+            color: $theme-greentea-primary;
+        }         
+    }
+}
+.theme-greentea{
+    &.light-skin, &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        background: $theme-greentea-info;
+                        color: $white !important;
+                        > i{
+                           color: $white; 
+                        }
+                        &:after{
+                            border-color: transparent #fafafa transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+         &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li.active{
+                        >a{
+                            >span{
+                                background: $theme-greentea-info !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        &:after{
+                            border-color: transparent lighten($black, 20%) transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+    /*---Primary Button---*/
+.theme-greentea {
+    .btn-link {
+        color: $theme-greentea-primary;
+    }
+    .btn-primary {
+        background-color: $theme-greentea-primary;
+        border-color: $theme-greentea-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-greentea-primary, 10%) !important;
+            border-color: darken($theme-greentea-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-greentea-primary, 20%);
+            border-color: $theme-greentea-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-greentea-primary, 20%);
+            border-color: $theme-greentea-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-primary, 10%) !important;
+            border-color: darken($theme-greentea-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-greentea-primary;
+        background-color: transparent;
+        border-color: $theme-greentea-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-greentea-primary, 10%) !important;
+            border-color: darken($theme-greentea-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-primary, 10%) !important;
+            border-color: darken($theme-greentea-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-greentea-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-greentea-primary, 10%) !important;
+            border-color: darken($theme-greentea-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-greentea {
+    .btn-info {
+        background-color: $theme-greentea-info;
+        border-color: $theme-greentea-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-greentea-info, 10%) !important;
+            border-color: darken($theme-greentea-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-greentea-info, 20%);
+            border-color: $theme-greentea-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-greentea-info, 20%);
+            border-color: $theme-greentea-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-info, 10%) !important;
+            border-color: darken($theme-greentea-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-greentea-info;
+        background-color: transparent;
+        border-color: $theme-greentea-info;        
+        @include hover-active-state{
+            background-color: darken($theme-greentea-info, 10%) !important;
+            border-color: darken($theme-greentea-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-info, 10%) !important;
+            border-color: darken($theme-greentea-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-greentea-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-greentea-info, 10%) !important;
+            border-color: darken($theme-greentea-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-greentea {
+    .btn-success {
+        background-color: $theme-greentea-success;
+        border-color: $theme-greentea-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-greentea-success, 10%) !important;
+            border-color: darken($theme-greentea-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-greentea-success, 20%);
+            border-color: $theme-greentea-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-greentea-success, 20%);
+            border-color: $theme-greentea-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-success, 10%) !important;
+            border-color: darken($theme-greentea-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-greentea-success;
+        background-color: transparent;
+        border-color: $theme-greentea-success;        
+        @include hover-active-state{
+            background-color: darken($theme-greentea-success, 10%) !important;
+            border-color: darken($theme-greentea-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-success, 10%) !important;
+            border-color: darken($theme-greentea-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-greentea-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-greentea-success, 10%) !important;
+            border-color: darken($theme-greentea-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-greentea {
+    .btn-danger {
+        background-color: $theme-greentea-danger;
+        border-color: $theme-greentea-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-greentea-danger, 10%) !important;
+            border-color: darken($theme-greentea-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-greentea-danger, 20%);
+            border-color: $theme-greentea-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-greentea-danger, 20%);
+            border-color: $theme-greentea-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-danger, 10%) !important;
+            border-color: darken($theme-greentea-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-greentea-danger;
+        background-color: transparent;
+        border-color: $theme-greentea-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-greentea-danger, 10%) !important;
+            border-color: darken($theme-greentea-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-danger, 10%) !important;
+            border-color: darken($theme-greentea-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-greentea-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-greentea-danger, 10%) !important;
+            border-color: darken($theme-greentea-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-greentea {
+    .btn-warning {
+        background-color: $theme-greentea-warning;
+        border-color: $theme-greentea-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-greentea-warning, 10%) !important;
+            border-color: darken($theme-greentea-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-greentea-warning, 20%);
+            border-color: $theme-greentea-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-greentea-warning, 20%);
+            border-color: $theme-greentea-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-warning, 10%) !important;
+            border-color: darken($theme-greentea-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-greentea-warning;
+        background-color: transparent;
+        border-color: $theme-greentea-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-greentea-warning, 10%) !important;
+            border-color: darken($theme-greentea-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-greentea-warning, 10%) !important;
+            border-color: darken($theme-greentea-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-greentea-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-greentea-warning, 10%) !important;
+            border-color: darken($theme-greentea-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-greentea{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-greentea-primary;
+        background-color: $theme-greentea-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-greentea-info;
+        background-color: $theme-greentea-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-greentea-success;
+        background-color: $theme-greentea-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-greentea-danger;
+        background-color: $theme-greentea-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-greentea-warning;
+        background-color: $theme-greentea-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-greentea{
+    .alert-primary{
+        border-color: $theme-greentea-primary;
+        background-color: $theme-greentea-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-greentea-info;
+        background-color: $theme-greentea-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-greentea-success;
+        background-color: $theme-greentea-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-greentea-danger;
+        background-color: $theme-greentea-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-greentea-danger;
+        background-color: $theme-greentea-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-greentea-warning;
+        background-color: $theme-greentea-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-greentea {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-greentea-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-greentea-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-greentea-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-greentea-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-greentea-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-greentea-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-greentea-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-greentea-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-greentea-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-greentea-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-greentea-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-greentea{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-greentea-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-greentea-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-greentea-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-greentea-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-greentea-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-greentea-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-greentea-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-greentea-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-greentea-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-greentea-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-greentea {
+    .border-primary {
+        border-color: $theme-greentea-primary !important;
+    }
+    .border-info {
+        border-color: $theme-greentea-info !important;
+    }
+    .border-success {
+        border-color: $theme-greentea-success !important;
+    }
+    .border-danger {
+        border-color: $theme-greentea-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-greentea-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-greentea {
+    .bg-primary {
+      background-color: $theme-greentea-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-greentea-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-greentea-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-greentea-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-greentea-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-greentea {
+    .text-primary {
+      color: $theme-greentea-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-greentea-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-greentea-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-greentea-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-greentea-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-greentea-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-greentea-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-greentea-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-greentea-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-greentea-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-greentea-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-greentea-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-greentea-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-greentea-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-greentea-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-greentea {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-greentea-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-greentea-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-greentea-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-greentea-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-greentea-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-greentea {
+    .label-primary{
+        background-color: $theme-greentea-primary !important;
+    }
+    .label-info{
+        background-color: $theme-greentea-info !important;
+    }
+    .label-success{
+        background-color: $theme-greentea-success !important;
+    }
+    .label-danger{
+        background-color: $theme-greentea-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-greentea-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-greentea {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-greentea-primary;
+            
+            &:before  {
+                border-color: $theme-greentea-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-greentea-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-greentea-info;
+            
+            &:before  {
+                border-color: $theme-greentea-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-greentea-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-greentea-success;
+            
+            &:before  {
+                border-color: $theme-greentea-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-greentea-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-greentea-danger;
+            
+            &:before  {
+                border-color: $theme-greentea-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-greentea-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-greentea-warning;
+            
+            &:before  {
+                border-color: $theme-greentea-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-greentea-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-greentea-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-greentea{ 
+    .box-primary {
+        background-color: $theme-greentea-primary !important;
+    &.box-bordered{
+        border-color: $theme-greentea-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-greentea-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-greentea-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-greentea-info !important;
+    &.box-bordered{
+        border-color: $theme-greentea-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-greentea-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-greentea-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-greentea-success !important;
+    &.box-bordered{
+        border-color: $theme-greentea-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-greentea-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-greentea-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-greentea-danger !important;
+    &.box-bordered{
+        border-color: $theme-greentea-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-greentea-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-greentea-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-greentea-warning !important;
+    &.box-bordered{
+        border-color: $theme-greentea-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-greentea-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-greentea-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-greentea-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-greentea-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-greentea-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-greentea-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-greentea {
+    .progress-bar-primary {
+        background-color: $theme-greentea-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-greentea-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-greentea-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-greentea-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-greentea-warning;
+    }
+}
+    /*---panel---*/
+.theme-greentea {
+    .panel-primary {
+        border-color: $theme-greentea-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-greentea-primary;
+            border-color: $theme-greentea-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-greentea-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-greentea-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-greentea-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-greentea-primary;
+          border-top-color: $theme-greentea-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-greentea-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-greentea-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-greentea-info;
+            border-color: $theme-greentea-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-greentea-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-greentea-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-greentea-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-greentea-info;
+          border-top-color: $theme-greentea-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-greentea-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-greentea-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-greentea-success;
+            border-color: $theme-greentea-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-greentea-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-greentea-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-greentea-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-greentea-success;
+          border-top-color: $theme-greentea-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-greentea-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-greentea-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-greentea-danger;
+            border-color: $theme-greentea-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-greentea-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-greentea-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-greentea-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-greentea-danger;
+          border-top-color: $theme-greentea-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-greentea-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-greentea-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-greentea-warning;
+            border-color: $theme-greentea-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-greentea-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-greentea-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-greentea-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-greentea-warning;
+          border-top-color: $theme-greentea-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-greentea-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-greentea {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-greentea-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-greentea-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-greentea-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-greentea-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-greentea-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-greentea-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-greentea {
+    .badge-primary {
+        background-color: $theme-greentea-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-greentea-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-greentea-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-greentea-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-greentea-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-greentea-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-greentea-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-greentea-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-greentea-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-greentea-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-greentea {
+    .rating-primary {
+        .active {
+            color: $theme-greentea-primary;
+        }
+        :checked ~ label {
+            color: $theme-greentea-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-greentea-primary;
+                ~ label {
+                    color: $theme-greentea-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-greentea-info;
+        }
+        :checked ~ label {
+            color: $theme-greentea-info;
+        }
+        label{
+            &:hover {
+                color: $theme-greentea-info;
+                ~ label {
+                    color: $theme-greentea-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-greentea-success;
+        }
+        :checked ~ label {
+            color: $theme-greentea-success;
+        }
+        label{
+            &:hover {
+                color: $theme-greentea-success;
+                ~ label {
+                    color: $theme-greentea-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-greentea-danger;
+        }
+        :checked ~ label {
+            color: $theme-greentea-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-greentea-danger;
+                ~ label {
+                    color: $theme-greentea-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-greentea-warning;
+        }
+        :checked ~ label {
+            color: $theme-greentea-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-greentea-warning;
+                ~ label {
+                    color: $theme-greentea-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-greentea {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-greentea-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-greentea-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-greentea-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-greentea-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-greentea-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-greentea {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-greentea-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-greentea-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-greentea-info, 10%);
+                background-color: transparent;
+                color: darken($theme-greentea-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-greentea-success, 10%);
+                background-color: transparent;
+                color: darken($theme-greentea-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-greentea-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-greentea-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-greentea-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-greentea-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-greentea-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-greentea-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-greentea-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-greentea-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-greentea-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-greentea-primary;
+            background-color: $theme-greentea-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-greentea-primary;
+                background-color: $theme-greentea-primary;  
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-greentea-primary;
+                background-color: $theme-greentea-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-greentea-primary;
+                    background-color: $theme-greentea-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-greentea {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-greentea-primary;
+        }
+        .info {
+            border-left-color: $theme-greentea-primary;
+        }
+        .success {
+            border-left-color: $theme-greentea-success;
+        }
+        .danger {
+            border-left-color: $theme-greentea-danger;
+        }
+        .warning {
+            border-left-color: $theme-greentea-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-greentea {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-greentea-primary;
+                  border: 1px solid  $theme-greentea-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-greentea-primary;
+                  border-right-color: $theme-greentea-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-greentea-info;
+                  border: 1px solid  $theme-greentea-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-greentea-info;
+                  border-right-color: $theme-greentea-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-greentea-success;
+                  border: 1px solid  $theme-greentea-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-greentea-success;
+                  border-right-color: $theme-greentea-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-greentea-danger;
+                  border: 1px solid  $theme-greentea-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-greentea-danger;
+                  border-right-color: $theme-greentea-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-greentea-warning;
+                  border: 1px solid  $theme-greentea-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-greentea-warning;
+                  border-right-color: $theme-greentea-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-greentea-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-greentea-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-greentea-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-greentea-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-greentea-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-greentea-primary;
+            }
+            .label-info {
+                background-color: $theme-greentea-info;
+            }
+            .label-success {
+                background-color: $theme-greentea-success;
+            }
+            .label-danger {
+                background-color: $theme-greentea-danger;
+            }
+            .label-warning {
+                background-color: $theme-greentea-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-greentea-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-greentea-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-greentea{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-greentea-primary; 
+                &:hover{
+                   background-color: $theme-greentea-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-greentea-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-greentea-primary;
+                background-color: $theme-greentea-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-greentea{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-greentea-primary;
+                        color: $theme-greentea-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-greentea-primary;
+                        color: $theme-greentea-primary;
+                        @include hover-state{
+                            border-color: $theme-greentea-primary;
+                            color: $theme-greentea-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-greentea-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-greentea{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-greentea-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-greentea-primary;
+	                   background-color: $theme-greentea-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-greentea-primary;
+	                   background-color: $theme-greentea-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-greentea-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-greentea-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-greentea-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-greentea-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-greentea-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-greentea-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-greentea {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-greentea-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-greentea-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-greentea-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-greentea-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-greentea-primary;
+                    border-bottom: 2px solid $theme-greentea-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-greentea-info;
+                    border-bottom: 2px solid $theme-greentea-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-greentea-success;
+                    border-bottom: 2px solid $theme-greentea-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-greentea-danger;
+                    border-bottom: 2px solid $theme-greentea-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-greentea-warning;
+                    border-bottom: 2px solid $theme-greentea-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-primary;
+                    background-color: $theme-greentea-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-info;
+                    background-color: $theme-greentea-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-success;
+                    background-color: $theme-greentea-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-danger;
+                    background-color: $theme-greentea-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-warning;
+                    background-color: $theme-greentea-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-primary;
+                    border-color: $theme-greentea-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-greentea-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-primary;
+                    border: 2px solid $theme-greentea-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-info;
+                    border-color: $theme-greentea-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-greentea-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-info;
+                    border: 2px solid $theme-greentea-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-success;
+                    border-color: $theme-greentea-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-greentea-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-success;
+                    border: 2px solid $theme-greentea-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-danger;
+                    border-color: $theme-greentea-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-greentea-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-danger;
+                    border: 2px solid $theme-greentea-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-warning;
+                    border-color: $theme-greentea-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-greentea-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-greentea-warning;
+                    border: 2px solid $theme-greentea-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-greentea-primary;
+                    border-bottom: 2px solid $theme-greentea-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-primary;
+                    background-color: $theme-greentea-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-greentea-primary;
+                }
+                &:after {
+                    background-color: $theme-greentea-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-greentea-primary;
+                    background-color: $theme-greentea-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-greentea-primary;
+                    background-color: $theme-greentea-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-greentea{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-greentea-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-greentea-primary;
+                border-color: $theme-greentea-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-greentea-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-greentea {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-greentea-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-greentea-primary;
+                        color: $theme-greentea-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-greentea-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-greentea {
+    .jq-icon-primary { 
+        background-color: $theme-greentea-primary; 
+        color: $white; 
+        border-color: $theme-greentea-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-greentea-info; 
+        color: $white; 
+        border-color: $theme-greentea-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-greentea-success; 
+        color: $white; 
+        border-color: $theme-greentea-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-greentea-danger; 
+        color: $white; 
+        border-color: $theme-greentea-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-greentea-danger; 
+        color: $white; 
+        border-color: $theme-greentea-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-greentea-warning; 
+        color: $white; 
+        border-color: $theme-greentea-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-greentea {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-greentea-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-greentea-info;
+        }
+        &.status-success::after {
+            background-color: $theme-greentea-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-greentea-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-greentea-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-greentea-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-greentea-primary, 10%);
+        border-color: darken($theme-greentea-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-greentea {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-greentea-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-greentea-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-greentea{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-greentea-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-greentea-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-greentea-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-greentea{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-greentea-primary;
+                        &:hover{
+                            border-left-color: $theme-greentea-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-greentea{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-greentea-primary;
+                    background-color: $theme-greentea-primary;
+                    &:hover{
+                        border: 1px solid $theme-greentea-primary;
+                        background-color: $theme-greentea-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-greentea-primary, 10%);
+                    background-color: darken($theme-greentea-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-greentea-primary;
+                background-color: $theme-greentea-primary;
+                    &:hover{
+                        border: 1px solid $theme-greentea-primary;
+                        background-color: $theme-greentea-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-greentea-primary;
+                }
+                &:hover a{
+                    background-color: $theme-greentea-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-greentea-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-greentea {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-greentea-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-greentea {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-greentea-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-greentea-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-greentea-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-greentea-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-greentea-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-greentea-primary;
+                border-color: $theme-greentea-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-greentea{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-greentea-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-greentea-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-greentea-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-greentea-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-greentea{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-greentea-primary;
+                        background-color: $theme-greentea-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-greentea-primary, 10%);
+                        background-color: darken($theme-greentea-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-greentea-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-greentea-primary;
+                        }
+                       &:before{
+                            background-color: $theme-greentea-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-greentea-primary;
+                        }
+                       &:before{
+                            background-color: $theme-greentea-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-greentea-primary;
+                                color: $theme-greentea-primary;
+                                &:after{
+                                    border-top-color: $theme-greentea-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-greentea-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-greentea{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-greentea-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-greentea{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-greentea-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-greentea{
+    #primary {
+        .slider-selection{
+            background-color: $theme-greentea-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-greentea-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-greentea-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-greentea-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-greentea-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-greentea{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-greentea-primary;
+	                    border-color: $theme-greentea-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-greentea-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-greentea-primary;
+        }
+        a{
+            color: $theme-greentea-primary; 
+            @include hover-focus-state{
+                color: $theme-greentea-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-greentea-primary;    
+            }
+        }
+    }
+}

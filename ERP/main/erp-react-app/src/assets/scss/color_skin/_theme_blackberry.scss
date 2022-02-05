@@ -1,0 +1,2834 @@
+/**************************************
+Theme blackberry Color
+**************************************/
+.bg-gradient-blackberry 
+{
+	background-image: $theme-blackberry-grd;
+}
+.theme-blackberry{ 
+    .bg-gradient-blackberry{@extend .bg-gradient-blackberry}
+    .art-bg{@extend .bg-gradient-blackberry}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-blackberry
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-blackberry
+    }
+}
+
+.theme-blackberry.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-blackberry-dark
+{
+	background-image: $theme-blackberry-grd-dark;
+}
+
+.dark-skin{
+&.theme-blackberry{ 
+    .bg-gradient-blackberry{@extend .bg-gradient-blackberry-dark}
+    .art-bg{@extend .bg-gradient-blackberry-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-blackberry-dark
+        }
+    }
+    .main-header{
+        @extend .bg-gradient-blackberry-dark
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-blackberry{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-blackberry-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-blackberry{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-blackberry-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-blackberry{
+    a{  
+        
+        @include hover-state{
+            color: $theme-blackberry-primary;
+        }         
+    }
+}
+.theme-blackberry{
+    &.light-skin, &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        background: transparent;
+                        color: $theme-blackberry-primary !important;
+                        > i{
+                           color: $theme-blackberry-primary; 
+                        }
+                        &:after{
+                            border-color: transparent #fafafa transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+         &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li.active{
+                        >a{
+                            >span{
+                                background: $theme-blackberry-primary !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dark-skin {
+        .sidebar-menu{
+            >li{
+                &.active{
+                    >a{
+                        &:after{
+                            border-color: transparent lighten($black, 20%) transparent transparent !important;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+    /*---Primary Button---*/
+.theme-blackberry {
+    .btn-link {
+        color: $theme-blackberry-primary;
+    }
+    .btn-primary {
+        background-color: $theme-blackberry-primary;
+        border-color: $theme-blackberry-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-blackberry-primary, 10%) !important;
+            border-color: darken($theme-blackberry-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-blackberry-primary, 20%);
+            border-color: $theme-blackberry-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-blackberry-primary, 20%);
+            border-color: $theme-blackberry-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-primary, 10%) !important;
+            border-color: darken($theme-blackberry-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-blackberry-primary;
+        background-color: transparent;
+        border-color: $theme-blackberry-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-primary, 10%) !important;
+            border-color: darken($theme-blackberry-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-primary, 10%) !important;
+            border-color: darken($theme-blackberry-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-blackberry-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-primary, 10%) !important;
+            border-color: darken($theme-blackberry-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-blackberry {
+    .btn-info {
+        background-color: $theme-blackberry-info;
+        border-color: $theme-blackberry-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-blackberry-info, 10%) !important;
+            border-color: darken($theme-blackberry-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-blackberry-info, 20%);
+            border-color: $theme-blackberry-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-blackberry-info, 20%);
+            border-color: $theme-blackberry-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-info, 10%) !important;
+            border-color: darken($theme-blackberry-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-blackberry-info;
+        background-color: transparent;
+        border-color: $theme-blackberry-info;        
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-info, 10%) !important;
+            border-color: darken($theme-blackberry-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-info, 10%) !important;
+            border-color: darken($theme-blackberry-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-blackberry-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-info, 10%) !important;
+            border-color: darken($theme-blackberry-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-blackberry {
+    .btn-success {
+        background-color: $theme-blackberry-success;
+        border-color: $theme-blackberry-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-blackberry-success, 10%) !important;
+            border-color: darken($theme-blackberry-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-blackberry-success, 20%);
+            border-color: $theme-blackberry-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-blackberry-success, 20%);
+            border-color: $theme-blackberry-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-success, 10%) !important;
+            border-color: darken($theme-blackberry-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-blackberry-success;
+        background-color: transparent;
+        border-color: $theme-blackberry-success;        
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-success, 10%) !important;
+            border-color: darken($theme-blackberry-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-success, 10%) !important;
+            border-color: darken($theme-blackberry-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-blackberry-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-success, 10%) !important;
+            border-color: darken($theme-blackberry-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-blackberry {
+    .btn-danger {
+        background-color: $theme-blackberry-danger;
+        border-color: $theme-blackberry-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-blackberry-danger, 10%) !important;
+            border-color: darken($theme-blackberry-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-blackberry-danger, 20%);
+            border-color: $theme-blackberry-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-blackberry-danger, 20%);
+            border-color: $theme-blackberry-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-danger, 10%) !important;
+            border-color: darken($theme-blackberry-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-blackberry-danger;
+        background-color: transparent;
+        border-color: $theme-blackberry-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-danger, 10%) !important;
+            border-color: darken($theme-blackberry-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-danger, 10%) !important;
+            border-color: darken($theme-blackberry-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-blackberry-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-danger, 10%) !important;
+            border-color: darken($theme-blackberry-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-blackberry {
+    .btn-warning {
+        background-color: $theme-blackberry-warning;
+        border-color: $theme-blackberry-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-blackberry-warning, 10%) !important;
+            border-color: darken($theme-blackberry-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-blackberry-warning, 20%);
+            border-color: $theme-blackberry-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-blackberry-warning, 20%);
+            border-color: $theme-blackberry-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-warning, 10%) !important;
+            border-color: darken($theme-blackberry-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-blackberry-warning;
+        background-color: transparent;
+        border-color: $theme-blackberry-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-warning, 10%) !important;
+            border-color: darken($theme-blackberry-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-blackberry-warning, 10%) !important;
+            border-color: darken($theme-blackberry-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-blackberry-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-blackberry-warning, 10%) !important;
+            border-color: darken($theme-blackberry-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-blackberry{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-blackberry-primary;
+        background-color: $theme-blackberry-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-blackberry-info;
+        background-color: $theme-blackberry-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-blackberry-success;
+        background-color: $theme-blackberry-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-blackberry-danger;
+        background-color: $theme-blackberry-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-blackberry-warning;
+        background-color: $theme-blackberry-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-blackberry{
+    .alert-primary{
+        border-color: $theme-blackberry-primary;
+        background-color: $theme-blackberry-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-blackberry-info;
+        background-color: $theme-blackberry-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-blackberry-success;
+        background-color: $theme-blackberry-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-blackberry-danger;
+        background-color: $theme-blackberry-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-blackberry-danger;
+        background-color: $theme-blackberry-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-blackberry-warning;
+        background-color: $theme-blackberry-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-blackberry {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-blackberry-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-blackberry-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-blackberry-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-blackberry-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-blackberry-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-blackberry-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-blackberry-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-blackberry-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-blackberry-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-blackberry-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-blackberry{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-blackberry-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-blackberry-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-blackberry-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-blackberry-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-blackberry-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-blackberry-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-blackberry-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-blackberry-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-blackberry-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-blackberry-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-blackberry {
+    .border-primary {
+        border-color: $theme-blackberry-primary !important;
+    }
+    .border-info {
+        border-color: $theme-blackberry-info !important;
+    }
+    .border-success {
+        border-color: $theme-blackberry-success !important;
+    }
+    .border-danger {
+        border-color: $theme-blackberry-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-blackberry-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-blackberry {
+    .bg-primary {
+      background-color: $theme-blackberry-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-blackberry-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-blackberry-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-blackberry-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-blackberry-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-blackberry {
+    .text-primary {
+      color: $theme-blackberry-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-blackberry-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-blackberry-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-blackberry-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-blackberry-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-blackberry-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-blackberry-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-blackberry-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-blackberry-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-blackberry-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-blackberry-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-blackberry-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-blackberry-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-blackberry-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-blackberry-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-blackberry {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-blackberry-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-blackberry-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-blackberry-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-blackberry-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-blackberry-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-blackberry {
+    .label-primary{
+        background-color: $theme-blackberry-primary !important;
+    }
+    .label-info{
+        background-color: $theme-blackberry-info !important;
+    }
+    .label-success{
+        background-color: $theme-blackberry-success !important;
+    }
+    .label-danger{
+        background-color: $theme-blackberry-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-blackberry-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-blackberry {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-blackberry-primary;
+            
+            &:before  {
+                border-color: $theme-blackberry-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-blackberry-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-blackberry-info;
+            
+            &:before  {
+                border-color: $theme-blackberry-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-blackberry-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-blackberry-success;
+            
+            &:before  {
+                border-color: $theme-blackberry-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-blackberry-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-blackberry-danger;
+            
+            &:before  {
+                border-color: $theme-blackberry-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-blackberry-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-blackberry-warning;
+            
+            &:before  {
+                border-color: $theme-blackberry-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-blackberry-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-blackberry-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-blackberry{ 
+    .box-primary {
+        background-color: $theme-blackberry-primary !important;
+    &.box-bordered{
+        border-color: $theme-blackberry-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-blackberry-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-blackberry-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-blackberry-info !important;
+    &.box-bordered{
+        border-color: $theme-blackberry-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-blackberry-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-blackberry-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-blackberry-success !important;
+    &.box-bordered{
+        border-color: $theme-blackberry-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-blackberry-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-blackberry-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-blackberry-danger !important;
+    &.box-bordered{
+        border-color: $theme-blackberry-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-blackberry-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-blackberry-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-blackberry-warning !important;
+    &.box-bordered{
+        border-color: $theme-blackberry-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-blackberry-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-blackberry-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-blackberry-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-blackberry-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-blackberry-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-blackberry-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-blackberry {
+    .progress-bar-primary {
+        background-color: $theme-blackberry-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-blackberry-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-blackberry-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-blackberry-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-blackberry-warning;
+    }
+}
+    /*---panel---*/
+.theme-blackberry {
+    .panel-primary {
+        border-color: $theme-blackberry-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-blackberry-primary;
+            border-color: $theme-blackberry-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-blackberry-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-blackberry-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-blackberry-primary;
+          border-top-color: $theme-blackberry-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-blackberry-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-blackberry-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-blackberry-info;
+            border-color: $theme-blackberry-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-blackberry-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-blackberry-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-blackberry-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-blackberry-info;
+          border-top-color: $theme-blackberry-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-blackberry-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-blackberry-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-blackberry-success;
+            border-color: $theme-blackberry-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-blackberry-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-blackberry-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-blackberry-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-blackberry-success;
+          border-top-color: $theme-blackberry-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-blackberry-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-blackberry-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-blackberry-danger;
+            border-color: $theme-blackberry-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-blackberry-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-blackberry-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-blackberry-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-blackberry-danger;
+          border-top-color: $theme-blackberry-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-blackberry-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-blackberry-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-blackberry-warning;
+            border-color: $theme-blackberry-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-blackberry-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-blackberry-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-blackberry-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-blackberry-warning;
+          border-top-color: $theme-blackberry-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-blackberry-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-blackberry {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-blackberry-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-blackberry-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-blackberry-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-blackberry-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-blackberry-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-blackberry-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-blackberry {
+    .badge-primary {
+        background-color: $theme-blackberry-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-blackberry-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-blackberry-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-blackberry-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-blackberry-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-blackberry-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-blackberry-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-blackberry-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-blackberry-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-blackberry-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-blackberry {
+    .rating-primary {
+        .active {
+            color: $theme-blackberry-primary;
+        }
+        :checked ~ label {
+            color: $theme-blackberry-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-blackberry-primary;
+                ~ label {
+                    color: $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-blackberry-info;
+        }
+        :checked ~ label {
+            color: $theme-blackberry-info;
+        }
+        label{
+            &:hover {
+                color: $theme-blackberry-info;
+                ~ label {
+                    color: $theme-blackberry-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-blackberry-success;
+        }
+        :checked ~ label {
+            color: $theme-blackberry-success;
+        }
+        label{
+            &:hover {
+                color: $theme-blackberry-success;
+                ~ label {
+                    color: $theme-blackberry-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-blackberry-danger;
+        }
+        :checked ~ label {
+            color: $theme-blackberry-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-blackberry-danger;
+                ~ label {
+                    color: $theme-blackberry-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-blackberry-warning;
+        }
+        :checked ~ label {
+            color: $theme-blackberry-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-blackberry-warning;
+                ~ label {
+                    color: $theme-blackberry-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-blackberry {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-blackberry-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-blackberry-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-blackberry-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-blackberry-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-blackberry-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-blackberry {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-blackberry-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-blackberry-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-blackberry-info, 10%);
+                background-color: $theme-blackberry-info;
+                color: $white;
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-blackberry-success, 10%);
+                background-color: transparent;
+                color: darken($theme-blackberry-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-blackberry-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-blackberry-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-blackberry-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-blackberry-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-blackberry-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-blackberry-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-blackberry-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-blackberry-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-blackberry-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-blackberry-info;
+            background-color: $theme-blackberry-info;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-blackberry-info;
+                background-color: $theme-blackberry-info;
+                color: $white;
+            }
+        }
+        } 
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-blackberry-primary;
+                background-color: $theme-blackberry-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-blackberry-primary;
+                    background-color: $theme-blackberry-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-blackberry {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-blackberry-primary;
+        }
+        .info {
+            border-left-color: $theme-blackberry-primary;
+        }
+        .success {
+            border-left-color: $theme-blackberry-success;
+        }
+        .danger {
+            border-left-color: $theme-blackberry-danger;
+        }
+        .warning {
+            border-left-color: $theme-blackberry-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-blackberry {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-blackberry-primary;
+                  border: 1px solid  $theme-blackberry-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-blackberry-primary;
+                  border-right-color: $theme-blackberry-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-blackberry-info;
+                  border: 1px solid  $theme-blackberry-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-blackberry-info;
+                  border-right-color: $theme-blackberry-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-blackberry-success;
+                  border: 1px solid  $theme-blackberry-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-blackberry-success;
+                  border-right-color: $theme-blackberry-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-blackberry-danger;
+                  border: 1px solid  $theme-blackberry-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-blackberry-danger;
+                  border-right-color: $theme-blackberry-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-blackberry-warning;
+                  border: 1px solid  $theme-blackberry-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-blackberry-warning;
+                  border-right-color: $theme-blackberry-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-blackberry-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-blackberry-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-blackberry-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-blackberry-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-blackberry-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-blackberry-primary;
+            }
+            .label-info {
+                background-color: $theme-blackberry-info;
+            }
+            .label-success {
+                background-color: $theme-blackberry-success;
+            }
+            .label-danger {
+                background-color: $theme-blackberry-danger;
+            }
+            .label-warning {
+                background-color: $theme-blackberry-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-blackberry-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-blackberry-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-blackberry{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-blackberry-primary; 
+                &:hover{
+                   background-color: $theme-blackberry-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-blackberry-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-blackberry-primary;
+                background-color: $theme-blackberry-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-blackberry{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-blackberry-primary;
+                        color: $theme-blackberry-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-blackberry-primary;
+                        color: $theme-blackberry-primary;
+                        @include hover-state{
+                            border-color: $theme-blackberry-primary;
+                            color: $theme-blackberry-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-blackberry-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-blackberry{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-blackberry-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-blackberry-primary;
+	                   background-color: $theme-blackberry-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-blackberry-primary;
+	                   background-color: $theme-blackberry-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-blackberry-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-blackberry-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-blackberry-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-blackberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-blackberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-blackberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-blackberry {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-blackberry-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-blackberry-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-blackberry-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-blackberry-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-blackberry-primary;
+                    border-bottom: 2px solid $theme-blackberry-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-blackberry-info;
+                    border-bottom: 2px solid $theme-blackberry-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-blackberry-success;
+                    border-bottom: 2px solid $theme-blackberry-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-blackberry-danger;
+                    border-bottom: 2px solid $theme-blackberry-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-blackberry-warning;
+                    border-bottom: 2px solid $theme-blackberry-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-primary;
+                    background-color: $theme-blackberry-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-info;
+                    background-color: $theme-blackberry-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-success;
+                    background-color: $theme-blackberry-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-danger;
+                    background-color: $theme-blackberry-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-warning;
+                    background-color: $theme-blackberry-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-primary;
+                    border-color: $theme-blackberry-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-blackberry-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-primary;
+                    border: 2px solid $theme-blackberry-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-info;
+                    border-color: $theme-blackberry-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-blackberry-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-info;
+                    border: 2px solid $theme-blackberry-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-success;
+                    border-color: $theme-blackberry-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-blackberry-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-success;
+                    border: 2px solid $theme-blackberry-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-danger;
+                    border-color: $theme-blackberry-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-blackberry-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-danger;
+                    border: 2px solid $theme-blackberry-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-warning;
+                    border-color: $theme-blackberry-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-blackberry-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-blackberry-warning;
+                    border: 2px solid $theme-blackberry-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-blackberry-primary;
+                    border-bottom: 2px solid $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-primary;
+                    background-color: $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-blackberry-primary;
+                }
+                &:after {
+                    background-color: $theme-blackberry-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-blackberry-primary;
+                    background-color: $theme-blackberry-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-blackberry-primary;
+                    background-color: $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-blackberry{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-blackberry-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-blackberry-primary;
+                border-color: $theme-blackberry-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-blackberry-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-blackberry {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-blackberry-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-blackberry-primary;
+                        color: $theme-blackberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-blackberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-blackberry {
+    .jq-icon-primary { 
+        background-color: $theme-blackberry-primary; 
+        color: $white; 
+        border-color: $theme-blackberry-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-blackberry-info; 
+        color: $white; 
+        border-color: $theme-blackberry-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-blackberry-success; 
+        color: $white; 
+        border-color: $theme-blackberry-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-blackberry-danger; 
+        color: $white; 
+        border-color: $theme-blackberry-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-blackberry-danger; 
+        color: $white; 
+        border-color: $theme-blackberry-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-blackberry-warning; 
+        color: $white; 
+        border-color: $theme-blackberry-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-blackberry {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-blackberry-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-blackberry-info;
+        }
+        &.status-success::after {
+            background-color: $theme-blackberry-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-blackberry-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-blackberry-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-blackberry-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-blackberry-primary, 10%);
+        border-color: darken($theme-blackberry-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-blackberry {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-blackberry-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-blackberry-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-blackberry{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-blackberry-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-blackberry-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-blackberry-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-blackberry{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-blackberry-primary;
+                        &:hover{
+                            border-left-color: $theme-blackberry-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-blackberry{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-blackberry-primary;
+                    background-color: $theme-blackberry-primary;
+                    &:hover{
+                        border: 1px solid $theme-blackberry-primary;
+                        background-color: $theme-blackberry-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-blackberry-primary, 10%);
+                    background-color: darken($theme-blackberry-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-blackberry-primary;
+                background-color: $theme-blackberry-primary;
+                    &:hover{
+                        border: 1px solid $theme-blackberry-primary;
+                        background-color: $theme-blackberry-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-blackberry-primary;
+                }
+                &:hover a{
+                    background-color: $theme-blackberry-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-blackberry-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-blackberry {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-blackberry-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-blackberry {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-blackberry-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-blackberry-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-blackberry-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-blackberry-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-blackberry-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-blackberry-primary;
+                border-color: $theme-blackberry-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-blackberry{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-blackberry-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-blackberry-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-blackberry-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-blackberry-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-blackberry{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-blackberry-primary;
+                        background-color: $theme-blackberry-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-blackberry-primary, 10%);
+                        background-color: darken($theme-blackberry-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-blackberry-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-blackberry-primary;
+                        }
+                       &:before{
+                            background-color: $theme-blackberry-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-blackberry-primary;
+                        }
+                       &:before{
+                            background-color: $theme-blackberry-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-blackberry-primary;
+                                color: $theme-blackberry-primary;
+                                &:after{
+                                    border-top-color: $theme-blackberry-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-blackberry-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-blackberry{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-blackberry-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-blackberry{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-blackberry-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-blackberry{
+    #primary {
+        .slider-selection{
+            background-color: $theme-blackberry-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-blackberry-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-blackberry-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-blackberry-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-blackberry-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-blackberry{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-blackberry-primary;
+	                    border-color: $theme-blackberry-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-blackberry-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-blackberry-primary;
+        }
+        a{
+            color: $theme-blackberry-primary; 
+            @include hover-focus-state{
+                color: $theme-blackberry-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-blackberry-primary;    
+            }
+        }
+    }
+}
