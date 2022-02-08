@@ -17,6 +17,7 @@ const Home = () => {
       type: LOAD_POST_REQUEST,
     });
   }, []);
+  
   useEffect(() => {
     function onScroll() {
       console.log(parseInt(window.scrollY), document.documentElement.clientHeight, document.documentElement.scrollHeight);
