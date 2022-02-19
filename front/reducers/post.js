@@ -7,6 +7,12 @@ export const initialState = {
   imagePaths: [],
   postAdded: false,
   hasMorePosts: true,
+  likePostLoading: false,
+  likePostDone: false,
+  likePostError: false,
+  unlikePostLoading: false,
+  unlikePostDone: false,
+  unlikePostError: false,
   loadPostLoading: false,
   loadPostDone: false,
   loadPostError: false,
@@ -19,6 +25,7 @@ export const initialState = {
   addCommentLoading: false,
   addCommentDone: false,
   addCommentError: false,
+  
 };
 
 export const generateDummyPost = (number) => Array(number).fill().map(() => ({
@@ -37,6 +44,14 @@ export const generateDummyPost = (number) => Array(number).fill().map(() => ({
       content: faker.lorem.sentence(),
     }],
 }));
+
+export const LIKE_POST_REQUEST = 'LIKE_POST_REQUEST';
+export const LIKE_POST_SUCCESS = 'LIKE_POST_SUCCESS';
+export const LIKE_POST_FAILURE = 'LIKE_POST_FAILURE';
+
+export const UNLIKE_POST_REQUEST = 'UNLIKE_POST_REQUEST';
+export const UNLIKE_POST_SUCCESS = 'UNLIKE_POST_SUCCESS';
+export const UNLIKE_POST_FAILURE = 'UNLIKE_POST_FAILURE';
 
 export const LOAD_POST_REQUEST = 'LOAD_POST_REQUEST';
 export const LOAD_POST_SUCCESS = 'LOAD_POST_SUCCESS';
@@ -113,7 +128,7 @@ const rootReducer = (state = initialState, action) => {
           break;
 
       case ADD_POST_SUCCESS:
-          draft.mainPosts.unshift(dummyPost(action.data));
+          draft.mainPosts.unshift(action.data);
           draft.addPostLoading = false;
           draft.addPostDone = true;
           break;
@@ -130,7 +145,8 @@ const rootReducer = (state = initialState, action) => {
           break;
 
       case REMOVE_POST_SUCCESS:
-          draft.mainPosts = state.mainPosts.filter((v) => v.id !== action.data);
+          console.log(action.data);
+          draft.mainPosts = state.mainPosts.filter((v) => v.id !== action.data.PostId);
           draft.removePostLoading = false;
           draft.removePostDone = true;
           break;
@@ -138,6 +154,44 @@ const rootReducer = (state = initialState, action) => {
       case REMOVE_POST_FAILURE:
           draft.removePostLoading = false;
           draft.removePostError = action.error;
+          break;
+
+      case LIKE_POST_REQUEST:
+          draft.likePostLoading = true;
+          draft.likePostDone = false;
+          draft.likePostError = null;
+          break;
+
+      case LIKE_POST_SUCCESS: {
+          const post = draft.mainPosts.find((v) => v.id === action.data.PostId);
+          post.Likers.push({ id: action.data.UserId });
+          draft.likePostLoading = false;
+          draft.likePostDone = true;
+          break;
+        }
+        
+      case LIKE_POST_FAILURE:
+          draft.likePostLoading = false;
+          draft.likePostError = action.error;
+          break;
+      
+      case UNLIKE_POST_REQUEST:
+          draft.unlikePostLoading = true;
+          draft.unlikePostDone = false;
+          draft.unlikePostError = null;
+          break;
+
+      case UNLIKE_POST_SUCCESS: {
+          const post = draft.mainPosts.find((v) => v.id === action.data.PostId);
+          post.Likers = post.Likers.filter((v) => v.id !== action.data.UserId);
+          draft.unlikePostLoading = false;
+          draft.unlikePostDone = true;
+          break;
+        }
+        
+      case UNLIKE_POST_FAILURE:
+          draft.unlikePostLoading = false;
+          draft.unlikePostError = action.error;
           break;
   
   
@@ -148,8 +202,8 @@ const rootReducer = (state = initialState, action) => {
           break;
   
       case ADD_COMMENT_SUCCESS:
-        const post = draft.mainPosts.find((v) => v.id === action.data.postId);
-        post.Comments.unshift(dummyComment(action.data.content));
+        const post = draft.mainPosts.find((v) => v.id === action.data.PostId);
+        post.Comments.unshift(action.data);
         draft.addCommentLoading = false;
         draft.addCommentDone = true;
         break;

@@ -1,6 +1,10 @@
 import { all, fork } from 'redux-saga/effects';
 import postSaga from './post';
 import userSaga from './user';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://localhost:3065';
+axios.defaults.withCredentials = true;
 
 // takeEvery는 take를 무한 반복한다.
 // 일반 take는 한 번 실행되면 사라지기 때문에, 로그인-로그아웃-> 로그인 불가능하다.
