@@ -1,0 +1,40 @@
+version: "3"
+services:
+  frontend:
+    build: #도커파일위치
+      dockerfile: Dockerfile.dev
+      context: ./frontend
+    volumes: # 코드 수정해도 도커 이미지 build 안해도 되게, volume 사용
+      - /app/node_modules
+      - ./frontend:/app
+    stdin_open: true #react 앱 종료할때 나오는 버그 제거
+
+  nginx:
+    restart: always # 항상 재시작
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3000:80"
+  
+  backend:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./backend
+    container_name: app_backend
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+
+  mysql:
+    build: ./mysql
+    restart: unless-stopped #개발자가 직접 멈추지 않는 이상, 재시작
+    container_name: app_mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/mysql_data:/var/lib/mysql
+      - ./mysql/sqls/:/docker-entrypoint-initdb.d/
+    environment:
+        MYSQL_ROOT_PASSWORD: 1234 #root 계정 비밀번호
+        MYSQL_DATABASE: myapp #데이터베이스 명
