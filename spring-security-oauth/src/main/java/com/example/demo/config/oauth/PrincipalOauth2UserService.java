@@ -3,9 +3,11 @@ package com.example.demo.config.oauth;
 import com.example.demo.config.auth.PrincipalDetails;
 import com.example.demo.config.auth.provider.FacebookUserInfo;
 import com.example.demo.config.auth.provider.GoogleUserInfo;
+import com.example.demo.config.auth.provider.NaverUserInfo;
 import com.example.demo.config.auth.provider.OAuth2UserInfo;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
+import com.nimbusds.openid.connect.sdk.claims.UserInfo;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,6 +16,8 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @Service
 public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
@@ -39,6 +43,8 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
             oAuth2UserInfo = new GoogleUserInfo(oAuth2User.getAttributes());
         } else if(userRequest.getClientRegistration().getRegistrationId().equals("facebook")) {
             oAuth2UserInfo = new FacebookUserInfo(oAuth2User.getAttributes());
+        } else if(userRequest.getClientRegistration().getRegistrationId().equals("naver")) {
+            oAuth2UserInfo = new NaverUserInfo((Map)oAuth2User.getAttributes().get("response"));
         } else {
             throw new Exception();
         }
