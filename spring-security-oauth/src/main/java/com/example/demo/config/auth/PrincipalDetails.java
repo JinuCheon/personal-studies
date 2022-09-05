@@ -16,17 +16,39 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
-public class PrincipalDetails implements UserDetails {
+// 이 PrincipalDetails는, 시큐리티 세션의 Authentication에 들어가는 객체다.
+// UserDetails 는 로컬 로그인에서 받은 정보를 담는 객체이고,
+// OAuth2User 는 OAuth2 에서 받은 정보를 담는 객체이다.
+// PrincipalDetails 는, 둘 다 한 번에 다룰 수 있게 하기위해, double implement 를 해준다.
+public class PrincipalDetails implements UserDetails, OAuth2User {
 
     private User user; //콤포지션
+    private Map<String, Object> attributes; //oauth provider 쪽에서 받은 유저 정보 담고 있음
 
+    //일반 로그인 사용
     public PrincipalDetails(User user) {
-        super();
         this.user = user;
+    }
+
+    //oauth 로그인 사용
+    public PrincipalDetails(User user, Map<String, Object> attributes) {
+        this.user = user;
+        this.attributes = attributes;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return attributes;
     }
 
     @Override
@@ -69,5 +91,11 @@ public class PrincipalDetails implements UserDetails {
     public boolean isEnabled() {
         // 계정이 활성화 되어 있는가 (휴먼계정 관리)
         return true;
+    }
+
+    @Override //oauth provider의 고유 식별자인데, 필요 없어서 안씀
+    public String getName() {
+        return null;
+//        return attributes.get("sub");
     }
 }

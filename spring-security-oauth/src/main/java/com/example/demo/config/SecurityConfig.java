@@ -1,6 +1,8 @@
 package com.example.demo.config;
 
+import com.example.demo.config.oauth.PrincipalOauth2UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,6 +15,9 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 @Configuration
 @EnableWebSecurity //스프링 필터체인에 스프링 시큐리티 필터 등록
 public class SecurityConfig {
+
+    @Autowired
+    PrincipalOauth2UserService principalOauth2UserService;
 
     @Bean
     public BCryptPasswordEncoder encoderPwd() {
@@ -31,7 +36,12 @@ public class SecurityConfig {
                 .formLogin()
                 .loginPage("/loginForm") //인증이 필요한 페이지의 경우, 로그인 창으로 리다이렉트
                 .loginProcessingUrl("/login") //login 주소가 호출되면, 시큐리티가 인터셉트해서 시큐리티가 직접 로그인을 진행해줌.
-                .defaultSuccessUrl("/"); //로그인 성공시 리다이렉트 주소. 그런데 특정 페이지에서 있다가 오는 경우, 해당 페이지로 다시 보내준다.
+                .defaultSuccessUrl("/") //로그인 성공시 리다이렉트 주소. 그런데 특정 페이지에서 있다가 오는 경우, 해당 페이지로 다시 보내준다.
+            .and()
+                .oauth2Login()
+                .loginPage("/loginForm")
+                .userInfoEndpoint()
+                .userService(principalOauth2UserService); //로그인 성공 후에, 해당 서비스 로직의 loadUser에서 후처리 됨.
         return http.build();
     }
 }

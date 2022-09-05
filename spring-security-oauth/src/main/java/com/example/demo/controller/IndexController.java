@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.util.Collection;
 import java.util.Iterator;
 
+import com.example.demo.config.auth.PrincipalDetails;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -30,7 +31,8 @@ public class IndexController {
 	}
 
 	@GetMapping("/user")
-	public @ResponseBody String user() {
+	public @ResponseBody String user(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+		System.out.println("principalDetails.getUser() = " + principalDetails.getUser());
 		return "user";
 	}
 
