@@ -1,8 +1,12 @@
 package com.example.demo.config.oauth;
 
 import com.example.demo.config.auth.PrincipalDetails;
+import com.example.demo.config.auth.provider.FacebookUserInfo;
+import com.example.demo.config.auth.provider.GoogleUserInfo;
+import com.example.demo.config.auth.provider.OAuth2UserInfo;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -23,17 +27,27 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
     // loadUser도, override 하지 않으면 기본 동작을 하는데 이렇게 재정의한 이유는,
     // 1. oauth로 넘어온 정보를 토대로 강제 회원가입 하기 위해서
     // 2. 기본 OAuth2User 이 아닌, PrincipalDetails 를 사용하기 위해서. (PrincipalDetails 설명 확인)
+    @SneakyThrows
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
 
         OAuth2User oAuth2User = super.loadUser(userRequest);
         System.out.println("oAuth2User.getAttributes() = " + oAuth2User.getAttributes());
 
-        String provider = userRequest.getClientRegistration().getRegistrationId(); //google
-        String providerId = oAuth2User.getAttribute("sub");
+        OAuth2UserInfo oAuth2UserInfo = null;
+        if(userRequest.getClientRegistration().getRegistrationId().equals("google")) {
+            oAuth2UserInfo = new GoogleUserInfo(oAuth2User.getAttributes());
+        } else if(userRequest.getClientRegistration().getRegistrationId().equals("facebook")) {
+            oAuth2UserInfo = new FacebookUserInfo(oAuth2User.getAttributes());
+        } else {
+            throw new Exception();
+        }
+
+        String provider = oAuth2UserInfo.getProvider();
+        String providerId = oAuth2UserInfo.getProviderId();
         String username = provider + "_" + providerId;
         String password = "password";
-        String email = oAuth2User.getAttribute("email");
+        String email = oAuth2UserInfo.getEmail();
         String role = "ROLE_USER";
 
         User user = userRepository.findByUsername(username);
